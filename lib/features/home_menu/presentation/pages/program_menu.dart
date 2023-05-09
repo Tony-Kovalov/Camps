@@ -66,7 +66,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
+                      open(context, SceneTextPage(title: "День 2", text1: ScenesData().secondMorningScene, text2: ScenesData().secondEveningScene,));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -100,7 +100,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
+                      open(context, SceneTextPage(title: "День 3", text1: ScenesData().thirdMorningScene, text2: ScenesData().thirdEveningScene,));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -134,7 +134,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
+                      open(context, SceneTextPage(title: "День 4", text1: ScenesData().fourthMorningScene, text2: ScenesData().fourthEveningScene,));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -168,7 +168,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
+                      open(context, SceneTextPage(title: "День 4", text1: ScenesData().fifthMorningScene, text2: ScenesData().fifthEveningScene,));
                     },
                   ),
                   const SizedBox(height: 5),
