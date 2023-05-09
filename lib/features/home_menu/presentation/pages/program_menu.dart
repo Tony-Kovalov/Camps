@@ -32,28 +32,28 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                      open(context, SceneTextPage(title: "День 1", text1: ScenesData().firstMorningScene, text2: ScenesData().firstEveningScene,));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
                     },
                   ),
                 ],
@@ -66,28 +66,28 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
                     },
                   ),
                 ],
@@ -100,28 +100,28 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
                     },
                   ),
                 ],
@@ -134,28 +134,28 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
                     },
                   ),
                 ],
@@ -168,28 +168,28 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                      // open(context, SceneTextPage(title: "Сцена", text1: ScenesData().firstMorningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп",
                     onTap: () {
-                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
                     },
                   ),
                 ],
