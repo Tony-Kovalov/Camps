@@ -54,8 +54,13 @@ class _SheduleTableContentState extends State<SheduleTableContent> {
                   onFocusChange: (hasFocus) async {
                     SheduleRepo().saveSheduleData(sheduleData);
                   },
-                  onChanged: (str) {
+                  onChangedText: (str) {
                     sheduleData[index].text = textEditingControllers[index].text;
+                  },
+                  onChangedTime: (newTime) {
+                    sheduleData[index].hours = newTime.hour;
+                    sheduleData[index].minutes = newTime.minute;
+                    SheduleRepo().saveSheduleData(sheduleData);
                   },
                   onRemoved: () {
                     setState(() {

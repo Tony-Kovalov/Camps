@@ -7,7 +7,8 @@ class SheduleItem extends StatefulWidget {
     required this.textEditingController,
     required this.onRemoved,
     required this.onFocusChange,
-    required this.onChanged,
+    required this.onChangedText,
+    required this.onChangedTime,
   }) : super(key: key) {
    textEditingController.text = text;
   }
@@ -17,7 +18,8 @@ class SheduleItem extends StatefulWidget {
   TextEditingController textEditingController;
   Function() onRemoved;
   Function(bool hasFocus) onFocusChange;
-  Function(String str) onChanged;
+  Function(String str) onChangedText;
+  Function(TimeOfDay newTime) onChangedTime;
 
   @override
   State<SheduleItem> createState() => _SheduleItemState();
@@ -48,6 +50,7 @@ class _SheduleItemState extends State<SheduleItem> {
               setState(() {
                 widget.time = newTime;
               });
+              widget.onChangedTime(newTime);
             },
             child: Text(
               timeToText(widget.time),
@@ -85,7 +88,7 @@ class _SheduleItemState extends State<SheduleItem> {
                   },
                   child: TextField(
                     onChanged: (str) {
-                      widget.onChanged(str);
+                      widget.onChangedText(str);
                     },
                     style: const TextStyle(fontSize: 20),
                     controller: widget.textEditingController,
