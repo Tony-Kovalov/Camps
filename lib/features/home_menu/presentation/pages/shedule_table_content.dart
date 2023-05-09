@@ -63,6 +63,7 @@ class _SheduleTableContentState extends State<SheduleTableContent> {
                     setState(() {
                       sheduleData.removeAt(index);
                     });
+                    SheduleRepo().saveSheduleData(sheduleData);
                     // int indexInList = -1;
                     // for (int i = 0; i < sheduleItems.length; i++) {
                     //   if (sheduleItems[i] is SheduleItem && (sheduleItems[i] as SheduleItem).index == indexToRemove) {
@@ -88,6 +89,7 @@ class _SheduleTableContentState extends State<SheduleTableContent> {
                       setState(() {
                         sheduleData.add(SheduleItemModel(hours: TimeOfDay.now().hour, minutes: TimeOfDay.now().minute, text: ""));
                       });
+                      SheduleRepo().saveSheduleData(sheduleData);
                     },
                     child: Container(
                       alignment: Alignment.centerRight,
