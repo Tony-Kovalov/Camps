@@ -23,14 +23,14 @@ class SubMenuCard extends StatelessWidget {
         ),
         onPressed: onTap,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
+          padding: const EdgeInsets.symmetric(vertical: 12),
           child: Center(
             child: Text(
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontSize: 14,
                 fontFamily: 'Unbounded',
                 decoration: TextDecoration.none,
               ),

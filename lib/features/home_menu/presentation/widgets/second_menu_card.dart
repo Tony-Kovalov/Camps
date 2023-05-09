@@ -38,7 +38,7 @@ class _SecondMenuCardState extends State<SecondMenuCard> {
         widget.onTap();
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24.0),
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
         child: Center(
           child: Row(
             children: [

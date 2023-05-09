@@ -13,11 +13,6 @@ class ProgramMenuPage extends StatefulWidget {
 }
 
 class _ProgramMenuPageState extends State<ProgramMenuPage> {
-  bool isFirstOpened = false;
-  bool isSecondOpened = false;
-  bool isThirdOpened = false;
-  bool isFourthOpened = false;
-  bool isFifthOpened = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,95 +29,91 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
               ExpandableMenu(
                 title: "День 1",
                 children: [
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
-                      title: "Ранок Сцена",
+                      title: "Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().firstMorningScene));
                       }),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Вечір Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().firstEveningScene));
                       }),
-                  const SizedBox(height: 6),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 2",
                 children: [
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Ранок Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().secondMorningScene));
                       }),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Вечір Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().secondEveningScene));
                       }),
-                  const SizedBox(height: 6),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 3",
                 children: [
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Ранок Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().thirdMorningScene));
                       }),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Вечір Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().thirdEveningScene));
                       }),
-                  const SizedBox(height: 6),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 4",
                 children: [
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Ранок Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().fourthMorningScene));
                       }),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Вечір Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().fourthEveningScene));
                       }),
-                  const SizedBox(height: 6),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 5",
                 children: [
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Ранок Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().fifthMorningScene));
                       }),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   SubMenuCard(
                       title: "Вечір Сцена",
                       onTap: () {
                         open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().fifthEveningScene));
                       }),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                 ],
               ),
             ],
