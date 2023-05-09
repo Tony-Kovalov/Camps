@@ -1,5 +1,6 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
+import 'package:camps_program/features/home_menu/presentation/widgets/custom_scene_menu_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
@@ -22,30 +23,62 @@ class SceneTextPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: SingleChildScrollView(
-                    child: HtmlWidget(text1),
-                  ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CustomSceneMenuItem(title: "Сценарій", onTap: () {
+
+                    }),
+                    const SizedBox(width: 10),
+                    CustomSceneMenuItem(title: "Ted talks", onTap: () {
+
+                    }),
+                    const SizedBox(width: 10),
+                    CustomSceneMenuItem(title: "Активності", onTap: () {
+
+                    }),
+                    const SizedBox(width: 10),
+                    CustomSceneMenuItem(title: "History channel", onTap: () {
+
+                    }),
+                    const SizedBox(width: 10),
+                    CustomSceneMenuItem(title: "Video Formula 1", onTap: () {
+
+                    }),
+                    const SizedBox(width: 10),
+                  ],
                 ),
               ),
-              const SizedBox(height: 16),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: SingleChildScrollView(
-                    child: HtmlWidget(text2),
+              const SizedBox(height: 5),
+              Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: SingleChildScrollView(
+                        child: HtmlWidget(text1),
+                      ),
+                    ),
                   ),
-                ),
+                  const SizedBox(height: 16),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: SingleChildScrollView(
+                        child: HtmlWidget(text2),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
