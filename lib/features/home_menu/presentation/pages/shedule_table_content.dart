@@ -16,7 +16,6 @@ class _SheduleTableContentState extends State<SheduleTableContent> {
 
   List<TextEditingController> textEditingControllers = [];
   List<SheduleItemModel> sheduleData = [];
-  int custom_index = 0;
 
   @override
   void initState() {
@@ -49,7 +48,6 @@ class _SheduleTableContentState extends State<SheduleTableContent> {
               children: [
                 const SizedBox(height: 4),
                 SheduleItem(
-                  index: custom_index++,
                   time: TimeOfDay(hour: sheduleData[index].hours, minute: sheduleData[index].minutes),
                   text: sheduleData[index].text,
                   textEditingController: textEditingControllers[index],
@@ -59,22 +57,11 @@ class _SheduleTableContentState extends State<SheduleTableContent> {
                   onChanged: (str) {
                     sheduleData[index].text = textEditingControllers[index].text;
                   },
-                  onRemoved: (indexToRemove) {
+                  onRemoved: () {
                     setState(() {
                       sheduleData.removeAt(index);
                     });
                     SheduleRepo().saveSheduleData(sheduleData);
-                    // int indexInList = -1;
-                    // for (int i = 0; i < sheduleItems.length; i++) {
-                    //   if (sheduleItems[i] is SheduleItem && (sheduleItems[i] as SheduleItem).index == indexToRemove) {
-                    //     indexInList = i;
-                    //     break;
-                    //   }
-                    // }
-                    // if (indexInList != -1) {
-                    //   sheduleItems.removeAt(indexInList - 1);
-                    //   sheduleItems.removeAt(indexInList);
-                    // }
                   },
                 ),
               ],

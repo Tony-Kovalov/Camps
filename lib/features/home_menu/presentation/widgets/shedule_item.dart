@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SheduleItem extends StatefulWidget {
-  SheduleItem({Key? key, required this.index,
+  SheduleItem({Key? key,
     required this.time,
     this.text = "",
     required this.textEditingController,
@@ -12,11 +12,10 @@ class SheduleItem extends StatefulWidget {
    textEditingController.text = text;
   }
 
-  int index;
   TimeOfDay time;
   String text;
   TextEditingController textEditingController;
-  Function(int index) onRemoved;
+  Function() onRemoved;
   Function(bool hasFocus) onFocusChange;
   Function(String str) onChanged;
 
@@ -130,7 +129,7 @@ class _SheduleItemState extends State<SheduleItem> {
             setState(() {
               isSwiped = false;
             });
-            widget.onRemoved(widget.index);
+            widget.onRemoved();
           },
           child: Visibility(
             visible: isSwiped,
