@@ -1,85 +1,28 @@
 import 'package:camps_program/app_colors.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/home_content.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/shedule.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/card.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/yellow_long_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MyHomeEmptyPage extends StatefulWidget {
+  const MyHomeEmptyPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomeEmptyPage> createState() => _MyHomeEmptyPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Image.asset("images/logo.png",),
+        title: Image.asset("images/logo.png"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              YellowLongCard(
-                title: "ПРО ТАБІР",
-                onTap: () {},
-              ),
-              const SizedBox(height: 14),
-              Row(
-                children: [
-                  MainCard(
-                    title: 'програма\nтабору',
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ProgramMenuPage()),
-                      );
-                    },
-                  ),
-                  const SizedBox(width: 14),
-                  MainCard(
-                    title: 'дизайн\nтабору',
-                    onTap: () {},
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
-              Row(
-                children: [
-                  MainCard(
-                    title: 'фішки\nднів',
-                    onTap: () {},
-                  ),
-                  const SizedBox(width: 14),
-                  MainCard(
-                    title: 'робота зі\nсоцмережами',
-                    onTap: () {},
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
-              Row(
-                children: [
-                  MainCard(
-                    title: 'організаційні\nмоменти роботи\nу таборі',
-                    onTap: () {},
-                  ),
-                  const SizedBox(width: 14),
-                  MainCard(
-                    title: 'додаткові\nджерела',
-                    onTap: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
+      body: getBody(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
@@ -178,11 +121,21 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  Widget? getBody(int selectedIndex) {
+    switch (selectedIndex) {
+      case 0: return null;
+      case 1: return null;
+      case 2: return const MyHomePageContent();
+      case 3: return null;
+      case 4: return const ShedulePageContent();
+    }
   }
 }
