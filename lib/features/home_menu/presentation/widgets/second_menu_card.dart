@@ -1,7 +1,8 @@
+import 'package:camps_program/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SecondMenuCard extends StatelessWidget {
+class SecondMenuCard extends StatefulWidget {
   SecondMenuCard({Key? key, required this.title, required this.onTap, this.isOpened = false}) : super(key: key);
 
   String title;
@@ -9,16 +10,33 @@ class SecondMenuCard extends StatelessWidget {
   bool isOpened = false;
 
   @override
+  State<SecondMenuCard> createState() => _SecondMenuCardState();
+}
+
+class _SecondMenuCardState extends State<SecondMenuCard> {
+
+  Color backgroundColor = Color(0xffffffff);
+
+  @override
   Widget build(BuildContext context) {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
-        backgroundColor: Colors.white,
+        backgroundColor: backgroundColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
         side: const BorderSide(color: Colors.black),
       ),
-      onPressed: onTap,
+      onPressed: () {
+        setState(() {
+          if (backgroundColor == AppColors.primaryYellow) {
+            backgroundColor = const Color(0xffffffff);
+          } else {
+            backgroundColor = AppColors.primaryYellow;
+          }
+        });
+        widget.onTap();
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 24.0),
         child: Center(
@@ -26,7 +44,7 @@ class SecondMenuCard extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  title,
+                  widget.title,
                   textAlign: TextAlign.left,
                   style: const TextStyle(
                     color: Colors.black,
@@ -36,7 +54,7 @@ class SecondMenuCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Icon(isOpened ? Icons.keyboard_arrow_down_outlined : Icons.keyboard_arrow_right, color: Colors.black),
+              Icon(widget.isOpened ? Icons.keyboard_arrow_down_outlined : Icons.keyboard_arrow_right, color: Colors.black),
             ],
           ),
         ),

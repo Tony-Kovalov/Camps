@@ -1,3 +1,4 @@
+import 'package:camps_program/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class MainCard extends StatelessWidget {
@@ -14,6 +15,7 @@ class MainCard extends StatelessWidget {
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
             backgroundColor: Colors.white,
+            primary: AppColors.primaryYellow,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
