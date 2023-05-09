@@ -13,7 +13,6 @@ class ProgramMenuPage extends StatefulWidget {
 }
 
 class _ProgramMenuPageState extends State<ProgramMenuPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,91 +28,170 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
               ExpandableMenu(
                 title: "День 1",
                 children: [
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().firstMorningScene));
-                      }),
-                  const SizedBox(height: 4),
+                    title: "Сцена",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Вечір Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().firstEveningScene));
-                      }),
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 10-14",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Піт-стоп",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                    },
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 2",
                 children: [
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Ранок Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().secondMorningScene));
-                      }),
-                  const SizedBox(height: 4),
+                    title: "Сцена",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Вечір Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().secondEveningScene));
-                      }),
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 10-14",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Піт-стоп",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                    },
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 3",
                 children: [
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Ранок Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().thirdMorningScene));
-                      }),
-                  const SizedBox(height: 4),
+                    title: "Сцена",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Вечір Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().thirdEveningScene));
-                      }),
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 10-14",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Піт-стоп",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                    },
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 4",
                 children: [
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Ранок Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().fourthMorningScene));
-                      }),
-                  const SizedBox(height: 4),
+                    title: "Сцена",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Вечір Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().fourthEveningScene));
-                      }),
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 10-14",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Піт-стоп",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                    },
+                  ),
                 ],
               ),
               const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 5",
                 children: [
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Ранок Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Ранок Сцена", text: ScenesData().fifthMorningScene));
-                      }),
-                  const SizedBox(height: 4),
+                    title: "Сцена",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Сцена", text: ScenesData().firstMorningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
                   SubMenuCard(
-                      title: "Вечір Сцена",
-                      onTap: () {
-                        open(context, SimpleTextPage(title: "Вечір Сцена", text: ScenesData().fifthEveningScene));
-                      }),
-                  const SizedBox(height: 4),
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 6-9", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 10-14",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Станції 10-14", text: ScenesData().firstEveningScene));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Піт-стоп",
+                    onTap: () {
+                      open(context, SimpleTextPage(title: "Піт-стоп", text: ScenesData().firstEveningScene));
+                    },
+                  ),
                 ],
               ),
             ],
@@ -126,5 +204,4 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
   open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
-
 }
