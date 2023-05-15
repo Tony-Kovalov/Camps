@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/presentation/pages/design_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,12 @@ class MyHomePageContent extends StatelessWidget {
                 const SizedBox(width: 14),
                 MainCard(
                   title: 'дизайн\nтабору',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const DesignPage()),
+                    );
+                  },
                 ),
               ],
             ),

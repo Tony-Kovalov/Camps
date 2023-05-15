@@ -1,4 +1,5 @@
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/first_day_stations_10_14.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/second_menu_card.dart';
@@ -46,7 +47,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
+                      open(context, FirstDayStations10_14Page());
                     },
                   ),
                   const SizedBox(height: 5),
