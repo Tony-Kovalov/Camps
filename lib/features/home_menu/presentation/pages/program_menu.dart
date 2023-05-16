@@ -1,10 +1,8 @@
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/first_day_stations_10_14.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/stations_first_day.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/stations_second_day.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
-import 'package:camps_program/features/home_menu/presentation/widgets/second_menu_card.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card.dart';
 import 'package:flutter/material.dart';
 
@@ -40,16 +38,9 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
-                    title: "Станції 6-9",
+                    title: "Станції",
                     onTap: () {
                       open(context, StationsFirstDay());
-                    },
-                  ),
-                  const SizedBox(height: 5),
-                  SubMenuCard(
-                    title: "Станції 10-14",
-                    onTap: () {
-                      open(context, FirstDayStations10_14Page());
                     },
                   ),
                   const SizedBox(height: 5),
@@ -77,13 +68,6 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     title: "Станції 6-9",
                     onTap: () {
                       open(context, const StationsSecondDay());
-                    },
-                  ),
-                  const SizedBox(height: 5),
-                  SubMenuCard(
-                    title: "Станції 10-14",
-                    onTap: () {
-                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
                     },
                   ),
                   const SizedBox(height: 5),
