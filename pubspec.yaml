@@ -68,6 +68,18 @@ flutter:
     - images/badge.png
     - images/certificate.png
     - images/door_car.png
+    - images/stations1_1.png
+    - images/stations1_2.png
+    - images/stations1_3.png
+    - images/stations1_4.png
+    - images/stations1_5.png
+    - images/stations2_1.png
+    - images/stations2_2.png
+    - images/stations2_3.png
+    - images/stations2_4.png
+    - images/stations2_5.png
+    - images/stations2_6.png
+    - images/stations2_7.png
     - images/draw_1.png
     - images/draw_2.png
     - images/flags.png

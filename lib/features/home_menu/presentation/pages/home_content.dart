@@ -1,5 +1,6 @@
 import 'package:camps_program/features/home_menu/presentation/pages/design_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
+import 'package:camps_program/features/home_menu/presentation/widgets/chips_of_days.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/card.dart';
@@ -48,7 +49,12 @@ class MyHomePageContent extends StatelessWidget {
               children: [
                 MainCard(
                   title: 'фішки\nднів',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ChipsOfDays()),
+                    );
+                  },
                 ),
                 const SizedBox(width: 14),
                 MainCard(

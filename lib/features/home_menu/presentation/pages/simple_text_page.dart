@@ -1,15 +1,18 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/custom_scene_menu_item.dart';
+import 'package:camps_program/features/home_menu/presentation/widgets/download_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SceneTextPage extends StatelessWidget {
-  SceneTextPage({Key? key, required this.title, required this.text1, required this.text2}) : super(key: key);
+  SceneTextPage({Key? key, required this.title, required this.text1, required this.text2, required this.urlOnDrive}) : super(key: key);
 
   String title;
   String text1;
   String text2;
+  String urlOnDrive;
 
   @override
   Widget build(BuildContext context) {
@@ -80,10 +83,24 @@ class SceneTextPage extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 20),
+              DownloadButton(onPressed: () {
+                _launchURL();
+              },),
             ],
           ),
         ),
       ),
     );
   }
+
+  _launchURL() async {
+    final uri = Uri.parse(urlOnDrive);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else { // todo Tony
+      throw 'Could not launch $urlOnDrive';
+    }
+  }
+
 }
