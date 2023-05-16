@@ -122,6 +122,37 @@ class StationsSecondDay extends StatelessWidget {
  Інвентар: канати для старту, 2 типи паличок різних кольорів з позначеними цифрами. (класно грати на траві).<br> <br>
   ''';
 
+  final String text12 = '''
+  <h4>Додаткові варіанти активностей для дітей, якщо потрібна додаткова гра, чи  заміна</h4>
+  ''';
+
+  final String text13 = '''
+  В кімнаті окреслити межі, надути шарік, дати дрібні м’ячик та відро.<br><br>
+  Всі м’ячики перед грою розкидані в периметрі, в якому проходить гра, завдання учасника, поки шарік у повітрі закинути всі м’ячики у відро, якщо шарік торкнувся землі, грає наступний учасник. Під час гри учасник підбиває м’яч, щоб він тримався у повітрі.<br<br>
+  <br>
+  <a href="https://www.instagram.com/reel/CqoZSzxvsmm/?igshid=YmMyMTA2M2Y%3D" style="background-color: white; color: blue">https://www.instagram.com/reel/CqoZSzxvsmm/?igshid=YmMyMTA2M2Y%3D</a>
+  <br>
+  ''';
+
+  final String text14 = '''
+  Активна гра, якщо команда складається більш ніж з 12-15 учасників. (можна грати як загальну гру на сцені в залі для усіх учасників) Вмикаємо активну музику, коли ведучий каже слово, завдання відтворити ту фігуру, яку назвав ведучий.
+  <br>
+  Фігури, які є у відео:<br>
+  - Крендель <br>
+  - Стрибок кохання (можна замінити на : стрибок переможця)<br>
+  - Курка в курнику<br>
+  - Птах у клітці<br>
+  - Собака у будці<br>
+  - Курячий суп<br>
+  - Рюкзак<br>
+  - Літак<br>
+  ''';
+
+  final String text15 = '''
+  Тік-ток для учасників команд (можна дати як домашнє завдання) Кинути у тік-ток чи інсту, позначити вашу сторінку, якщо вона є та наступного дня отримати приз. (Буде працювати як реклама вашого табору та поширення інформації про нього)<br>
+  <a href="https://www.instagram.com/reel/CpUfjczDV7d/?igshid=YmMyMTA2M2Y%3D" style="background-color: white; color: blue">https://www.instagram.com/reel/CpUfjczDV7d/?igshid=YmMyMTA2M2Y%3D</a>
+  ''';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -207,6 +238,36 @@ class StationsSecondDay extends StatelessWidget {
                   const SizedBox(width: 10),
                   const Text("5. "),
                   Flexible(child: HtmlWidget(text11)),
+                ],
+              ),
+              const SizedBox(height: 30),
+
+              HtmlWidget(text12),
+
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  SizedBox(width: 10),
+                  Text("1. "),
+                  Flexible(child: HtmlWidget("")),
+                ],
+              ),
+              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations3_1.png")),
+              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text13)),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(width: 10),
+                  const Text("2. "),
+                  Flexible(child: HtmlWidget(text14)),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(width: 10),
+                  const Text("3. "),
+                  Flexible(child: HtmlWidget(text15)),
                 ],
               ),
             ],
