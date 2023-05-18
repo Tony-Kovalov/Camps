@@ -2,11 +2,10 @@ import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/lesson.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/stations_first_day.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/stations_second_day.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProgramMenuPage extends StatefulWidget {
   const ProgramMenuPage({Key? key}) : super(key: key);
@@ -42,14 +41,14 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, StationsFirstDay());
+                      _launchURL("https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing");
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, StationsFirstDay());
+                      _launchURL("https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing");
                     },
                   ),
                   const SizedBox(height: 5),
@@ -76,14 +75,14 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, const StationsSecondDay());
+                      _launchURL("https://drive.google.com/file/d/1FY2n8IbFWjJsgOuOPWG7d1iigIxxtrtO/view?usp=sharing");
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, const StationsSecondDay());
+                      _launchURL("https://drive.google.com/file/d/1rCV5g3NlnqE_Te1gUah2qltiFaQME0fo/view?usp=sharing");
                     },
                   ),
                   const SizedBox(height: 5),
@@ -200,5 +199,14 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
 
   open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+  }
+
+  _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else { // todo Tony
+      throw 'Could not launch $url';
+    }
   }
 }
