@@ -5,7 +5,6 @@ class StationsSecondDay extends StatelessWidget {
   const StationsSecondDay({Key? key}) : super(key: key);
 
   final String text1 = '''
-    <strong style="color:red">Відео-станція.</strong>
     Команда має створити своє відео на хвилину (можливо більше) на задану тематику.<br>
     Кожній команді буде роздано завдання про різні види транспорту, історію їх створення, коротка інформація про того, хто створював, можливо про невдачі, труднощі з якими стикався.<br>
     Завдання команди творчо показати, який шлях пройшов той герой, чи історію створення того чи іншого транспорту, наголосити, що пройшов герой для того щоб отримати кінцевий продукт. Можливо в нього невірили, сміялись, показати, що пробував кілька разів, щоб воно таки запрацювало. Це було нелегко, але він зміг. (приклад : історія-створення літака «мрія»)<br>
@@ -27,10 +26,6 @@ class StationsSecondDay extends StatelessWidget {
     4) Олекса́ндр Васи́льович Галуне́нко (*1 березня 1946, Троїцьке) — льотчик-випробувач Авіаційного науково-технічного комплексу імені О. К. Антонова, помічник генерального конструктора з льотних питань, кандидат технічних наук, Президент ГО «Федерація авіаційного спорту України», член Наглядової Ради НАУ, Голова координаційної ради ГО «Асоціація літакобудівників», Герой України (з врученням ордена «Золота Зірка» № 1), почесний громадянин Бучі.<br>
     <br>
     Встановив 263 світових авіаційних рекордів. За встановлення 110 світових авіаційних рекордів в одному польоті на Ан-225 «Мрія» його ім'я занесено у книгу рекордів Гіннеса (1991).<br>
-  ''';
-
-  final String text2 = '''
-    <strong style="color:red">Побудувати гоночну трасу для автомобілів.</strong><br>
   ''';
 
   final String text3 = '''
@@ -65,11 +60,10 @@ class StationsSecondDay extends StatelessWidget {
     12. Ти можеш торкатись всього, та рухатись, але не можеш говорити.<br>
     13. Знаєш, де є парковка, але ти не можеш говорити, рухатись та нічого торкатись, можеш використовувати слова «так, ні, знаю, не знаю».<br>
     14. Ти можеш говорити, рухатись і можеш торкатись тільки елементів парковки.<br>
-    15. Ти можеш говорити, рухатись, але можеш торкатись тільки елементів дороги.<br>
+    15. Ти можеш говорити, рухатись, але можеш торкатись тільки елементів дороги.
   ''';
 
   final String text4 = '''
-    <strong style="color:red">Гоночна траса.</strong><br>
     (4-5 етапів) ділимо команду на дві підкоманди і вони змагаються між собою.<br>
     1 етап: <a href="https://www.instagram.com/reel/CpZlLyOgHG8/?igshid=YmMyMTA2M2Y%3D" style="background-color: white; color: blue">https://www.instagram.com/reel/CpZlLyOgHG8/?igshid=YmMyMTA2M2Y%3D</a>
   ''';
@@ -103,7 +97,6 @@ class StationsSecondDay extends StatelessWidget {
   ''';
 
   final String text9 = '''
-  <strong style="color:red">Вишикуватись по зросту.</strong><br>
   Команді дається дошка<br>
   ''';
 
@@ -112,18 +105,13 @@ class StationsSecondDay extends StatelessWidget {
   ''';
 
   final String text11 = '''
-  <strong style="color:red">«Кинь-знайди»</strong><br>
   Грає парна кількість учасників, не менше 6 чоловік. Гравці шикуються шеренгу і розраховуються за номерами. Парні номери будуть однією командою, непарні — іншою. Відстань між гравцями 1м. Гравцям кожної команди видають невеликі палички, пофарбовані в певний колір. На кожній паличці є номер гравця. Гравці запам’ятовують колір паличок своєї команди та обмінюються нею з сусідом.<br>
   <br>
   За сигналом всі повинні закинути палички якнайдалі, а за наступним сигналом побігти за ними. Кожен має знайти та підібрати свою паличку (яку закинув сусід). Якщо по дорозі трапляються палички чужої команди, їх можна закидати ще далі.<br>
   <br>
   Перемагає команда, всі гравці якої раніше повернуться на місце зі своїми.
  <br><br>
- Інвентар: канати для старту, 2 типи паличок різних кольорів з позначеними цифрами. (класно грати на траві).<br> <br>
-  ''';
-
-  final String text12 = '''
-  <h4>Додаткові варіанти активностей для дітей, якщо потрібна додаткова гра, чи  заміна</h4>
+ Інвентар: канати для старту, 2 типи паличок різних кольорів з позначеними цифрами. (класно грати на траві).
   ''';
 
   final String text13 = '''
@@ -165,110 +153,155 @@ class StationsSecondDay extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "День 2",
-                textAlign: TextAlign.start,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "1. Відео-станція",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      HtmlWidget(text1),
+                    ],
+                  ),
+                ),
               ),
-              const SizedBox(height: 10),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("1. "),
-                  Flexible(child: HtmlWidget(text1)),
-                ],
+              const SizedBox(height: 20),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "2. Побудувати гоночну трасу для автомобілів",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      Image.asset("images/stations2_1.png"),
+                      HtmlWidget(text3),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "3. Гоночна траса",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      HtmlWidget(text4),
+                      Image.asset("images/stations2_2.png"),
+                      HtmlWidget(text5),
+                      Image.asset("images/stations2_3.png"),
+                      HtmlWidget(text6),
+                      Row(
+                        children: [
+                          Flexible(child: Image.asset("images/stations2_4.png")),
+                          Flexible(child: Image.asset("images/stations2_5.png")),
+                        ],
+                      ),
+                      HtmlWidget(text7),
+                      Image.asset("images/stations2_6.png"),
+                      HtmlWidget(text8),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "4. Вишикуватись по зросту",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      HtmlWidget(text9),
+                      Image.asset("images/stations2_7.png"),
+                      HtmlWidget(text10),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "5. «Кинь-знайди»",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      HtmlWidget(text11),
+                    ],
+                  ),
+                ),
               ),
 
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("2. "),
-                  Flexible(child: HtmlWidget(text2)),
-                ],
-              ),
-              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations2_1.png")),
+              const SizedBox(height: 20),
 
-              const SizedBox(height: 10),
-
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text3)),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("3. "),
-                  Flexible(child: HtmlWidget(text4)),
-                ],
-              ),
-
-              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations2_2.png")),
-              const SizedBox(height: 10),
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text5)),
-              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations2_3.png")),
-              const SizedBox(height: 10),
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text6)),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 25),
-                child: Row(children: [
-                  Flexible(child: Image.asset("images/stations2_4.png")),
-                  Flexible(child: Image.asset("images/stations2_5.png")),
-                ],),
-              ),
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text7)),
-              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations2_6.png")),
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text8)),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("4. "),
-                  Flexible(child: HtmlWidget(text9)),
-                ],
-              ),
-              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations2_7.png")),
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text10)),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("5. "),
-                  Flexible(child: HtmlWidget(text11)),
-                ],
-              ),
-              const SizedBox(height: 30),
-
-              HtmlWidget(text12),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  SizedBox(width: 10),
-                  Text("1. "),
-                  Flexible(child: HtmlWidget("")),
-                ],
-              ),
-              Padding(padding: const EdgeInsets.only(left: 25), child: Image.asset("images/stations3_1.png")),
-              Padding(padding: const EdgeInsets.only(left: 25), child: HtmlWidget(text13)),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("2. "),
-                  Flexible(child: HtmlWidget(text14)),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 10),
-                  const Text("3. "),
-                  Flexible(child: HtmlWidget(text15)),
-                ],
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Додаткові варіанти активностей для дітей, якщо потрібна додаткова гра, чи  заміна",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      const Text("1)"),
+                      Image.asset("images/stations3_1.png"),
+                      HtmlWidget(text13),
+                      HtmlWidget(text14),
+                      HtmlWidget(text15),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
