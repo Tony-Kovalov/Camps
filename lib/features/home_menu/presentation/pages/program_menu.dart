@@ -1,4 +1,6 @@
+import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/lesson.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/stations_first_day.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/stations_second_day.dart';
@@ -54,7 +56,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
+                       open(context, LessonPage(text: LessonsRepo().lesson1Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
                     },
                   ),
                 ],
@@ -88,7 +90,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
+                      open(context, LessonPage(text: LessonsRepo().lesson2Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
                     },
                   ),
                 ],
@@ -115,7 +117,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
+                      open(context, LessonPage(text: LessonsRepo().lesson3Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
                     },
                   ),
                 ],
@@ -142,7 +144,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
+                      open(context, LessonPage(text: LessonsRepo().lesson4Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -177,7 +179,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
+                      open(context, LessonPage(text: LessonsRepo().lesson5Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
