@@ -1,6 +1,7 @@
 import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/lesson.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card.dart';
@@ -41,14 +42,14 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      _launchURL("https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing");
+                      open(context, PdfScreen(title: "Станції 10-14", url: "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      _launchURL("https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing");
+                      open(context, PdfScreen(title: "Станції 6-9", url: "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -75,14 +76,14 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      _launchURL("https://drive.google.com/file/d/1FY2n8IbFWjJsgOuOPWG7d1iigIxxtrtO/view?usp=sharing");
+                      open(context, PdfScreen(title: "Станції 10-14", url: "https://drive.google.com/file/d/1FY2n8IbFWjJsgOuOPWG7d1iigIxxtrtO/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      _launchURL("https://drive.google.com/file/d/1rCV5g3NlnqE_Te1gUah2qltiFaQME0fo/view?usp=sharing");
+                      open(context, PdfScreen(title: "Станції 6-9", url: "https://drive.google.com/file/d/1rCV5g3NlnqE_Te1gUah2qltiFaQME0fo/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -109,7 +110,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Бізнес гра \"Життя 2.0\"",
                     onTap: () {
-                       // open(context, const StationsFirstDay());
+                      open(context, PdfScreen(title: "Бізнес гра \"Життя 2.0\"", url: "https://drive.google.com/file/d/1m2ZQ5WeofIDqxabCTFAAnsUV3-osCUUY/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -136,7 +137,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Квест \"Шлях\"",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
+                      open(context, PdfScreen(title: "Квест \"Шлях\"", url: "https://drive.google.com/file/d/1Y7ZDcNdm46hMRhvl87yJwz8udSyVKjWu/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -150,7 +151,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Турнір",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Станції 10-14", text1: ScenesData().firstEveningScene));
+                      open(context, PdfScreen(title: "Турнір", url: "https://drive.google.com/file/d/1sMm-7MR0IbZb91DBqOyzfXaZeABHsO5g/view?usp=sharing"));
                     },
                   ),
 
@@ -171,7 +172,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Загальнотабірна гра",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Станції 6-9", text1: ScenesData().firstEveningScene));
+                      open(context, PdfScreen(title: "Загальнотабірна гра", url: "https://drive.google.com/file/d/1T9yu5fGowVsDLrUiEWrrYyWiiy--otRe/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -199,14 +200,5 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
 
   open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
-  }
-
-  _launchURL(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
-    } else { // todo Tony
-      throw 'Could not launch $url';
-    }
   }
 }

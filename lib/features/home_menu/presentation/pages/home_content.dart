@@ -1,7 +1,9 @@
 import 'package:camps_program/features/home_menu/presentation/pages/design_page.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
-import 'package:camps_program/features/home_menu/presentation/widgets/chips_of_days.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/card.dart';
 import '../widgets/yellow_long_card.dart';
@@ -50,10 +52,7 @@ class MyHomePageContent extends StatelessWidget {
                 MainCard(
                   title: 'фішки\nднів',
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ChipsOfDays()),
-                    );
+                    open(context,  PdfScreen(title: "Фішки днів", url: "https://drive.google.com/file/d/1AYqM1JHWAUQsACaCeMgHBxOodwDZgr3h/view?usp=sharing"));
                   },
                 ),
                 const SizedBox(width: 14),
@@ -81,5 +80,9 @@ class MyHomePageContent extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  open(BuildContext context, Widget page) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
 }
