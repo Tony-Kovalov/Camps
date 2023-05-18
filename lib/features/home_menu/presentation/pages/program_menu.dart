@@ -56,7 +56,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                       open(context, LessonPage(text: LessonsRepo().lesson1Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                       open(context, LessonPage(text: LessonsRepo().lesson1Text, urlOnDrive: "https://drive.google.com/file/d/1YIoj5hwaAGEQiqZ8aekfmDEXh76X8tJh/view?usp=sharing",));
                     },
                   ),
                 ],
@@ -90,7 +90,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson2Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                      open(context, LessonPage(text: LessonsRepo().lesson2Text, urlOnDrive: "https://drive.google.com/file/d/1ZLtTS9lbUZrz8b5inbC9nXre-TPOyKpw/view?usp=sharing",));
                     },
                   ),
                 ],
@@ -117,7 +117,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson3Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                      open(context, LessonPage(text: LessonsRepo().lesson3Text, urlOnDrive: "https://drive.google.com/file/d/14j0VvxoaA_AQ8xGiO0LO7SEFDxMbj8YS/view?usp=sharing",));
                     },
                   ),
                 ],
@@ -144,7 +144,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson4Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                      open(context, LessonPage(text: LessonsRepo().lesson4Text, urlOnDrive: "https://drive.google.com/file/d/1dulQ3G8CrhAKlnR8Z4zjweBY_Lqio4TN/view?usp=sharing",));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -179,7 +179,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson5Text, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                      open(context, LessonPage(text: LessonsRepo().lesson5Text, urlOnDrive: "https://drive.google.com/file/d/1bmaLZWiP3ojDQI31pmbFAsXN96RqDcC6/view?usp=sharing",));
                     },
                   ),
                   const SizedBox(height: 5),
