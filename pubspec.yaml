@@ -39,6 +39,7 @@ dependencies:
   flutter_widget_from_html: ^0.10.0
   url_launcher: ^6.1.11
   webview_flutter: ^4.2.0
+  flutter_svg: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +93,7 @@ flutter:
     - images/winers_diary.png
     - images/tshirt.png
     - pdfs/stations.pdf
+    - assets/logo.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

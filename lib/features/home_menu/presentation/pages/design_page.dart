@@ -1,6 +1,7 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/download_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/design_container.dart';
@@ -36,7 +37,11 @@ class DesignPage extends StatelessWidget {
                 const SizedBox(height: 40),
                 const Text("ЛОГО", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
                 const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/logo_big.png")),
+                DesignContainer(child: SvgPicture.asset(
+                    "assets/logo.svg",
+                    height: 80,
+                    semanticsLabel: 'Перемога'
+                ),),
                 const SizedBox(height: 20),
                 DownloadButton(onPressed: () {
                   _launchURL("https://drive.google.com/drive/folders/1GfzkC0R7xcJSpLFl4E03zpqrukvTCyw3?usp=share_link");

@@ -6,6 +6,7 @@ import 'package:camps_program/features/home_menu/presentation/widgets/card.dart'
 import 'package:camps_program/features/home_menu/presentation/widgets/yellow_long_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MyHomeEmptyPage extends StatefulWidget {
   const MyHomeEmptyPage({Key? key}) : super(key: key);
@@ -20,7 +21,11 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Image.asset("images/logo.png"),
+        title: SvgPicture.asset(
+            "assets/logo.svg",
+            height: 40,
+            semanticsLabel: 'Перемога'
+        ),
       ),
       body: getBody(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
