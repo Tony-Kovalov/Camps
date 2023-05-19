@@ -2,7 +2,7 @@ import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/lesson.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +35,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(title: "День 1", text1: ScenesData().firstMorningScene, text2: ScenesData().firstEveningScene, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                      open(context, SceneTextPage(text1: ScenesData().firstMorningScene, text2: ScenesData().firstEveningScene, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -69,7 +69,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(title: "День 2", text1: ScenesData().secondMorningScene, text2: ScenesData().secondEveningScene, urlOnDrive: "https://drive.google.com/file/d/17zlHZxCRwQ39kPon4CfiYkgz-5qREOiD/view?usp=share_link",));
+                      open(context, SceneTextPage(text1: ScenesData().secondMorningScene, text2: ScenesData().secondEveningScene, urlOnDrive: "https://drive.google.com/file/d/17zlHZxCRwQ39kPon4CfiYkgz-5qREOiD/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -103,7 +103,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(title: "День 3", text1: ScenesData().thirdMorningScene, text2: ScenesData().thirdEveningScene, urlOnDrive: "https://drive.google.com/file/d/1ioKB1IyXUjKsZRFQ8J4YY0Rtde23Xo0w/view?usp=share_link",));
+                      open(context, SceneTextPage(text1: ScenesData().thirdMorningScene, text2: ScenesData().thirdEveningScene, urlOnDrive: "https://drive.google.com/file/d/1ioKB1IyXUjKsZRFQ8J4YY0Rtde23Xo0w/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -130,7 +130,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(title: "День 4", text1: ScenesData().fourthMorningScene, text2: ScenesData().fourthEveningScene, urlOnDrive: "https://drive.google.com/file/d/1diZ7Sgch1X8NvSIfy8tYFxv5vRqXKv8-/view?usp=share_link",));
+                      open(context, SceneTextPage(text1: ScenesData().fourthMorningScene, text2: ScenesData().fourthEveningScene, urlOnDrive: "https://drive.google.com/file/d/1diZ7Sgch1X8NvSIfy8tYFxv5vRqXKv8-/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -165,7 +165,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(title: "День 5", text1: ScenesData().fifthMorningScene, text2: ScenesData().fifthEveningScene, urlOnDrive: "https://drive.google.com/file/d/1d754tigY0M2PIAd23T_zvo_qQE88UgJq/view?usp=share_link",));
+                      open(context, SceneTextPage(text1: ScenesData().fifthMorningScene, text2: ScenesData().fifthEveningScene, urlOnDrive: "https://drive.google.com/file/d/1d754tigY0M2PIAd23T_zvo_qQE88UgJq/view?usp=share_link",));
                     },
                   ),
                   const SizedBox(height: 5),
