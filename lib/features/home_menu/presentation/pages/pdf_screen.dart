@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PdfScreen extends StatefulWidget {
@@ -12,11 +14,12 @@ class PdfScreen extends StatefulWidget {
 }
 
 class _PdfScreenState extends State<PdfScreen> {
-
   late WebViewController controller;
 
   bool isReady = false;
   bool isFailed = false;
+
+  String activeUrl = "";
 
   @override
   void initState() {
@@ -34,15 +37,16 @@ class _PdfScreenState extends State<PdfScreen> {
           },
           onPageStarted: (String url) {},
           onPageFinished: (String url) {},
-          onWebResourceError: (WebResourceError error) {
-           setState(() {
-             isFailed = true;
-           });
+          onWebResourceError: (WebResourceError error) async {
+            setState(() {
+              isFailed = true;
+            });
+            if (await InternetConnectionChecker().hasConnection) {
+              _launchActiveURL();
+            }
           },
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.startsWith('https://www.youtube.com/')) {
-              return NavigationDecision.prevent;
-            }
+            activeUrl = request.url;
             return NavigationDecision.navigate;
           },
         ),
@@ -54,9 +58,23 @@ class _PdfScreenState extends State<PdfScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        appBar: AppBar(title: Text(widget.title),),
-        body: getPlaceHolder(isReady, isFailed),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+        actions: [
+          GestureDetector(
+            child: const Padding(padding: EdgeInsets.symmetric(horizontal: 8), child: Center(child: Text("Назад"))),
+            onTap: () async {
+              if (await controller.canGoBack()) {
+                controller.goBack();
+              } else {
+                Navigator.of(context).pop();
+              }
+            },
+          ),
+        ],
+      ),
+      body: getPlaceHolder(isReady, isFailed),
     );
   }
 
@@ -64,7 +82,11 @@ class _PdfScreenState extends State<PdfScreen> {
     if (isFailed) {
       return const Padding(
         padding: EdgeInsets.all(16.0),
-        child: Center(child: Text("Перевір інтернет з'єднання і спробуй ще раз.", textAlign: TextAlign.center,)),
+        child: Center(
+            child: Text(
+          "Перевір інтернет з'єднання і спробуй ще раз.",
+          textAlign: TextAlign.center,
+        )),
       );
     } else if (!isReady) {
       return const Center(child: CircularProgressIndicator());
@@ -72,5 +94,13 @@ class _PdfScreenState extends State<PdfScreen> {
       return WebViewWidget(controller: controller);
     }
   }
-}
 
+  _launchActiveURL() async {
+    final uri = Uri.parse(activeUrl);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else { // todo Tony
+      throw 'Could not launch $activeUrl';
+    }
+  }
+}
