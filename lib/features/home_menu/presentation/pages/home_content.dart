@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/presentation/pages/about_camp.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
@@ -19,7 +20,9 @@ class MyHomePageContent extends StatelessWidget {
           children: [
             YellowLongCard(
               title: "ПРО ТАБІР",
-              onTap: () {},
+              onTap: () {
+                open(context, AboutCampPage());
+              },
             ),
             const SizedBox(height: 14),
             Row(
