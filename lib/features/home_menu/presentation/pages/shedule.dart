@@ -3,14 +3,17 @@ import 'package:camps_program/features/home_menu/presentation/pages/shedule_tabl
 import 'package:camps_program/features/home_menu/presentation/widgets/custon_toggle.dart';
 import 'package:flutter/material.dart';
 
-class ShedulePageContent extends StatefulWidget {
-  const ShedulePageContent({Key? key}) : super(key: key);
+class SchedulePageContent extends StatefulWidget {
+  const SchedulePageContent({Key? key}) : super(key: key);
 
   @override
-  State<ShedulePageContent> createState() => _ShedulePageContentState();
+  State<SchedulePageContent> createState() => _SchedulePageContentState();
 }
 
-class _ShedulePageContentState extends State<ShedulePageContent> {
+class _SchedulePageContentState extends State<SchedulePageContent> {
+
+  bool isTable = true;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +23,11 @@ class _ShedulePageContentState extends State<ShedulePageContent> {
           const SizedBox(height: 10),
           Center(
             child: CustomToggle(
-              onTap: (List<bool> isSelected) {},
+              onTap: (List<bool> isSelected) {
+                setState(() {
+                  isTable = isSelected[0];
+                });
+              },
             ),
           ),
           const SizedBox(height: 10),
@@ -37,9 +44,18 @@ class _ShedulePageContentState extends State<ShedulePageContent> {
             ),
           ),
           const SizedBox(height: 10),
-          const Expanded(child: SheduleTableContent()),
+          getContent(isTable)
         ],
       ),
     );
   }
+
+  Widget getContent(bool isTable) {
+    if (isTable) {
+      return const Expanded(child: SheduleTableContent());
+    } else {
+      return const Expanded(child: Center(child: Text("Ми працюємо над цим..."),));
+    }
+  }
+
 }
