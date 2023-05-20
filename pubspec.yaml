@@ -96,6 +96,11 @@ flutter:
     - images/tshirt.png
     - pdfs/stations.pdf
     - assets/logo.svg
+    - assets/settings.svg
+    - assets/home.svg
+    - assets/file_text.svg
+    - assets/clock.svg
+    - assets/clipboard.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

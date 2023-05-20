@@ -19,16 +19,19 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
+        elevation: 0.0,
         centerTitle: true,
         title: SvgPicture.asset(
             "assets/logo.svg",
-            height: 40,
+            height: 45,
             semanticsLabel: 'Перемога'
         ),
       ),
       body: getBody(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: AppColors.primaryWhite,
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
         currentIndex: _selectedIndex,
@@ -36,33 +39,57 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         showUnselectedLabels: false,
         items: [
           BottomNavigationBarItem(
-            icon: Column(
-              children: const [
-                Icon(Icons.settings_outlined, color: Colors.black, size: 35),
-                SizedBox(height: 3),
-                Text("Налаштування", style: TextStyle(fontSize: 9)),
-              ],
+            icon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Column(
+                children: [
+                  SvgPicture.asset(
+                      "assets/settings.svg",
+                      height: 35,
+                      semanticsLabel: 'Налаштування'
+                  ),
+                  const SizedBox(height: 3),
+                  const Text("Налаштування", style: TextStyle(fontSize: 9)),
+                ],
+              ),
             ),
-            activeIcon: Column(
-              children: [
-                Icon(Icons.settings_outlined, color: Colors.purple[100], size: 35),
-                const SizedBox(height: 3),
-                const Text("Налаштування", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
-              ],
+            activeIcon: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Column(
+                children: [
+                  SvgPicture.asset(
+                      "assets/settings.svg",
+                      height: 35,
+                      semanticsLabel: 'Налаштування',
+                      color: Colors.purple[100]
+                  ),
+                  const SizedBox(height: 3),
+                  const Text("Налаштування", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
+                ],
+              ),
             ),
             label: 'Calls',
           ),
           BottomNavigationBarItem(
             icon: Column(
-              children: const [
-                Icon(Icons.list_alt, color: Colors.black, size: 35),
-                SizedBox(height: 3),
-                Text("Завдання", style: TextStyle(fontSize: 9)),
+              children: [
+                SvgPicture.asset(
+                    "assets/clipboard.svg",
+                    height: 35,
+                    semanticsLabel: 'Завдання'
+                ),
+                const SizedBox(height: 3),
+                const Text("Завдання", style: TextStyle(fontSize: 9)),
               ],
             ),
             activeIcon: Column(
               children: [
-                Icon(Icons.list_alt, color: Colors.purple[100], size: 35),
+                SvgPicture.asset(
+                    "assets/clipboard.svg",
+                    height: 35,
+                    semanticsLabel: 'Завдання',
+                    color: Colors.purple[100]
+                ),
                 const SizedBox(height: 3),
                 const Text("Завдання", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
               ],
@@ -76,12 +103,12 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                 color: AppColors.primaryYellow,
                 border: Border.all(color: Colors.black),
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(10),
-                child: Icon(
-                  Icons.home_outlined,
-                  color: Colors.black,
-                  size: 35,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: SvgPicture.asset(
+                    "assets/home.svg",
+                    height: 35,
+                    semanticsLabel: 'Головна'
                 ),
               ),
             ),
@@ -89,15 +116,24 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
           ),
           BottomNavigationBarItem(
             icon: Column(
-              children: const [
-                Icon(Icons.note_alt_outlined, color: Colors.black, size: 35),
-                SizedBox(height: 3),
-                Text("Нотатки", style: TextStyle(fontSize: 9)),
+              children: [
+                SvgPicture.asset(
+                    "assets/file_text.svg",
+                    height: 35,
+                    semanticsLabel: 'Нотатки'
+                ),
+                const SizedBox(height: 3),
+                const Text("Нотатки", style: TextStyle(fontSize: 9)),
               ],
             ),
             activeIcon: Column(
               children: [
-                Icon(Icons.note_alt_outlined, color: Colors.purple[100], size: 35),
+                SvgPicture.asset(
+                    "assets/file_text.svg",
+                    height: 35,
+                    semanticsLabel: 'Нотатки',
+                    color: Colors.purple[100]
+                ),
                 const SizedBox(height: 3),
                 const Text("Нотатки", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
               ],
@@ -106,15 +142,24 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
           ),
           BottomNavigationBarItem(
             icon: Column(
-              children: const [
-                Icon(Icons.access_time_outlined, color: Colors.black, size: 35),
-                SizedBox(height: 3),
-                Text("Розклад", style: TextStyle(fontSize: 9)),
+              children: [
+                SvgPicture.asset(
+                    "assets/clock.svg",
+                    height: 35,
+                    semanticsLabel: 'Розклад'
+                ),
+                const SizedBox(height: 3),
+                const Text("Розклад", style: TextStyle(fontSize: 9)),
               ],
             ),
             activeIcon: Column(
               children: [
-                Icon(Icons.access_time_outlined, color: Colors.purple[100], size: 35),
+                SvgPicture.asset(
+                    "assets/clock.svg",
+                    height: 35,
+                    semanticsLabel: 'Розклад',
+                    color: Colors.purple[100]
+                ),
                 const SizedBox(height: 3),
                 const Text("Розклад", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
               ],

@@ -1,6 +1,4 @@
-import 'package:camps_program/features/home_menu/presentation/pages/shedule_example.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_page.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/speech_for_team.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app_colors.dart';
