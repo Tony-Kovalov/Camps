@@ -1,3 +1,4 @@
+import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/download_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
@@ -13,6 +14,7 @@ class SimplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
         title: Text(title),
       ),

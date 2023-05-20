@@ -1,8 +1,10 @@
 import 'package:camps_program/features/home_menu/presentation/pages/shedule_example.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/simple_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/speech_for_team.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../app_colors.dart';
+import '../../data/general_repo.dart';
 
 class OrganizationMomentsPage extends StatelessWidget {
   const OrganizationMomentsPage({Key? key}) : super(key: key);
@@ -22,11 +24,11 @@ class OrganizationMomentsPage extends StatelessWidget {
             child: Column(
               children: [
                 resMenuItem("Слово для команди", () {
-                  open(context, SpeechForTeamPage());
+                  open(context, SimplePage(title: 'Слово для команди', text: GeneralRepo().textForTeam, urlOnDrive: 'https://drive.google.com/file/d/1k8TFyOIUsMDKeLP4lXLjyTGUaAFV0eMF/view?usp=sharing',));
                 }),
                 const SizedBox(height: 20),
                 resMenuItem("Приклад розкладу", () {
-                  open(context, SheduleExamplePage());
+                  open(context, SimplePage(title: "Приклад розкладу", text: GeneralRepo().textSchedule, urlOnDrive: "https://drive.google.com/file/d/1DWZMfpZfqQCxw5GKqgtLaZrMjq5tRr3-/view?usp=sharing"));
                 }),
               ],
             ),
