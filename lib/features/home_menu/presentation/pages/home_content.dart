@@ -1,4 +1,5 @@
 import 'package:camps_program/features/home_menu/presentation/pages/about_camp.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/additional_res.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
@@ -74,7 +75,9 @@ class MyHomePageContent extends StatelessWidget {
                 const SizedBox(width: 14),
                 MainCard(
                   title: 'додаткові\nджерела',
-                  onTap: () {},
+                  onTap: () {
+                    open(context, const AdditionalResPage());
+                  },
                 ),
               ],
             ),
