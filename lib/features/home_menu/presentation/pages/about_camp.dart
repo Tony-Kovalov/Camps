@@ -71,11 +71,13 @@ class AboutCampPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("ПРО ТАБІР", style: TextStyle(fontWeight: FontWeight.bold))),
+      appBar: AppBar(
+        elevation: 0,
+          title: const Text("ПРО ТАБІР", style: TextStyle(fontWeight: FontWeight.bold))),
       body: Container(
         color: AppColors.primaryWhite,
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.only(left: 12, bottom: 12, right: 12),
           child: SingleChildScrollView(
             child: Container(
               decoration: BoxDecoration(

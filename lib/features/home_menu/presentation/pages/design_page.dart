@@ -12,14 +12,16 @@ class DesignPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
+        elevation: 0,
         title: const Text("Дизайн табору"),
       ),
       body: SingleChildScrollView(
         child: Container(
           color: AppColors.primaryWhite,
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
             child: Column(
               children: [
                 const Text(

@@ -10,15 +10,17 @@ class AdditionalResPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
+        elevation: 0,
         title: const Text("Додаткові джерела"),
       ),
       body: Container(
         color: AppColors.primaryWhite,
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
             child: Column(
               children: [
+                const SizedBox(height: 20),
                 resMenuItem("Телеграм чат для служителів клубів", () {
                   _launchURL("https://t.me/christianclubs");
                 }),

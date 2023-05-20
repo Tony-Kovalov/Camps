@@ -1,13 +1,9 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/home_content.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/notes.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/settings.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/shedule.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/tasks.dart';
-import 'package:camps_program/features/home_menu/presentation/widgets/card.dart';
-import 'package:camps_program/features/home_menu/presentation/widgets/yellow_long_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

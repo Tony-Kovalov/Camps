@@ -16,11 +16,12 @@ class SimplePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
+        elevation: 0,
         title: Text(title),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
           child: Column(
             children: [
               Container(

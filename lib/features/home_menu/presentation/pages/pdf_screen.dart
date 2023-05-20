@@ -1,3 +1,4 @@
+import 'package:camps_program/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -59,8 +60,11 @@ class _PdfScreenState extends State<PdfScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: AppColors.primaryWhite,
+        elevation: 0,
         actions: [
           GestureDetector(
             child: const Padding(padding: EdgeInsets.symmetric(horizontal: 8), child: Center(child: Text("Назад"))),
@@ -89,7 +93,7 @@ class _PdfScreenState extends State<PdfScreen> {
         )),
       );
     } else if (!isReady) {
-      return const Center(child: CircularProgressIndicator());
+      return const Center(child: CircularProgressIndicator(color: AppColors.primaryYellow,));
     } else {
       return WebViewWidget(controller: controller);
     }

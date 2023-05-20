@@ -1,3 +1,4 @@
+import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
 import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
@@ -7,7 +8,6 @@ import 'package:camps_program/features/home_menu/presentation/pages/scene_page.d
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/general_repo.dart';
 
@@ -22,15 +22,18 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
+        elevation: 0,
         centerTitle: true,
         title: const Text("Програма табору"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
         child: SingleChildScrollView(
           child: Column(
             children: [
+              const SizedBox(height: 10),
               ExpandableMenu(
                 title: "День 1",
                 children: [

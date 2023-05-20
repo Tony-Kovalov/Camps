@@ -41,6 +41,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
     return Scaffold(
       appBar: (topItemsState[4] != true || !showFullScreen)
           ? AppBar(
+              elevation: 0.0,
               centerTitle: true,
               title: Text(getTitle(topItemsState)),
             )
@@ -49,7 +50,9 @@ class _SceneTextPageState extends State<SceneTextPage> {
         color: AppColors.primaryWhite,
         height: double.maxFinite,
         child: Padding(
-          padding: (topItemsState[4] != true || !showFullScreen) ? const EdgeInsets.only(left: 8, top: 16, right: 8, bottom: 16) : EdgeInsets.zero,
+          padding: (topItemsState[4] != true || !showFullScreen)
+              ? const EdgeInsets.only(left: 8, top: 0, right: 8, bottom: 16)
+              : EdgeInsets.zero,
           child: SingleChildScrollView(
             child: Column(
               children: [

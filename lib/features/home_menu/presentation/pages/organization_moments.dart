@@ -12,15 +12,17 @@ class OrganizationMomentsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
+        elevation: 0,
         title: const Text("Додаткові джерела"),
       ),
       body: Container(
         color: AppColors.primaryWhite,
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.only(left: 16, bottom: 16, right: 16),
             child: Column(
               children: [
+                const SizedBox(height: 20),
                 resMenuItem("Слово для команди", () {
                   open(context, SimplePage(title: 'Слово для команди', text: GeneralRepo().textForTeam, urlOnDrive: 'https://drive.google.com/file/d/1k8TFyOIUsMDKeLP4lXLjyTGUaAFV0eMF/view?usp=sharing',));
                 }),
