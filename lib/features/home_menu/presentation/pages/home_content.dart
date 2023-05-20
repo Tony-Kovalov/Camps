@@ -1,6 +1,7 @@
 import 'package:camps_program/features/home_menu/presentation/pages/about_camp.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/additional_res.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/organization_moments.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
 import 'package:flutter/foundation.dart';
@@ -70,7 +71,9 @@ class MyHomePageContent extends StatelessWidget {
               children: [
                 MainCard(
                   title: 'організаційні\nмоменти роботи\nу таборі',
-                  onTap: () {},
+                  onTap: () {
+                    open(context, const OrganizationMomentsPage());
+                  },
                 ),
                 const SizedBox(width: 14),
                 MainCard(
