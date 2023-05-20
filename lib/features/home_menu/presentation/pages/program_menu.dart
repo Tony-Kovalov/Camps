@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
 import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/lesson.dart';
@@ -35,28 +36,53 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(text1: ScenesData().firstMorningScene, text2: ScenesData().firstEveningScene, urlOnDrive: "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",));
+                      open(
+                          context,
+                          SceneTextPage(
+                            text1: ScenesData().firstMorningScene,
+                            text2: ScenesData().firstEveningScene,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
+                            historyChannelText: HistoryChannelRepo().historyChannel1,
+                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, PdfScreen(title: "Станції 10-14", url: "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 10-14",
+                              url:
+                                  "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, PdfScreen(title: "Станції 6-9", url: "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 6-9",
+                              url:
+                                  "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                       open(context, LessonPage(text: LessonsRepo().lesson1Text, urlOnDrive: "https://drive.google.com/file/d/1YIoj5hwaAGEQiqZ8aekfmDEXh76X8tJh/view?usp=sharing",));
+                      open(
+                          context,
+                          LessonPage(
+                            text: LessonsRepo().lesson1Text,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1YIoj5hwaAGEQiqZ8aekfmDEXh76X8tJh/view?usp=sharing",
+                          ));
                     },
                   ),
                 ],
@@ -69,28 +95,53 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(text1: ScenesData().secondMorningScene, text2: ScenesData().secondEveningScene, urlOnDrive: "https://drive.google.com/file/d/17zlHZxCRwQ39kPon4CfiYkgz-5qREOiD/view?usp=share_link",));
+                      open(
+                          context,
+                          SceneTextPage(
+                            text1: ScenesData().secondMorningScene,
+                            text2: ScenesData().secondEveningScene,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/17zlHZxCRwQ39kPon4CfiYkgz-5qREOiD/view?usp=share_link",
+                            historyChannelText: HistoryChannelRepo().historyChannel2,
+                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 10-14",
                     onTap: () {
-                      open(context, PdfScreen(title: "Станції 10-14", url: "https://drive.google.com/file/d/1FY2n8IbFWjJsgOuOPWG7d1iigIxxtrtO/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 10-14",
+                              url:
+                                  "https://drive.google.com/file/d/1FY2n8IbFWjJsgOuOPWG7d1iigIxxtrtO/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Станції 6-9",
                     onTap: () {
-                      open(context, PdfScreen(title: "Станції 6-9", url: "https://drive.google.com/file/d/1rCV5g3NlnqE_Te1gUah2qltiFaQME0fo/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 6-9",
+                              url:
+                                  "https://drive.google.com/file/d/1rCV5g3NlnqE_Te1gUah2qltiFaQME0fo/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson2Text, urlOnDrive: "https://drive.google.com/file/d/1ZLtTS9lbUZrz8b5inbC9nXre-TPOyKpw/view?usp=sharing",));
+                      open(
+                          context,
+                          LessonPage(
+                            text: LessonsRepo().lesson2Text,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1ZLtTS9lbUZrz8b5inbC9nXre-TPOyKpw/view?usp=sharing",
+                          ));
                     },
                   ),
                 ],
@@ -103,21 +154,41 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(text1: ScenesData().thirdMorningScene, text2: ScenesData().thirdEveningScene, urlOnDrive: "https://drive.google.com/file/d/1ioKB1IyXUjKsZRFQ8J4YY0Rtde23Xo0w/view?usp=share_link",));
+                      open(
+                          context,
+                          SceneTextPage(
+                            text1: ScenesData().thirdMorningScene,
+                            text2: ScenesData().thirdEveningScene,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1ioKB1IyXUjKsZRFQ8J4YY0Rtde23Xo0w/view?usp=share_link",
+                            historyChannelText: HistoryChannelRepo().historyChannel3,
+                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Бізнес гра \"Життя 2.0\"",
                     onTap: () {
-                      open(context, PdfScreen(title: "Бізнес гра \"Життя 2.0\"", url: "https://drive.google.com/file/d/1m2ZQ5WeofIDqxabCTFAAnsUV3-osCUUY/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Бізнес гра \"Життя 2.0\"",
+                              url:
+                                  "https://drive.google.com/file/d/1m2ZQ5WeofIDqxabCTFAAnsUV3-osCUUY/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson3Text, urlOnDrive: "https://drive.google.com/file/d/14j0VvxoaA_AQ8xGiO0LO7SEFDxMbj8YS/view?usp=sharing",));
+                      open(
+                          context,
+                          LessonPage(
+                            text: LessonsRepo().lesson3Text,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/14j0VvxoaA_AQ8xGiO0LO7SEFDxMbj8YS/view?usp=sharing",
+                          ));
                     },
                   ),
                 ],
@@ -130,31 +201,55 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(text1: ScenesData().fourthMorningScene, text2: ScenesData().fourthEveningScene, urlOnDrive: "https://drive.google.com/file/d/1diZ7Sgch1X8NvSIfy8tYFxv5vRqXKv8-/view?usp=share_link",));
+                      open(
+                          context,
+                          SceneTextPage(
+                            text1: ScenesData().fourthMorningScene,
+                            text2: ScenesData().fourthEveningScene,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1diZ7Sgch1X8NvSIfy8tYFxv5vRqXKv8-/view?usp=share_link",
+                            historyChannelText: HistoryChannelRepo().historyChannel4,
+                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Квест \"Шлях\"",
                     onTap: () {
-                      open(context, PdfScreen(title: "Квест \"Шлях\"", url: "https://drive.google.com/file/d/1Y7ZDcNdm46hMRhvl87yJwz8udSyVKjWu/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Квест \"Шлях\"",
+                              url:
+                                  "https://drive.google.com/file/d/1Y7ZDcNdm46hMRhvl87yJwz8udSyVKjWu/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson4Text, urlOnDrive: "https://drive.google.com/file/d/1dulQ3G8CrhAKlnR8Z4zjweBY_Lqio4TN/view?usp=sharing",));
+                      open(
+                          context,
+                          LessonPage(
+                            text: LessonsRepo().lesson4Text,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1dulQ3G8CrhAKlnR8Z4zjweBY_Lqio4TN/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Турнір",
                     onTap: () {
-                      open(context, PdfScreen(title: "Турнір", url: "https://drive.google.com/file/d/1sMm-7MR0IbZb91DBqOyzfXaZeABHsO5g/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Турнір",
+                              url:
+                                  "https://drive.google.com/file/d/1sMm-7MR0IbZb91DBqOyzfXaZeABHsO5g/view?usp=sharing"));
                     },
                   ),
-
                 ],
               ),
               const SizedBox(height: 10),
@@ -165,21 +260,41 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Сцена",
                     onTap: () {
-                      open(context, SceneTextPage(text1: ScenesData().fifthMorningScene, text2: ScenesData().fifthEveningScene, urlOnDrive: "https://drive.google.com/file/d/1d754tigY0M2PIAd23T_zvo_qQE88UgJq/view?usp=share_link",));
+                      open(
+                          context,
+                          SceneTextPage(
+                            text1: ScenesData().fifthMorningScene,
+                            text2: ScenesData().fifthEveningScene,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1d754tigY0M2PIAd23T_zvo_qQE88UgJq/view?usp=share_link",
+                            historyChannelText: HistoryChannelRepo().historyChannel5,
+                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Загальнотабірна гра",
                     onTap: () {
-                      open(context, PdfScreen(title: "Загальнотабірна гра", url: "https://drive.google.com/file/d/1T9yu5fGowVsDLrUiEWrrYyWiiy--otRe/view?usp=sharing"));
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Загальнотабірна гра",
+                              url:
+                                  "https://drive.google.com/file/d/1T9yu5fGowVsDLrUiEWrrYyWiiy--otRe/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
-                      open(context, LessonPage(text: LessonsRepo().lesson5Text, urlOnDrive: "https://drive.google.com/file/d/1bmaLZWiP3ojDQI31pmbFAsXN96RqDcC6/view?usp=sharing",));
+                      open(
+                          context,
+                          LessonPage(
+                            text: LessonsRepo().lesson5Text,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1bmaLZWiP3ojDQI31pmbFAsXN96RqDcC6/view?usp=sharing",
+                          ));
                     },
                   ),
                   const SizedBox(height: 5),
