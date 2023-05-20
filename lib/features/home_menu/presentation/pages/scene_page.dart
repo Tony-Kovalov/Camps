@@ -129,7 +129,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
       return SceneHistoryChannelPage(text: widget.historyChannelText, urlOnDrive: widget.historyChannelUrl);
     } else {
       return VideoPage(
-        url: "https://www.youtube.com/watch?v=BBAyRBTfsOU",
+        url: "https://www.youtube.com/watch?v=JpMDI3IBXAo&ab_channel=KoloDruzivLviv",
         onFullScreenChanged: (isFullScreen) {
           setState(() {
             showFullScreen = isFullScreen;
