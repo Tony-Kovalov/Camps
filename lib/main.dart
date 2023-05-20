@@ -1,6 +1,7 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'features/home_menu/presentation/pages/home_empty.dart';
 
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
