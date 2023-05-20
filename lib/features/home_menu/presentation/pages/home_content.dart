@@ -6,6 +6,7 @@ import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.d
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/card.dart';
 import '../widgets/yellow_long_card.dart';
@@ -62,7 +63,9 @@ class MyHomePageContent extends StatelessWidget {
                 const SizedBox(width: 14),
                 MainCard(
                   title: 'робота зі\nсоцмережами',
-                  onTap: () {},
+                  onTap: () {
+                    _launchURL("https://drive.google.com/file/d/1pxKqE1VHasEvbR0_6DPWR8sSjn-m1rKX/view?usp=sharing");
+                  },
                 ),
               ],
             ),
@@ -92,5 +95,14 @@ class MyHomePageContent extends StatelessWidget {
 
   open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+  }
+
+  _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } else { // todo Tony
+      throw 'Could not launch $url';
+    }
   }
 }

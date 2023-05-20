@@ -1,13 +1,15 @@
 import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
 import 'package:camps_program/features/home_menu/data/lessons_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/lesson.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/simple_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/expandable_menu.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../data/general_repo.dart';
 
 class ProgramMenuPage extends StatefulWidget {
   const ProgramMenuPage({Key? key}) : super(key: key);
@@ -78,7 +80,8 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          LessonPage(
+                          SimplePage(
+                            title: "Піт-стоп",
                             text: LessonsRepo().lesson1Text,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1YIoj5hwaAGEQiqZ8aekfmDEXh76X8tJh/view?usp=sharing",
@@ -137,7 +140,8 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          LessonPage(
+                          SimplePage(
+                            title: "Піт-стоп",
                             text: LessonsRepo().lesson2Text,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1ZLtTS9lbUZrz8b5inbC9nXre-TPOyKpw/view?usp=sharing",
@@ -184,7 +188,8 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          LessonPage(
+                          SimplePage(
+                            title: "Піт-стоп",
                             text: LessonsRepo().lesson3Text,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/14j0VvxoaA_AQ8xGiO0LO7SEFDxMbj8YS/view?usp=sharing",
@@ -231,7 +236,8 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          LessonPage(
+                          SimplePage(
+                            title: "Піт-стоп",
                             text: LessonsRepo().lesson4Text,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1dulQ3G8CrhAKlnR8Z4zjweBY_Lqio4TN/view?usp=sharing",
@@ -290,7 +296,8 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          LessonPage(
+                          SimplePage(
+                            title: "Піт-стоп",
                             text: LessonsRepo().lesson5Text,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1bmaLZWiP3ojDQI31pmbFAsXN96RqDcC6/view?usp=sharing",
@@ -301,7 +308,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Виступ для батьків",
                     onTap: () {
-                      // open(context, SceneTextPage(title: "Піт-стоп", text1: ScenesData().firstEveningScene));
+                       open(context, SimplePage(title: "Виступ для батьків", text: GeneralRepo().textForParent, urlOnDrive: "https://drive.google.com/file/d/1C8HW9xbXcINYkYhkZoBVBrOh_LM_DPnX/view?usp=sharing",));
                     },
                   ),
                 ],

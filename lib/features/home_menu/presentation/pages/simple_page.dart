@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class LessonPage extends StatelessWidget {
-  const LessonPage({Key? key, required this.text, required this.urlOnDrive}) : super(key: key);
+class SimplePage extends StatelessWidget {
+  SimplePage({Key? key, required this.title, required this.text, required this.urlOnDrive}) : super(key: key);
 
+  String title;
   final String text;
   final String urlOnDrive;
 
@@ -13,7 +14,7 @@ class LessonPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Піт-стоп"),
+        title: Text(title),
       ),
       body: SingleChildScrollView(
         child: Padding(
