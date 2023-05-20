@@ -1,6 +1,6 @@
 import 'package:camps_program/features/home_menu/presentation/pages/shedule_example.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/speech_for_team.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../app_colors.dart';
 
@@ -22,7 +22,7 @@ class OrganizationMomentsPage extends StatelessWidget {
             child: Column(
               children: [
                 resMenuItem("Слово для команди", () {
-
+                  open(context, SpeechForTeamPage());
                 }),
                 const SizedBox(height: 20),
                 resMenuItem("Приклад розкладу", () {
@@ -66,14 +66,5 @@ class OrganizationMomentsPage extends StatelessWidget {
 
   open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
-  }
-
-  _launchURL(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } else { // todo Tony
-      throw 'Could not launch $url';
-    }
   }
 }
