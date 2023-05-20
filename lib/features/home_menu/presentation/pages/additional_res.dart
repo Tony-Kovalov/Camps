@@ -28,7 +28,7 @@ class AdditionalResPage extends StatelessWidget {
                 }),
                 const SizedBox(height: 20),
                 resMenuItem("Телеграм канал з табірною музикою", () {
-                  // todo
+                  _launchURL("https://t.me/joinchat/AAAAAFXklGmUMlBJSpGuPw");
                 }),
                 const SizedBox(height: 20),
                 resMenuItem("Телеграм група для зворотнього зв'язку", () {
