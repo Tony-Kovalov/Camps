@@ -50,6 +50,7 @@ class _VideoPageState extends State<VideoPage> {
       },
       onExitFullScreen: () {
         widget.onFullScreenChanged(false);
+        SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
       },
       player: player,
       builder: (BuildContext, Widget) {
@@ -68,6 +69,7 @@ class _VideoPageState extends State<VideoPage> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
     super.dispose();
   }
 }
