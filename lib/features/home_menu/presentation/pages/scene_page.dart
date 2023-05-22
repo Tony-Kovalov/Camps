@@ -4,6 +4,7 @@ import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.d
 import 'package:camps_program/features/home_menu/presentation/pages/scene_activities.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_history_channel.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_scenariy.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/scene_teds.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/video_page.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/custom_scene_menu_item.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/download_button.dart';
@@ -125,7 +126,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
     if (topItemsState[0] == true) {
       return SceneScenariy(text1: widget.text1, text2: widget.text2, urlOnDrive: widget.urlOnDrive);
     } else if (topItemsState[1] == true) {
-      return Container();
+      return const SceneTedsPage();
     } else if (topItemsState[2] == true) {
       return SceneActivities();
     } else if (topItemsState[3] == true) {
