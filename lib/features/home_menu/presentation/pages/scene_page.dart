@@ -1,16 +1,10 @@
 import 'package:camps_program/app_colors.dart';
-import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_activities.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_history_channel.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_scenariy.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/scene_teds.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/video_page.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/custom_scene_menu_item.dart';
-import 'package:camps_program/features/home_menu/presentation/widgets/download_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SceneTextPage extends StatefulWidget {
   SceneTextPage(
@@ -33,14 +27,14 @@ class SceneTextPage extends StatefulWidget {
 }
 
 class _SceneTextPageState extends State<SceneTextPage> {
-  List<bool> topItemsState = [true, false, false, false, false];
+  List<bool> topItemsState = [true, false, false, false];
 
   bool showFullScreen = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: (topItemsState[4] != true || !showFullScreen)
+      appBar: (topItemsState[3] != true || !showFullScreen)
           ? AppBar(
               elevation: 0.0,
               centerTitle: true,
@@ -51,7 +45,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
         color: AppColors.primaryWhite,
         height: double.maxFinite,
         child: Padding(
-          padding: (topItemsState[4] != true || !showFullScreen)
+          padding: (topItemsState[3] != true || !showFullScreen)
               ? const EdgeInsets.only(left: 8, top: 0, right: 8, bottom: 16)
               : EdgeInsets.zero,
           child: SingleChildScrollView(
@@ -60,7 +54,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Visibility(
-                    visible: topItemsState[4] != true || !showFullScreen,
+                    visible: topItemsState[3] != true || !showFullScreen,
                     child: Row(
                       children: [
                         CustomSceneMenuItem(
@@ -68,43 +62,34 @@ class _SceneTextPageState extends State<SceneTextPage> {
                             isActive: topItemsState[0],
                             onTap: () {
                               setState(() {
-                                topItemsState = [true, false, false, false, false];
-                              });
-                            }),
-                        const SizedBox(width: 10),
-                        CustomSceneMenuItem(
-                            title: "Ted talks",
-                            isActive: topItemsState[1],
-                            onTap: () {
-                              setState(() {
-                                topItemsState = [false, true, false, false, false];
+                                topItemsState = [true, false, false, false];
                               });
                             }),
                         const SizedBox(width: 10),
                         CustomSceneMenuItem(
                             title: "Активності",
-                            isActive: topItemsState[2],
+                            isActive: topItemsState[1],
                             onTap: () {
                               setState(() {
-                                topItemsState = [false, false, true, false, false];
+                                topItemsState = [false, true, false, false];
                               });
                             }),
                         const SizedBox(width: 10),
                         CustomSceneMenuItem(
                             title: "History channel",
-                            isActive: topItemsState[3],
+                            isActive: topItemsState[2],
                             onTap: () {
                               setState(() {
-                                topItemsState = [false, false, false, true, false];
+                                topItemsState = [false, false, true, false];
                               });
                             }),
                         const SizedBox(width: 10),
                         CustomSceneMenuItem(
                             title: "Video Formula 1",
-                            isActive: topItemsState[4],
+                            isActive: topItemsState[3],
                             onTap: () {
                               setState(() {
-                                topItemsState = [false, false, false, false, true];
+                                topItemsState = [false, false, false, true];
                               });
                             }),
                         const SizedBox(width: 10),
@@ -126,10 +111,8 @@ class _SceneTextPageState extends State<SceneTextPage> {
     if (topItemsState[0] == true) {
       return SceneScenariy(text1: widget.text1, text2: widget.text2, urlOnDrive: widget.urlOnDrive);
     } else if (topItemsState[1] == true) {
-      return const SceneTedsPage();
-    } else if (topItemsState[2] == true) {
       return SceneActivities();
-    } else if (topItemsState[3] == true) {
+    } else if (topItemsState[2] == true) {
       return SceneHistoryChannelPage(text: widget.historyChannelText, urlOnDrive: widget.historyChannelUrl);
     } else {
       return VideoPage(
@@ -147,10 +130,8 @@ class _SceneTextPageState extends State<SceneTextPage> {
     if (topItemsState[0] == true) {
       return "Сценарій";
     } else if (topItemsState[1] == true) {
-      return "Ted talks";
-    } else if (topItemsState[2] == true) {
       return "Активності";
-    } else if (topItemsState[3] == true) {
+    } else if (topItemsState[2] == true) {
       return "History Channel";
     } else {
       return "Video Formula 1";
