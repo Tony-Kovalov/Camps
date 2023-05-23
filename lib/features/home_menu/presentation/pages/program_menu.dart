@@ -50,6 +50,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                                 "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
                             historyChannelText: HistoryChannelRepo().historyChannel1,
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl: "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -110,6 +111,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                                 "https://drive.google.com/file/d/17zlHZxCRwQ39kPon4CfiYkgz-5qREOiD/view?usp=share_link",
                             historyChannelText: HistoryChannelRepo().historyChannel2,
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl: "https://www.youtube.com/watch?v=nc8WRGdH6Iw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=2&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -170,6 +172,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                                 "https://drive.google.com/file/d/1ioKB1IyXUjKsZRFQ8J4YY0Rtde23Xo0w/view?usp=share_link",
                             historyChannelText: HistoryChannelRepo().historyChannel3,
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl: "https://www.youtube.com/watch?v=pEbT85ZORqE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=3&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -218,6 +221,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                                 "https://drive.google.com/file/d/1diZ7Sgch1X8NvSIfy8tYFxv5vRqXKv8-/view?usp=share_link",
                             historyChannelText: HistoryChannelRepo().historyChannel4,
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl: "https://www.youtube.com/watch?v=SsvQO5YvHgE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=4&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -278,6 +282,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                                 "https://drive.google.com/file/d/1d754tigY0M2PIAd23T_zvo_qQE88UgJq/view?usp=share_link",
                             historyChannelText: HistoryChannelRepo().historyChannel5,
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl: "https://www.youtube.com/watch?v=cSet8HcZOMw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=5&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),

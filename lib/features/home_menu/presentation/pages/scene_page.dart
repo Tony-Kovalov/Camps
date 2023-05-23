@@ -7,20 +7,22 @@ import 'package:camps_program/features/home_menu/presentation/widgets/custom_sce
 import 'package:flutter/material.dart';
 
 class SceneTextPage extends StatefulWidget {
-  SceneTextPage(
-      {Key? key,
-      required this.text1,
-      required this.text2,
-      required this.urlOnDrive,
-      required this.historyChannelText,
-      required this.historyChannelUrl})
-      : super(key: key);
+  SceneTextPage({
+    Key? key,
+    required this.text1,
+    required this.text2,
+    required this.urlOnDrive,
+    required this.historyChannelText,
+    required this.historyChannelUrl,
+    required this.videoFormulaUrl,
+  }) : super(key: key);
 
   String text1;
   String text2;
   String urlOnDrive;
   String historyChannelText;
   String historyChannelUrl;
+  String videoFormulaUrl;
 
   @override
   State<SceneTextPage> createState() => _SceneTextPageState();
@@ -116,7 +118,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
       return SceneHistoryChannelPage(text: widget.historyChannelText, urlOnDrive: widget.historyChannelUrl);
     } else {
       return VideoPage(
-        url: "https://www.youtube.com/watch?v=JpMDI3IBXAo&ab_channel=KoloDruzivLviv",
+        url: widget.videoFormulaUrl,
         onFullScreenChanged: (isFullScreen) {
           setState(() {
             showFullScreen = isFullScreen;
