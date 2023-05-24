@@ -29,144 +29,144 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         ),
       ),
       body: getBody(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: AppColors.primaryWhite,
-        type: BottomNavigationBarType.fixed,
-        onTap: _onItemTapped,
-        currentIndex: _selectedIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: [
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Column(
-                children: [
-                  SvgPicture.asset(
-                      "assets/settings.svg",
-                      height: 35,
-                      semanticsLabel: 'Налаштування'
-                  ),
-                  const SizedBox(height: 3),
-                  const Text("Налаштування", style: TextStyle(fontSize: 9)),
-                ],
-              ),
-            ),
-            activeIcon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Column(
-                children: [
-                  SvgPicture.asset(
-                      "assets/settings.svg",
-                      height: 35,
-                      semanticsLabel: 'Налаштування',
-                      color: Colors.purple[100]
-                  ),
-                  const SizedBox(height: 3),
-                  const Text("Налаштування", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
-                ],
-              ),
-            ),
-            label: 'Calls',
-          ),
-          BottomNavigationBarItem(
-            icon: Column(
-              children: [
-                SvgPicture.asset(
-                    "assets/clipboard.svg",
-                    height: 35,
-                    semanticsLabel: 'Завдання'
-                ),
-                const SizedBox(height: 3),
-                const Text("Завдання", style: TextStyle(fontSize: 9)),
-              ],
-            ),
-            activeIcon: Column(
-              children: [
-                SvgPicture.asset(
-                    "assets/clipboard.svg",
-                    height: 35,
-                    semanticsLabel: 'Завдання',
-                    color: Colors.purple[100]
-                ),
-                const SizedBox(height: 3),
-                const Text("Завдання", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
-              ],
-            ),
-            label: 'Calls',
-          ),
-          BottomNavigationBarItem(
-            icon: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.primaryYellow,
-                border: Border.all(color: Colors.black),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: SvgPicture.asset(
-                    "assets/home.svg",
-                    height: 35,
-                    semanticsLabel: 'Головна'
-                ),
-              ),
-            ),
-            label: "Головна",
-          ),
-          BottomNavigationBarItem(
-            icon: Column(
-              children: [
-                SvgPicture.asset(
-                    "assets/file_text.svg",
-                    height: 35,
-                    semanticsLabel: 'Нотатки'
-                ),
-                const SizedBox(height: 3),
-                const Text("Нотатки", style: TextStyle(fontSize: 9)),
-              ],
-            ),
-            activeIcon: Column(
-              children: [
-                SvgPicture.asset(
-                    "assets/file_text.svg",
-                    height: 35,
-                    semanticsLabel: 'Нотатки',
-                    color: Colors.purple[100]
-                ),
-                const SizedBox(height: 3),
-                const Text("Нотатки", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
-              ],
-            ),
-            label: 'Calls',
-          ),
-          BottomNavigationBarItem(
-            icon: Column(
-              children: [
-                SvgPicture.asset(
-                    "assets/clock.svg",
-                    height: 35,
-                    semanticsLabel: 'Розклад'
-                ),
-                const SizedBox(height: 3),
-                const Text("Розклад", style: TextStyle(fontSize: 9)),
-              ],
-            ),
-            activeIcon: Column(
-              children: [
-                SvgPicture.asset(
-                    "assets/clock.svg",
-                    height: 35,
-                    semanticsLabel: 'Розклад',
-                    color: Colors.purple[100]
-                ),
-                const SizedBox(height: 3),
-                const Text("Розклад", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
-              ],
-            ),
-            label: 'Calls',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: AppColors.primaryWhite,
+      //   type: BottomNavigationBarType.fixed,
+      //   onTap: _onItemTapped,
+      //   currentIndex: _selectedIndex,
+      //   showSelectedLabels: false,
+      //   showUnselectedLabels: false,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Padding(
+      //         padding: const EdgeInsets.symmetric(horizontal: 8),
+      //         child: Column(
+      //           children: [
+      //             SvgPicture.asset(
+      //                 "assets/settings.svg",
+      //                 height: 35,
+      //                 semanticsLabel: 'Налаштування'
+      //             ),
+      //             const SizedBox(height: 3),
+      //             const Text("Налаштування", style: TextStyle(fontSize: 9)),
+      //           ],
+      //         ),
+      //       ),
+      //       activeIcon: Padding(
+      //         padding: const EdgeInsets.symmetric(horizontal: 8),
+      //         child: Column(
+      //           children: [
+      //             SvgPicture.asset(
+      //                 "assets/settings.svg",
+      //                 height: 35,
+      //                 semanticsLabel: 'Налаштування',
+      //                 color: Colors.purple[100]
+      //             ),
+      //             const SizedBox(height: 3),
+      //             const Text("Налаштування", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
+      //           ],
+      //         ),
+      //       ),
+      //       label: 'Calls',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Column(
+      //         children: [
+      //           SvgPicture.asset(
+      //               "assets/clipboard.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Завдання'
+      //           ),
+      //           const SizedBox(height: 3),
+      //           const Text("Завдання", style: TextStyle(fontSize: 9)),
+      //         ],
+      //       ),
+      //       activeIcon: Column(
+      //         children: [
+      //           SvgPicture.asset(
+      //               "assets/clipboard.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Завдання',
+      //               color: Colors.purple[100]
+      //           ),
+      //           const SizedBox(height: 3),
+      //           const Text("Завдання", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
+      //         ],
+      //       ),
+      //       label: 'Calls',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Container(
+      //         decoration: BoxDecoration(
+      //           shape: BoxShape.circle,
+      //           color: AppColors.primaryYellow,
+      //           border: Border.all(color: Colors.black),
+      //         ),
+      //         child: Padding(
+      //           padding: const EdgeInsets.all(10),
+      //           child: SvgPicture.asset(
+      //               "assets/home.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Головна'
+      //           ),
+      //         ),
+      //       ),
+      //       label: "Головна",
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Column(
+      //         children: [
+      //           SvgPicture.asset(
+      //               "assets/file_text.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Нотатки'
+      //           ),
+      //           const SizedBox(height: 3),
+      //           const Text("Нотатки", style: TextStyle(fontSize: 9)),
+      //         ],
+      //       ),
+      //       activeIcon: Column(
+      //         children: [
+      //           SvgPicture.asset(
+      //               "assets/file_text.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Нотатки',
+      //               color: Colors.purple[100]
+      //           ),
+      //           const SizedBox(height: 3),
+      //           const Text("Нотатки", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
+      //         ],
+      //       ),
+      //       label: 'Calls',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Column(
+      //         children: [
+      //           SvgPicture.asset(
+      //               "assets/clock.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Розклад'
+      //           ),
+      //           const SizedBox(height: 3),
+      //           const Text("Розклад", style: TextStyle(fontSize: 9)),
+      //         ],
+      //       ),
+      //       activeIcon: Column(
+      //         children: [
+      //           SvgPicture.asset(
+      //               "assets/clock.svg",
+      //               height: 35,
+      //               semanticsLabel: 'Розклад',
+      //               color: Colors.purple[100]
+      //           ),
+      //           const SizedBox(height: 3),
+      //           const Text("Розклад", style: TextStyle(fontSize: 9, color: Color(0xFFD8B7DF))),
+      //         ],
+      //       ),
+      //       label: 'Calls',
+      //     ),
+      //   ],
+      // ),
     );
   }
 

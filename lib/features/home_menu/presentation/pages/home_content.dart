@@ -87,6 +87,7 @@ class MyHomePageContent extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 14),
           ],
         ),
       ),
