@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class OrganizationMomentsPage extends StatelessWidget {
       backgroundColor: AppColors.primaryWhite,
       appBar: AppBar(
         elevation: 0,
-        title: const Text("Додаткові джерела"),
+        title: const Text("Організаційні моменти"),
       ),
       body: Container(
         color: AppColors.primaryWhite,
@@ -29,6 +30,10 @@ class OrganizationMomentsPage extends StatelessWidget {
                 const SizedBox(height: 20),
                 resMenuItem("Приклад розкладу", () {
                   open(context, SimplePage(title: "Приклад розкладу", text: GeneralRepo().textSchedule, urlOnDrive: "https://drive.google.com/file/d/1DWZMfpZfqQCxw5GKqgtLaZrMjq5tRr3-/view?usp=sharing"));
+                }),
+                const SizedBox(height: 20),
+                resMenuItem("Година для тінсів", () {
+                  open(context, PdfScreen(title: "Година для тінсів", url: "https://drive.google.com/file/d/18kxl3enmF_L0zxnHQbyn4jI7OqeZErW9/view?usp=sharing"));
                 }),
               ],
             ),

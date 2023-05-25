@@ -80,6 +80,18 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
+                    title: "Мальовничими куточками України",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Мальовничими куточками України",
+                              url:
+                              "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
                       open(
@@ -141,6 +153,18 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   ),
                   const SizedBox(height: 5),
                   SubMenuCard(
+                    title: "Мальовничими куточками України",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Мальовничими куточками України",
+                              url:
+                              "https://drive.google.com/file/d/1HHZaltswvHHcTsFO7rRbzao5dyp2vUT7/view?usp=sharing"));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
                     title: "Піт-стоп/урок",
                     onTap: () {
                       open(
@@ -174,6 +198,30 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
                             videoFormulaUrl: "https://www.youtube.com/watch?v=pEbT85ZORqE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=3&ab_channel=KoloDruzivLviv",
                           ));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 6-9",
+                              url:
+                              "https://drive.google.com/file/d/1QZuVPXiiAkis3si15E33_RIssk_qMbml/view?usp=sharing"));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Мальовничими куточками України",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Мальовничими куточками України",
+                              url:
+                              "https://drive.google.com/file/d/1kn3ZTXkkwBho-UbEY0MGovJJ-bu_IS3_/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -223,6 +271,30 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
                             videoFormulaUrl: "https://www.youtube.com/watch?v=SsvQO5YvHgE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=4&ab_channel=KoloDruzivLviv",
                           ));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 6-9",
+                              url:
+                              "https://drive.google.com/file/d/1ycEXvLX1eY_283loAt_YwZFkNJQ4XSFB/view?usp=sharing"));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Мальовничими куточками України",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Мальовничими куточками України",
+                              url:
+                              "https://drive.google.com/file/d/1caZFFJv7lFmzV2WWj101pk6xZHjhMEsT/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -284,6 +356,18 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
                             videoFormulaUrl: "https://www.youtube.com/watch?v=cSet8HcZOMw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=5&ab_channel=KoloDruzivLviv",
                           ));
+                    },
+                  ),
+                  const SizedBox(height: 5),
+                  SubMenuCard(
+                    title: "Станції 6-9",
+                    onTap: () {
+                      open(
+                          context,
+                          PdfScreen(
+                              title: "Станції 6-9",
+                              url:
+                              "https://drive.google.com/file/d/1g30fd3X6OJFNSpeBNJ6HQGVzYNTH8O4b/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
