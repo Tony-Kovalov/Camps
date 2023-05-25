@@ -64,7 +64,7 @@ class MyHomePageContent extends StatelessWidget {
                 MainCard(
                   title: 'робота зі\nсоцмережами',
                   onTap: () {
-                    _launchURL("https://drive.google.com/file/d/1pxKqE1VHasEvbR0_6DPWR8sSjn-m1rKX/view?usp=sharing");
+                    open(context, PdfScreen(title: "Робота зі соцмережами", url: "https://drive.google.com/file/d/1pxKqE1VHasEvbR0_6DPWR8sSjn-m1rKX/view?usp=sharing"));
                   },
                 ),
               ],
