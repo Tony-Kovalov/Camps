@@ -1,9 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.camps_program">
    <application
-        android:label="camps_program"
+        android:label="5/4 Camp program"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/app_icon"
+       android:roundIcon="@mipmap/app_icon_round">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
