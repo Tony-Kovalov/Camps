@@ -1,10 +1,17 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class AboutCampPage extends StatelessWidget {
-  AboutCampPage({Key? key}) : super(key: key);
+class AboutCampPage extends StatefulWidget {
+  const AboutCampPage({Key? key}) : super(key: key);
 
+  @override
+  State<AboutCampPage> createState() => _AboutCampPageState();
+}
+
+class _AboutCampPageState extends State<AboutCampPage> {
   String text = '''
   <b>5/4</b><br>
   <b>місце, де тренують переможців</b><br>
@@ -68,30 +75,94 @@ class AboutCampPage extends StatelessWidget {
   В кожного є роздрукований блокнот, який заповнюють на Піт стопах, краще хай залишають його в таборі, а в останній день віддати.<br>
   ''';
 
+  YoutubePlayerController? _controller;
+
+  bool isFullScreen = false;
+
+  @override
+  void initState() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.landscapeLeft,
+    ]);
+
+    String? videoId = YoutubePlayer.convertUrlToId("https://youtu.be/9BrBc28OsCM");
+
+    _controller = YoutubePlayerController(
+      initialVideoId: videoId!,
+      flags: const YoutubePlayerFlags(
+        autoPlay: true,
+        mute: false,
+      ),
+    );
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    var player = YoutubePlayer(
+      controller: _controller!,
+      liveUIColor: Colors.amber,
+    );
+
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-          title: const Text("ПРО ТАБІР", style: TextStyle(fontWeight: FontWeight.bold))),
+      appBar: !isFullScreen ? AppBar(elevation: 0, title: const Text("ПРО ТАБІР", style: TextStyle(fontWeight: FontWeight.bold))) : null,
       body: Container(
         color: AppColors.primaryWhite,
         child: Padding(
-          padding: const EdgeInsets.only(left: 12, bottom: 12, right: 12),
+          padding: !isFullScreen ? const EdgeInsets.only(left: 12, bottom: 12, right: 12) : EdgeInsets.zero,
           child: SingleChildScrollView(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: HtmlWidget(text),
-              ),
+            child: Column(
+              children: [
+                YoutubePlayerBuilder(
+                  onEnterFullScreen: () {
+                    setState(() {
+                      isFullScreen = true;
+                    });
+                  },
+                  onExitFullScreen: () {
+                    setState(() {
+                      isFullScreen = false;
+                    });
+                    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+                  },
+                  player: player,
+                  builder: (BuildContext, Widget) {
+                    return Column(
+                      children: [
+                        player,
+                      ],
+                    );
+                  },
+                ),
+                const SizedBox(height: 16),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: HtmlWidget(text),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
       ),
     );
   }
+
+  @override
+  void dispose() {
+    _controller?.dispose();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    super.dispose();
+  }
+
 }
