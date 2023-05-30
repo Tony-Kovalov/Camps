@@ -1,10 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.camps_program">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
         android:label="5/4 Camp program"
         android:name="${applicationName}"
         android:icon="@mipmap/app_icon"
        android:roundIcon="@mipmap/app_icon_round">
+
 
         <activity
             android:name=".MainActivity"
