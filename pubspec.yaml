@@ -94,7 +94,7 @@ flutter:
     - images/proector.png
     - images/winers_diary.png
     - images/tshirt.png
-    - pdfs/stations.pdf
+#    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg
     - assets/home.svg

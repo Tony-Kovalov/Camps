@@ -14,8 +14,7 @@ class SubMenuCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 32),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          backgroundColor: Colors.white,
-          primary: AppColors.primaryYellow,
+          foregroundColor: AppColors.primaryYellow, backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),
           ),
