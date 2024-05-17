@@ -60,6 +60,15 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+
+  fonts:
+    - family: Unbounded
+      fonts:
+        - asset: fonts/Unbounded-Light.ttf
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter-Medium.ttf
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -94,6 +103,7 @@ flutter:
     - images/proector.png
     - images/winers_diary.png
     - images/tshirt.png
+    - images/daily_camps.png
 #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg
@@ -113,11 +123,6 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-
-  fonts:
-    - family: Unbounded
-    - fonts:
-      - asset: assets/fonts/Unbounded_Light.ttf
 
   #
   # For details regarding fonts from package dependencies,
