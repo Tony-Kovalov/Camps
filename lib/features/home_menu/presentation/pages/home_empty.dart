@@ -1,10 +1,5 @@
 import 'package:camps_program/app_colors.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/choose_program.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/home_content.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/notes.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/settings.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/shedule.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/tasks.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -103,17 +98,9 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
 
   Widget? getBody(int selectedIndex) {
     switch (selectedIndex) {
-      case 0:
-        return const SettingsPage();
-      case 1:
-        return const TasksPage();
       case 2:
-        return const ChooseProgram();
-        // return const MyHomePageContent();
-      case 3:
-        return const NotesPage();
-      case 4:
-        return const SchedulePageContent();
+        // return const ChooseProgram();
+        return const MyHomePageContent();
     }
   }
 }
