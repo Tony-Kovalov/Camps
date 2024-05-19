@@ -1,4 +1,5 @@
 import 'package:camps_program/app_colors.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/choose_program.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/home_content.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/notes.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/settings.dart';
@@ -107,7 +108,8 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
       case 1:
         return const TasksPage();
       case 2:
-        return const MyHomePageContent();
+        return const ChooseProgram();
+        // return const MyHomePageContent();
       case 3:
         return const NotesPage();
       case 4:
