@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CampCard extends StatelessWidget {
-  CampCard({
+class CampCard2 extends StatelessWidget {
+  CampCard2({
     super.key,
     required this.title,
     required this.imgAsset,
@@ -14,7 +14,6 @@ class CampCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
           color: const Color(0xffe0dfff),
@@ -23,11 +22,14 @@ class CampCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(14)),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               width: 170,
               child: Text(
+                textAlign: TextAlign.center,
                 title,
                 style: const TextStyle(
                   fontSize: 14,
@@ -36,10 +38,9 @@ class CampCard extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            Expanded(
-                child: Image.asset(
+            Image.asset(
               imgAsset,
-            )),
+            ),
           ],
         ),
       ),

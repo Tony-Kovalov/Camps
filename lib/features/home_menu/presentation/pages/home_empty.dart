@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'home_content_2.dart';
+
 class MyHomeEmptyPage extends StatefulWidget {
   const MyHomeEmptyPage({Key? key}) : super(key: key);
 
@@ -100,7 +102,8 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
     switch (selectedIndex) {
       case 2:
         // return const ChooseProgram();
-        return const MyHomePageContent();
+        // return const MyHomePageContent();
+        return const MyHomePageContent2();
     }
   }
 }

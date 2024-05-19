@@ -104,6 +104,13 @@ flutter:
     - images/winers_diary.png
     - images/tshirt.png
     - images/daily_camps.png
+    - images/play_rounded_new_ligh.png
+    - images/notepad.png
+    - images/rocket.png
+    - images/design.png
+    - images/social.png
+    - images/management.png
+    - images/additional_sources.png
 #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg
