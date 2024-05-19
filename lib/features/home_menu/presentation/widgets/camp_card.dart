@@ -6,41 +6,48 @@ class CampCard extends StatelessWidget {
     super.key,
     required this.title,
     required this.imgAsset,
+    this.onTap,
   });
 
   final String title;
   final String imgAsset;
+  Function? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 160,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-          color: const Color(0xffe0dfff),
-          borderRadius: BorderRadius.circular(16)),
+    return GestureDetector(
+      onTap: () {
+        onTap?.call();
+      },
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        height: 160,
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(14)),
-        child: Row(
-          children: [
-            SizedBox(
-              width: 170,
-              child: Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontFamily: "Inter",
+            color: const Color(0xffe0dfff),
+            borderRadius: BorderRadius.circular(16)),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(14)),
+          child: Row(
+            children: [
+              SizedBox(
+                width: 170,
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontFamily: "Inter",
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(width: 8),
-            Expanded(
-                child: Image.asset(
-              imgAsset,
-            )),
-          ],
+              const SizedBox(width: 8),
+              Expanded(
+                  child: Image.asset(
+                imgAsset,
+              )),
+            ],
+          ),
         ),
       ),
     );

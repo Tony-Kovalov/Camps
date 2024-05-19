@@ -1,11 +1,16 @@
+import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../widgets/camp_card.dart';
+import 'main_page_cubit.dart';
 
 class ChooseProgram extends StatelessWidget {
-  const ChooseProgram({super.key});
+  ChooseProgram(this.mainPageState, {super.key});
+
+  MainPageState mainPageState;
 
   @override
   Widget build(BuildContext context) {
@@ -54,12 +59,18 @@ class ChooseProgram extends StatelessWidget {
             ),
             const SizedBox(height: 50),
             CampCard(
+              onTap: () {
+                context.read<MainPageCubit>().openFiveDivideFourCampPage();
+              },
               title:
                   "Програма денного табору \"5/4 Місце, де тренують пееможців\"",
               imgAsset: "images/logo.png",
             ),
             const SizedBox(height: 24),
             CampCard(
+              onTap: () {
+                context.read<MainPageCubit>().openGameVsYouCampPage();
+              },
               title:
               "Програма денного табору \"Гра vs Ти\"",
               imgAsset: "images/logo.png",
@@ -69,4 +80,9 @@ class ChooseProgram extends StatelessWidget {
       ),
     );
   }
+
+  open(BuildContext context, Widget page) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+  }
+
 }
