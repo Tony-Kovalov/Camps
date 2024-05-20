@@ -1,5 +1,6 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/choose_program.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/contacts_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_cubit.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
 import 'package:flutter/cupertino.dart';
@@ -89,11 +90,17 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                 const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 45),
                     child: Divider(color: Color(0x190d08ff))),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 45),
-                  child: Text(
-                    "Контакти",
-                    style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
+                GestureDetector(
+                  onTap: () {
+                    context.read<MainPageCubit>().openContactsPage();
+                    Navigator.of(context).pop();
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                    child: Text(
+                      "Контакти",
+                      style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
+                    ),
                   ),
                 ),
                 const Padding(
@@ -122,6 +129,9 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         return const MyHomePageContent();
       case AppState.gameVsYou:
         return const MyHomePageContent2();
+      case AppState.contacts:
+        return Contacts();
+        break;
     }
   }
 }

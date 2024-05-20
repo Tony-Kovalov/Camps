@@ -14,4 +14,5 @@ enum AppState {
   fiveDivideFourMenu,
   gameVsYou,
   chooseProgram,
+  contacts,
 }

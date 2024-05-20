@@ -17,4 +17,8 @@ class MainPageCubit extends Cubit<MainPageState> {
     emit(const MainPageState(AppState.gameVsYou));
   }
 
+  void openContactsPage() {
+    emit(const MainPageState(AppState.contacts));
+  }
+
 }
