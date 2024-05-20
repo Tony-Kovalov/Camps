@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card2.dart';
 import 'package:flutter/cupertino.dart';
@@ -52,6 +53,9 @@ class MyHomePageContent2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CampCard2(
+                        onTap: () {
+                          open(context, const ProgramMenuPage2());
+                        },
                         title: "Програма табору",
                         imgAsset: "images/notepad.png",
                       ),
