@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card2.dart';
@@ -81,6 +82,9 @@ class MyHomePageContent2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CampCard3(
+                        onTap: () {
+                          open(context, const DesignPage2());
+                        },
                         title: "Дизайн табору",
                         imgAsset: "images/design.png",
                       ),

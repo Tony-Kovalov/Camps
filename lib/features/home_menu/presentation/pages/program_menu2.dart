@@ -2,8 +2,10 @@ import 'package:camps_program/features/home_menu/data/history_channel_repo.dart'
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/scene_page2.dart';
 import 'package:flutter/material.dart';
 
+import '../../data/scenes_repo2.dart';
 import '../widgets/expandable_menu2.dart';
 import '../widgets/sub_menu_card2.dart';
 
@@ -57,8 +59,8 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                             context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
+                            SceneTextPage2(
+                              text1: ScenesData2().firstMorningScene,
                               text2: ScenesData().firstEveningScene,
                               urlOnDrive:
                                   "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",

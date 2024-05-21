@@ -16,11 +16,11 @@ class DownloadButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(40.0),
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Icon(Icons.file_download_outlined, color: Colors.black),
             SizedBox(width: 10),
             Text("Завантажити", style: TextStyle(color: Colors.black, fontSize: 14),),
