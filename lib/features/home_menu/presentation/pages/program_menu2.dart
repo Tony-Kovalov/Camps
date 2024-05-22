@@ -59,22 +59,22 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                   children: [
                     const SizedBox(height: 5),
                     SubMenuCard2(
-                      title: "Сцена",
+                      title: "Сцена ранок",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage2(
-                              text1: ScenesData2().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Ранок 1", texts: ScenesData2.firstMorningScene, images: []),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Сцена вечір",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Вечір 1", texts: ScenesData2.firstEveningScene, images: []),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -121,22 +121,22 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                   children: [
                     const SizedBox(height: 5),
                     SubMenuCard2(
-                      title: "Сцена",
+                      title: "Сцена ранок",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Ранок 2", texts: ScenesData2.secondMorningScene, images: []),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Сцена вечір",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Вечір 2", texts: ScenesData2.secondEveningScene, images: []),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -183,22 +183,22 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                   children: [
                     const SizedBox(height: 5),
                     SubMenuCard2(
-                      title: "Сцена",
+                      title: "Сцена ранок",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Ранок 3", texts: ScenesData2.thirdMorningScene, images: []),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Сцена вечір",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Вечір 3", texts: ScenesData2.thirdEveningScene, images: []),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -245,22 +245,22 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                   children: [
                     const SizedBox(height: 5),
                     SubMenuCard2(
-                      title: "Сцена",
+                      title: "Сцена ранок",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Ранок 4`", texts: ScenesData2.fourthMorningScene, images: []),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Сцена вечір",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Вечір 4", texts: ScenesData2.fourthEveningScene, images: []),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -307,22 +307,22 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                   children: [
                     const SizedBox(height: 5),
                     SubMenuCard2(
-                      title: "Сцена",
+                      title: "Сцена ранок",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Ранок 5", texts: ScenesData2.fifthMorningScene, images: []),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Сцена вечір",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(title: "Сцена / Вечір 5", texts: ScenesData2.fifthEveningScene, images: []),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -482,6 +482,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
+                            title: "Camp surfers",
                             texts: GeneralGamesRepo.textsCampSurfers,
                             images: GeneralGamesRepo.imagesCampSurfers,
                           ),
@@ -495,6 +496,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
+                            title: "Camp Stars",
                             texts: GeneralGamesRepo.textsCampStars,
                             images: GeneralGamesRepo.imagesCampStars,
                           ),
@@ -508,6 +510,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
+                            title: "Like us",
                             texts: GeneralGamesRepo.textsLikeUs,
                             images: GeneralGamesRepo.imagesLikeUs,
                           ),
@@ -521,6 +524,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
+                            title: "Journey",
                             texts: GeneralGamesRepo.textsJourney,
                             images: GeneralGamesRepo.imagesJourney,
                           ),

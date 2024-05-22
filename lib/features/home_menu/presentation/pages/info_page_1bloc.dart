@@ -5,10 +5,12 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 class InfoPage1Bloc extends StatelessWidget {
   InfoPage1Bloc({
     Key? key,
+    required this.title,
     required this.texts,
     required this.images,
   }) : super(key: key);
 
+  String title;
   List<String> texts;
   List<String> images;
 
@@ -16,6 +18,7 @@ class InfoPage1Bloc extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(title),
         elevation: 0,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
