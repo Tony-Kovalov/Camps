@@ -62,13 +62,18 @@ class MyHomePageContent2 extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       CampCard3(
-                        title: "Фішки днів",
+                        title: "Батьківський контроль",
                         imgAsset: "images/rocket.png",
                       ),
                       const SizedBox(height: 16),
                       CampCard2(
                         title: "Організаційні моменти роботи у таборі",
                         imgAsset: "images/management.png",
+                      ),
+                      const SizedBox(height: 16),
+                      CampCard3(
+                        title: "Система заохочення - аватар",
+                        imgAsset: "images/avatar.png",
                       ),
                       const SizedBox(height: 16),
                     ],

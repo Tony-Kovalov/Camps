@@ -136,6 +136,7 @@ flutter:
     - images/journey1.png
     - images/journey2.png
     - images/journey3.png
+    - images/avatar.png
 #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg
