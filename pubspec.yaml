@@ -124,6 +124,18 @@ flutter:
     - images/joystick.png
     - images/planet.png
     - images/stickers.png
+    - images/camp_surfers1.png
+    - images/camp_surfers2.png
+    - images/camp_surfers3.png
+    - images/camp_surfers4.png
+    - images/camp_surfers5.png
+    - images/camp_stars1.png
+    - images/camp_stars2.png
+    - images/like_us1.png
+    - images/like_us2.png
+    - images/journey1.png
+    - images/journey2.png
+    - images/journey3.png
 #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg

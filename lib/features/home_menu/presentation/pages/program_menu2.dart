@@ -1,8 +1,12 @@
+import 'package:camps_program/features/home_menu/data/generalGamesRepo.dart';
+import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/info_page_1bloc.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page2.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/scenes_repo2.dart';
@@ -458,7 +462,72 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                 const SizedBox(height: 10),
                 ExpandableMenu2(
                   title: "Загальнотабірки",
-                  children: [],
+                  children: [
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Прочитай мене",
+                      onTap: () {
+                        open(
+                          context,
+                          SimpleTextPage(
+                            text: GeneralRepo().generalGamesReadMe,
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Camp surfers",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            texts: GeneralGamesRepo.textsCampSurfers,
+                            images: GeneralGamesRepo.imagesCampSurfers,
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Camp Stars",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            texts: GeneralGamesRepo.textsCampStars,
+                            images: GeneralGamesRepo.imagesCampStars,
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Like us",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            texts: GeneralGamesRepo.textsLikeUs,
+                            images: GeneralGamesRepo.imagesLikeUs,
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard2(
+                      title: "Journey",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            texts: GeneralGamesRepo.textsJourney,
+                            images: GeneralGamesRepo.imagesJourney,
+                          ),
+                        );
+                      },
+                    ),
+                  ],
                 ),
               ],
             ),
