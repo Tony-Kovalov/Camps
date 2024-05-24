@@ -80,6 +80,7 @@ flutter:
   assets:
     - images/logo.png
     - images/logo_big.png
+    - images/logo_2_0.jpg
     - images/badge.png
     - images/certificate.png
     - images/door_car.png

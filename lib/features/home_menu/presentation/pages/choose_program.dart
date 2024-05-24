@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/data/shared_prefs.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -60,6 +61,7 @@ class ChooseProgram extends StatelessWidget {
             const SizedBox(height: 50),
             CampCard(
               onTap: () {
+                SharedPrefs().setChosenCamp(CampName.fiveDivideFour);
                 context.read<MainPageCubit>().openFiveDivideFourCampPage();
               },
               title:
@@ -69,6 +71,7 @@ class ChooseProgram extends StatelessWidget {
             const SizedBox(height: 24),
             CampCard(
               onTap: () {
+                SharedPrefs().setChosenCamp(CampName.gameVsYou);
                 context.read<MainPageCubit>().openGameVsYouCampPage();
               },
               title:
