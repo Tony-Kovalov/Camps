@@ -137,7 +137,83 @@ flutter:
     - images/journey2.png
     - images/journey3.png
     - images/avatar.png
-#    - pdfs/stations.pdf
+    - images/first_station_1.png
+    - images/first_station_2.png
+    - images/first_station_3.png
+    - images/first_station_4.png
+    - images/first_station_5.png
+    - images/first2_station_1.png
+    - images/first2_station_2.png
+    - images/first2_station_3.png
+    - images/first2_station_4.png
+    - images/first2_station_5.png
+    - images/first2_station_6.png
+    - images/first2_station_7.png
+    - images/second_station_1.png
+    - images/second_station_2.png
+    - images/second_station_3.png
+    - images/second_station_4.png
+    - images/second_station_5.png
+    - images/second_station_6.png
+    - images/second_station_7.png
+    - images/second_station_8.png
+    - images/second2_station_1.png
+    - images/second2_station_2.png
+    - images/second2_station_3.png
+    - images/second2_station_4.png
+    - images/second2_station_5.png
+    - images/second2_station_6.png
+    - images/second2_station_7.png
+    - images/second2_station_8.png
+    - images/second2_station_9.png
+    - images/second2_station_10.png
+    - images/second2_station_11.png
+    - images/second2_station_12.png
+    - images/second2_station_13.png
+    - images/third_station_1.png
+    - images/third_station_2.png
+    - images/third_station_3.png
+    - images/third_station_4.png
+    - images/third_station_5.png
+    - images/third_station_6.png
+    - images/third_station_7.png
+    - images/third_station_8.png
+    - images/third_station_9.png
+    - images/third2_station_1.png
+    - images/third2_station_2.png
+    - images/third2_station_3.png
+    - images/third2_station_4.png
+    - images/third2_station_5.png
+    - images/fourth_station_1.png
+    - images/fourth_station_2.png
+    - images/fourth_station_3.png
+    - images/fourth_station_4.png
+    - images/fourth_station_4.png
+    - images/fourth_station_5.png
+    - images/fourth_station_6.png
+    - images/fourth_station_7.png
+    - images/fourth_station_8.png
+    - images/fourth_station_9.png
+    - images/fourth_station_10.png
+    - images/fourth2_station_1.png
+    - images/fourth2_station_2.png
+    - images/fourth2_station_3.png
+    - images/fifth2_station_1.png
+    - images/fifth2_station_2.png
+    - images/fifth2_station_3.png
+    - images/fifth2_station_4.png
+    - images/fifth2_station_5.png
+    - images/fifth2_station_6.png
+    - images/fifth_station_1.png
+    - images/fifth_station_2.png
+    - images/fifth_station_3.png
+    - images/fifth_station_4.png
+    - images/fifth_station_5.png
+    - images/fifth_station_6.png
+    - images/fifth_station_7.png
+    - images/fifth_station_8.png
+    - images/fifth_station_9.png
+    #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg
     - assets/home.svg

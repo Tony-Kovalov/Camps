@@ -2,6 +2,7 @@ import 'package:camps_program/features/home_menu/data/generalGamesRepo.dart';
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
+import 'package:camps_program/features/home_menu/data/stations_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/info_page_1bloc.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
@@ -63,7 +64,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Ранок 1", texts: ScenesData2.firstMorningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Ранок 1",
+                              texts: ScenesData2.firstMorningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -73,7 +77,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Вечір 1", texts: ScenesData2.firstEveningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Вечір 1",
+                              texts: ScenesData2.firstEveningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -82,11 +89,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 7-11р",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 10-14",
-                                url:
-                                    "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 7-11р",
+                            texts: StationsRepo.first7_11yTexts,
+                            images: StationsRepo.first7_11yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -94,11 +103,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 12+",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 12+",
-                                url:
-                                    "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 12+",
+                            texts: StationsRepo.first12yTexts,
+                            images: StationsRepo.first12yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -125,7 +136,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Ранок 2", texts: ScenesData2.secondMorningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Ранок 2",
+                              texts: ScenesData2.secondMorningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -135,7 +149,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Вечір 2", texts: ScenesData2.secondEveningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Вечір 2",
+                              texts: ScenesData2.secondEveningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -144,11 +161,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 7-11р",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 10-14",
-                                url:
-                                    "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 7-11р",
+                            texts: StationsRepo.second7_11yTexts,
+                            images: StationsRepo.second7_11yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -156,11 +175,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 12+",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 12+",
-                                url:
-                                    "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 12+",
+                            texts: StationsRepo.second12yTexts,
+                            images: StationsRepo.second12yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -187,7 +208,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Ранок 3", texts: ScenesData2.thirdMorningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Ранок 3",
+                              texts: ScenesData2.thirdMorningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -197,7 +221,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Вечір 3", texts: ScenesData2.thirdEveningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Вечір 3",
+                              texts: ScenesData2.thirdEveningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -206,11 +233,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 7-11р",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 10-14",
-                                url:
-                                    "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 7-11р",
+                            texts: StationsRepo.third7_11yTexts,
+                            images: StationsRepo.third7_11yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -218,11 +247,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 12+",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 12+",
-                                url:
-                                    "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 12+",
+                            texts: StationsRepo.third12yTexts,
+                            images: StationsRepo.third12yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -249,7 +280,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Ранок 4`", texts: ScenesData2.fourthMorningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Ранок 4`",
+                              texts: ScenesData2.fourthMorningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -259,7 +293,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Вечір 4", texts: ScenesData2.fourthEveningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Вечір 4",
+                              texts: ScenesData2.fourthEveningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -268,11 +305,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 7-11р",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 10-14",
-                                url:
-                                    "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 7-11р",
+                            texts: StationsRepo.fourth7_11yTexts,
+                            images: StationsRepo.fourth7_11yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -280,11 +319,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 12+",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 12+",
-                                url:
-                                    "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 12+",
+                            texts: StationsRepo.fourth12yTexts,
+                            images: StationsRepo.fourth12yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -311,7 +352,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Ранок 5", texts: ScenesData2.fifthMorningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Ранок 5",
+                              texts: ScenesData2.fifthMorningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -321,7 +365,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       onTap: () {
                         open(
                           context,
-                          InfoPage1Bloc(title: "Сцена / Вечір 5", texts: ScenesData2.fifthEveningScene, images: []),
+                          InfoPage1Bloc(
+                              title: "Сцена / Вечір 5",
+                              texts: ScenesData2.fifthEveningScene,
+                              images: []),
                         );
                       },
                     ),
@@ -330,11 +377,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 7-11р",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 10-14",
-                                url:
-                                    "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 7-11р",
+                            texts: StationsRepo.fifth7_11yTexts,
+                            images: StationsRepo.fifth7_11yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -342,11 +391,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Станції 12+",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Станції 12+",
-                                url:
-                                    "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Станції 12+",
+                            texts: StationsRepo.fifth12yTexts,
+                            images: StationsRepo.fifth12yImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),

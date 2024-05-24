@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class InfoPage1Bloc extends StatelessWidget {
@@ -75,7 +76,7 @@ class InfoPage1Bloc extends StatelessWidget {
         t--;
       }
       if (i > 0) {
-        list.add(Image.asset(images[images.length - i]));
+        list.add(Center(child: Image.asset(images[images.length - i])));
         list.add(const SizedBox(height: 10));
         i--;
       }
