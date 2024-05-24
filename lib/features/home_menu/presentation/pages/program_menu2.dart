@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/data/additional_stations_2.dart';
 import 'package:camps_program/features/home_menu/data/bible_lesson_repo.dart';
 import 'package:camps_program/features/home_menu/data/generalGamesRepo.dart';
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
@@ -10,6 +11,7 @@ import 'package:camps_program/features/home_menu/presentation/pages/scene_page.d
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/scenes_repo2.dart';
 import '../widgets/expandable_menu2.dart';
@@ -435,19 +437,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Творчість",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Творчість",
+                            texts: AdditionalStations2Repo.art_texts,
+                            images: AdditionalStations2Repo.art_images,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -455,19 +451,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Ігри з парашутом",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Ігри з парашутом",
+                            texts: AdditionalStations2Repo.parachuteGamesTexts,
+                            images: [],
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
@@ -475,39 +465,22 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Майстер-класи",
                       onTap: () {
                         open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Майстер-класи",
+                            texts: AdditionalStations2Repo.masterClassesTexts,
+                            images: AdditionalStations2Repo.masterClassesImages,
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
                     SubMenuCard2(
                       title: "Гігантська розмальовка",
-                      onTap: () {
-                        open(
-                            context,
-                            SceneTextPage(
-                              text1: ScenesData().firstMorningScene,
-                              text2: ScenesData().firstEveningScene,
-                              urlOnDrive:
-                                  "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                              historyChannelText:
-                                  HistoryChannelRepo().historyChannel1,
-                              historyChannelUrl:
-                                  "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                              videoFormulaUrl:
-                                  "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
-                            ));
+                      onTap: () async {
+                        final Uri url = Uri.parse(
+                            'https://drive.google.com/file/d/1602IOXbijr2OpbTISTs-oqalSgNvGeyv/view');
+                        await launchUrl(url);
                       },
                     ),
                   ],
