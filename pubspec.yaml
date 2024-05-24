@@ -214,6 +214,9 @@ flutter:
     - images/fifth_station_7.png
     - images/fifth_station_8.png
     - images/fifth_station_9.png
+    - images/lesson2_3d_1.png
+    - images/lesson2_3d_2.png
+    - images/lesson2_5d_1.png
     #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg

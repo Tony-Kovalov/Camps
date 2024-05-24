@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/data/bible_lesson_repo.dart';
 import 'package:camps_program/features/home_menu/data/generalGamesRepo.dart';
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
@@ -78,9 +79,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Вечір 1",
-                              texts: ScenesData2.firstEveningScene,
-                              images: []),
+                            title: "Сцена / Вечір 1",
+                            texts: ScenesData2.firstEveningScene,
+                            images: [],
+                          ),
                         );
                       },
                     ),
@@ -117,11 +119,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Чат (біблійна зустріч)",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Мальовничими куточками України",
-                                url:
-                                    "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Чат (біблійна зустріч)",
+                            texts: BibleLessonRepo.bible_seson1,
+                            images: [],
+                          ),
+                        );
                       },
                     ),
                   ],
@@ -189,11 +193,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Чат (біблійна зустріч)",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Мальовничими куточками України",
-                                url:
-                                    "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Чат (біблійна зустріч)",
+                            texts: BibleLessonRepo.bible_seson2,
+                            images: [],
+                          ),
+                        );
                       },
                     ),
                   ],
@@ -261,11 +267,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Чат (біблійна зустріч)",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Мальовничими куточками України",
-                                url:
-                                    "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Чат (біблійна зустріч)",
+                            texts: BibleLessonRepo.bible_seson3_texts,
+                            images: BibleLessonRepo.bible_seson3_images,
+                          ),
+                        );
                       },
                     ),
                   ],
@@ -333,11 +341,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Чат (біблійна зустріч)",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Мальовничими куточками України",
-                                url:
-                                    "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Чат (біблійна зустріч)",
+                            texts: BibleLessonRepo.bible_seson4_texts,
+                            images: [],
+                          ),
+                        );
                       },
                     ),
                   ],
@@ -405,11 +415,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       title: "Чат (біблійна зустріч)",
                       onTap: () {
                         open(
-                            context,
-                            PdfScreen(
-                                title: "Мальовничими куточками України",
-                                url:
-                                    "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                          context,
+                          InfoPage1Bloc(
+                            title: "Чат (біблійна зустріч)",
+                            texts: BibleLessonRepo.bible_seson5_texts,
+                            images: BibleLessonRepo.bible_seson5_images,
+                          ),
+                        );
                       },
                     ),
                   ],
