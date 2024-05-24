@@ -5,16 +5,19 @@ import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
 import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/data/stations_repo.dart';
+import 'package:camps_program/features/home_menu/data/teens_info_2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/info_page_1bloc.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/scene_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/scenes_repo2.dart';
 import '../widgets/expandable_menu2.dart';
+import '../widgets/second_menu_card2.dart';
 import '../widgets/sub_menu_card2.dart';
 
 class ProgramMenuPage2 extends StatefulWidget {
@@ -486,9 +489,19 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                ExpandableMenu2(
+                SecondMenuCard2(
                   title: "Година з Тінсами",
-                  children: [],
+                  isOpenEffectEnabled: false,
+                  onTap: () {
+                    open(
+                      context,
+                      InfoPage1Bloc(
+                        title: "Година з Тінсами",
+                        texts: Teens2Repo.teensTexts,
+                        images: Teens2Repo.teensImages,
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 10),
                 ExpandableMenu2(

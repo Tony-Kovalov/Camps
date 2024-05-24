@@ -3,16 +3,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SecondMenuCard2 extends StatefulWidget {
-  SecondMenuCard2(
-      {Key? key,
-      required this.title,
-      required this.onTap,
-      this.isOpened = false})
-      : super(key: key);
+  SecondMenuCard2({
+    Key? key,
+    required this.title,
+    required this.onTap,
+    this.isOpened = false,
+    this.isOpenEffectEnabled = true,
+  }) : super(key: key);
 
   String title;
   Function() onTap;
   bool isOpened = false;
+  bool isOpenEffectEnabled = true;
 
   @override
   State<SecondMenuCard2> createState() => _SecondMenuCardState2();
@@ -32,13 +34,15 @@ class _SecondMenuCardState2 extends State<SecondMenuCard2> {
         side: const BorderSide(color: Colors.white),
       ),
       onPressed: () {
-        setState(() {
-          if (widget.isOpened) {
-            backgroundColor = const Color(0xffffffff);
-          } else {
-            backgroundColor = const Color(0xff0d08ff);
-          }
-        });
+        if (widget.isOpenEffectEnabled) {
+          setState(() {
+            if (widget.isOpened) {
+              backgroundColor = const Color(0xffffffff);
+            } else {
+              backgroundColor = const Color(0xff0d08ff);
+            }
+          });
+        }
         widget.onTap();
       },
       child: Padding(
