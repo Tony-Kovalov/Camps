@@ -1,5 +1,6 @@
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/additional_res2.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/anout_camp_2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/camp_song.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
@@ -36,6 +37,9 @@ class MyHomePageContent2 extends StatelessWidget {
           children: [
             const SizedBox(height: 16),
             CampCard(
+                onTap: () {
+                  open(context, const AboutCamp2Page());
+                },
                 title: "Дивитись про програму \"Гра vs Ти\"",
                 imgAsset: "images/play_rounded_new_ligh.png"),
             const SizedBox(height: 16),
