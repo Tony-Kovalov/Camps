@@ -76,7 +76,7 @@ class ChooseProgram extends StatelessWidget {
               },
               title:
               "Програма денного табору \"Гра vs Ти\"",
-              imgAsset: "images/logo.png",
+              imgAsset: "images/logo_2_0.jpg",
             ),
           ],
         ),

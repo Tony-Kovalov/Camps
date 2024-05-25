@@ -1,4 +1,5 @@
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/additional_res2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/camp_song.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
@@ -57,17 +58,22 @@ class MyHomePageContent2 extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       CampCard3(
+                        onTap: () {
+                          open(
+                            context,
+                            InfoPage1Bloc(
+                              title: "Батьківський контроль",
+                              texts: GeneralRepo.parentControlTexts,
+                              images: GeneralRepo.parentControlImages,
+                            ),
+                          );
+                        },
                         title: "Батьківський контроль",
                         imgAsset: "images/rocket.png",
                       ),
                       const SizedBox(height: 16),
                       CampCard2(
-                        title: "Організаційні моменти роботи у таборі",
-                        imgAsset: "images/management.png",
-                      ),
-                      const SizedBox(height: 16),
-                      CampCard3(
-                        onTap: (){
+                        onTap: () {
                           open(
                             context,
                             InfoPage1Bloc(
@@ -100,18 +106,16 @@ class MyHomePageContent2 extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       CampCard2(
-                        title: "Робота із соцмережами",
-                        imgAsset: "images/social.png",
-                      ),
-                      const SizedBox(height: 16),
-                      CampCard3(
+                        onTap: () {
+                          open(context, const AdditionalRes2());
+                        },
                         title: "Додаткові джерела",
                         imgAsset: "images/additional_sources.png",
                       ),
                       const SizedBox(height: 16),
-                      CampCard2(
+                      CampCard3(
                         onTap: () {
-                          open(context, CampSong());
+                          open(context, const CampSong());
                         },
                         title: "Табірна пісня",
                         imgAsset: "images/music.jpg",

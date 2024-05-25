@@ -29,6 +29,13 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
+        title: Text(
+          "Програма табору",
+          style: TextStyle(
+            fontFamily: 'Inter',
+            fontSize: 23,
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -48,14 +55,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text(
-                  "Програма табору",
-                  style: TextStyle(
-                    fontFamily: 'Inter',
-                    fontSize: 23,
-                  ),
-                ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 16),
                 ExpandableMenu2(
                   title: "День 1",
                   children: [
