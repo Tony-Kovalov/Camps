@@ -97,17 +97,6 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                     const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 45),
                         child: Divider(color: Color(0x190d08ff))),
-                    const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 45),
-                      child: Text(
-                        "Налаштування",
-                        style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
-                      ),
-                    ),
-                    const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 45),
-                        child: Divider(color: Color(0x190d08ff))),
                     GestureDetector(
                       onTap: () {
                         open(context, const AboutUsPage());
@@ -137,6 +126,17 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                         ),
                       ),
                     ),
+                    // const Padding(
+                    //     padding: EdgeInsets.symmetric(horizontal: 45),
+                    //     child: Divider(color: Color(0x190d08ff))),
+                    // const Padding(
+                    //   padding:
+                    //   EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                    //   child: Text(
+                    //     "Налаштування",
+                    //     style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
+                    //   ),
+                    // ),
                     const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 45),
                         child: Divider(color: Color(0x190d08ff))),
