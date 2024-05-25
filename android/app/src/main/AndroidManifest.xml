@@ -4,9 +4,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
    <application
-        android:label="5/4 Camp program"
+        android:label="Daily camps"
         android:name="${applicationName}"
-        android:icon="@mipmap/app_icon"
+        android:icon="@mipmap/app_icon_2"
        android:roundIcon="@mipmap/app_icon_round">
 
 
