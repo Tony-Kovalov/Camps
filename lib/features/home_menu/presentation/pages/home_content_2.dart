@@ -43,92 +43,98 @@ class MyHomePageContent2 extends StatelessWidget {
                 title: "Дивитись про програму \"Гра vs Ти\"",
                 imgAsset: "images/play_rounded_new_ligh.png"),
             const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CampCard2(
-                        onTap: () {
-                          open(context, const ProgramMenuPage2());
-                        },
-                        title: "Програма табору",
-                        imgAsset: "images/notepad.png",
-                      ),
-                      const SizedBox(height: 16),
-                      CampCard3(
-                        onTap: () {
-                          open(
-                            context,
-                            InfoPage1Bloc(
-                              title: "Батьківський контроль",
-                              texts: GeneralRepo.parentControlTexts,
-                              images: GeneralRepo.parentControlImages,
-                            ),
-                          );
-                        },
-                        title: "Батьківський контроль",
-                        imgAsset: "images/rocket.png",
-                      ),
-                      const SizedBox(height: 16),
-                      CampCard2(
-                        onTap: () {
-                          open(
-                            context,
-                            InfoPage1Bloc(
-                              title: "Система заохочення",
-                              texts: GeneralRepo.rewardSystemTexts,
-                              images: GeneralRepo.rewardSystemImages,
-                            ),
-                          );
-                        },
-                        title: "Система заохочення - аватар",
-                        imgAsset: "images/avatar.png",
-                      ),
-                      const SizedBox(height: 16),
-                    ],
+            IntrinsicHeight(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CampCard2(
+                            onTap: () {
+                              open(context, const ProgramMenuPage2());
+                            },
+                            title: "Програма табору",
+                            imgAsset: "images/notepad.png",
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        CampCard3(
+                          onTap: () {
+                            open(
+                              context,
+                              InfoPage1Bloc(
+                                title: "Батьківський контроль",
+                                texts: GeneralRepo.parentControlTexts,
+                                images: GeneralRepo.parentControlImages,
+                              ),
+                            );
+                          },
+                          title: "Батьківський контроль",
+                          imgAsset: "images/rocket.png",
+                        ),
+                        const SizedBox(height: 16),
+                        CampCard2(
+                          onTap: () {
+                            open(
+                              context,
+                              InfoPage1Bloc(
+                                title: "Система заохочення",
+                                texts: GeneralRepo.rewardSystemTexts,
+                                images: GeneralRepo.rewardSystemImages,
+                              ),
+                            );
+                          },
+                          title: "Система заохочення - аватар",
+                          imgAsset: "images/avatar.png",
+                        ),
+                        const SizedBox(height: 16),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  flex: 1,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CampCard3(
-                        onTap: () {
-                          open(context, const DesignPage2());
-                        },
-                        title: "Дизайн табору",
-                        imgAsset: "images/design.png",
-                      ),
-                      const SizedBox(height: 16),
-                      CampCard2(
-                        onTap: () {
-                          open(context, const AdditionalRes2());
-                        },
-                        title: "Додаткові джерела",
-                        imgAsset: "images/additional_sources.png",
-                      ),
-                      const SizedBox(height: 16),
-                      CampCard3(
-                        onTap: () {
-                          open(context, const CampSong());
-                        },
-                        title: "Табірна пісня",
-                        imgAsset: "images/music.jpg",
-                      ),
-                      const SizedBox(height: 16),
-                    ],
+                  const SizedBox(width: 16),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CampCard3(
+                          onTap: () {
+                            open(context, const DesignPage2());
+                          },
+                          title: "Дизайн табору",
+                          imgAsset: "images/design.png",
+                        ),
+                        const SizedBox(height: 16),
+                        Expanded(
+                          child: CampCard2(
+                            onTap: () {
+                              open(context, const AdditionalRes2());
+                            },
+                            title: "Додаткові джерела",
+                            imgAsset: "images/additional_sources.png",
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        CampCard3(
+                          onTap: () {
+                            open(context, const CampSong());
+                          },
+                          title: "Табірна пісня",
+                          imgAsset: "images/music.jpg",
+                        ),
+                        const SizedBox(height: 16),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

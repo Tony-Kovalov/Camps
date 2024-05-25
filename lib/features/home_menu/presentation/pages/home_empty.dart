@@ -4,7 +4,6 @@ import 'package:camps_program/features/home_menu/presentation/pages/choose_progr
 import 'package:camps_program/features/home_menu/presentation/pages/contacts_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_cubit.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
-import 'package:camps_program/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
