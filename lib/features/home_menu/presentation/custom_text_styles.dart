@@ -7,6 +7,12 @@ class CustomTextStyle {
     fontFamily: "Inter",
   );
 
+  static const TextStyle inter16Bold = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    fontFamily: "Inter",
+  );
+
   static const TextStyle inter12Grey = TextStyle(
     fontSize: 12,
     fontFamily: "Inter",

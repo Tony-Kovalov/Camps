@@ -2,14 +2,9 @@ import 'package:camps_program/features/home_menu/data/additional_stations_2.dart
 import 'package:camps_program/features/home_menu/data/bible_lesson_repo.dart';
 import 'package:camps_program/features/home_menu/data/generalGamesRepo.dart';
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
-import 'package:camps_program/features/home_menu/data/history_channel_repo.dart';
-import 'package:camps_program/features/home_menu/data/scenes_repo.dart';
 import 'package:camps_program/features/home_menu/data/stations_repo.dart';
 import 'package:camps_program/features/home_menu/data/teens_info_2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/info_page_1bloc.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/scene_page.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/scene_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -502,11 +497,6 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                       ),
                     );
                   },
-                ),
-                const SizedBox(height: 10),
-                ExpandableMenu2(
-                  title: "Табірна пісня",
-                  children: [],
                 ),
                 const SizedBox(height: 10),
                 ExpandableMenu2(

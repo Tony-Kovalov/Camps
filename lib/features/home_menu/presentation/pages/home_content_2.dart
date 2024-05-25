@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/presentation/pages/camp_song.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card.dart';
@@ -102,6 +103,14 @@ class MyHomePageContent2 extends StatelessWidget {
                       CampCard3(
                         title: "Додаткові джерела",
                         imgAsset: "images/additional_sources.png",
+                      ),
+                      const SizedBox(height: 16),
+                      CampCard2(
+                        onTap: () {
+                          open(context, CampSong());
+                        },
+                        title: "Табірна пісня",
+                        imgAsset: "images/music.jpg",
                       ),
                       const SizedBox(height: 16),
                     ],
