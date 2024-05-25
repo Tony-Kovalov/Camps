@@ -1,5 +1,6 @@
 import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/data/shared_prefs.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/about_us.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/choose_program.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/contacts_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_cubit.dart';
@@ -43,111 +44,128 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: SharedPreferences.getInstance(),
-        builder: (BuildContext context,
-            AsyncSnapshot<SharedPreferences> snapshot,) {
-          if (snapshot.connectionState != ConnectionState.done) {
-            return Container();
-          }
-          updateCampNameFromPrefs(snapshot.data!);
-          return MultiBlocProvider(
-            providers: [
-              BlocProvider(
-                create: (context) => MainPageCubit(MainPageState(appState)),
-              )
-            ],
-            child: BlocBuilder<MainPageCubit, MainPageState>(
-              builder: (BuildContext context, state) {
-                return Scaffold(
-                  backgroundColor: AppColors.primaryWhite,
-                  drawer: NavigationDrawer(
-                    children: [
-                      const SizedBox(height: 60),
-                      Row(
-                        children: [
-                          const SizedBox(width: 45),
-                          Image.asset("images/daily_camps.png", height: 40),
-                          const SizedBox(width: 16),
-                          const Text(
-                            "DAILY\nCAMPS",
-                            style: TextStyle(
-                                color: Color(0xEE1B16FF),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                height: 1.0),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 60),
-                      GestureDetector(
-                        onTap: () {
-                          context.read<MainPageCubit>().openChooseProgramPage();
-                          Navigator.of(context).pop();
-                        },
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 45),
-                          child: Text(
-                            "Обрати програму",
-                            style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
-                          ),
+      future: SharedPreferences.getInstance(),
+      builder: (
+        BuildContext context,
+        AsyncSnapshot<SharedPreferences> snapshot,
+      ) {
+        if (snapshot.connectionState != ConnectionState.done) {
+          return Container();
+        }
+        updateCampNameFromPrefs(snapshot.data!);
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => MainPageCubit(MainPageState(appState)),
+            )
+          ],
+          child: BlocBuilder<MainPageCubit, MainPageState>(
+            builder: (BuildContext context, state) {
+              return Scaffold(
+                backgroundColor: AppColors.primaryWhite,
+                drawer: NavigationDrawer(
+                  children: [
+                    const SizedBox(height: 60),
+                    Row(
+                      children: [
+                        const SizedBox(width: 45),
+                        Image.asset("images/daily_camps.png", height: 40),
+                        const SizedBox(width: 16),
+                        const Text(
+                          "DAILY\nCAMPS",
+                          style: TextStyle(
+                              color: Color(0xEE1B16FF),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              height: 1.0),
                         ),
-                      ),
-                      const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 45),
-                          child: Divider(color: Color(0x190d08ff))),
-                      const Padding(
+                      ],
+                    ),
+                    const SizedBox(height: 60),
+                    GestureDetector(
+                      onTap: () {
+                        context.read<MainPageCubit>().openChooseProgramPage();
+                        Navigator.of(context).pop();
+                      },
+                      child: const Padding(
                         padding:
-                        EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 45),
                         child: Text(
-                          "Налаштування",
+                          "Обрати програму",
                           style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
                         ),
                       ),
-                      const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 45),
-                          child: Divider(color: Color(0x190d08ff))),
-                      const Padding(
+                    ),
+                    const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 45),
+                        child: Divider(color: Color(0x190d08ff))),
+                    const Padding(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                      child: Text(
+                        "Налаштування",
+                        style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
+                      ),
+                    ),
+                    const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 45),
+                        child: Divider(color: Color(0x190d08ff))),
+                    GestureDetector(
+                      onTap: () {
+                        open(context, const AboutUsPage());
+                      },
+                      child: const Padding(
                         padding:
-                        EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 45),
                         child: Text(
                           "Про нас",
                           style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
                         ),
                       ),
-                      const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 45),
-                          child: Divider(color: Color(0x190d08ff))),
-                      GestureDetector(
-                        onTap: () {
-                          context.read<MainPageCubit>().openContactsPage();
-                          Navigator.of(context).pop();
-                        },
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 45),
-                          child: Text(
-                            "Контакти",
-                            style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
-                          ),
+                    ),
+                    const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 45),
+                        child: Divider(color: Color(0x190d08ff))),
+                    GestureDetector(
+                      onTap: () {
+                        context.read<MainPageCubit>().openContactsPage();
+                        Navigator.of(context).pop();
+                      },
+                      child: const Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                        child: Text(
+                          "Контакти",
+                          style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
                         ),
                       ),
-                      const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 45),
-                          child: Divider(color: Color(0x190d08ff))),
-                    ],
+                    ),
+                    const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 45),
+                        child: Divider(color: Color(0x190d08ff))),
+                  ],
+                ),
+                appBar: AppBar(
+                  elevation: 0.0,
+                  centerTitle: true,
+                  title: getLogo(state),
+                  flexibleSpace: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
+                      ),
+                    ),
                   ),
-                  appBar: AppBar(
-                    elevation: 0.0,
-                    centerTitle: true,
-                    title: getLogo(state),
-                  ),
-                  body: getBody(state),
-                );
-              },
-            ),
-          );
-        });
+                ),
+                body: getBody(state),
+              );
+            },
+          ),
+        );
+      },
+    );
   }
 
   Widget getLogo(MainPageState state) {
@@ -183,5 +201,9 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         return Contacts();
         break;
     }
+  }
+
+  open(BuildContext context, Widget page) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
 }

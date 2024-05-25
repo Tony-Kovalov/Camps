@@ -27,7 +27,7 @@ class MyHomePageContent2 extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xfffefeff), Color(0xff2520FF)],
+          colors: [Color(0xfff7f6ff), Color(0xff5350ff)],
         ),
       ),
       child: SingleChildScrollView(

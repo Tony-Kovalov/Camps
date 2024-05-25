@@ -36,6 +36,15 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
             fontSize: 23,
           ),
         ),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
+            ),
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -44,7 +53,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xfffefeff), Color(0xff2520FF)],
+            colors: [Color(0xfff7f6ff), Color(0xff5350ff)],
           ),
         ),
         child: Padding(
