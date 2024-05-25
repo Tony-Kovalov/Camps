@@ -1,15 +1,12 @@
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/additional_res2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/anout_camp_2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/camp_song.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card2.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/camp_card3.dart';
 import 'info_page_1bloc.dart';
@@ -115,9 +112,9 @@ class MyHomePageContent2 extends StatelessWidget {
                         Expanded(
                           child: CampCard2(
                             onTap: () {
-                              open(context, const AdditionalRes2());
+                              _launchURL("https://t.me/+L9l995gD74U5ODZi");
                             },
-                            title: "Додаткові джерела",
+                            title: "Чат однодумців",
                             imgAsset: "images/additional_sources.png",
                           ),
                         ),
@@ -140,6 +137,13 @@ class MyHomePageContent2 extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
   }
 
   open(BuildContext context, Widget page) {

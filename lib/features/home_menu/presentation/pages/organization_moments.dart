@@ -33,7 +33,7 @@ class OrganizationMomentsPage extends StatelessWidget {
                 }),
                 const SizedBox(height: 20),
                 resMenuItem("Година для тінсів", () {
-                  open(context, PdfScreen(title: "Година для тінсів", url: "https://drive.google.com/file/d/18kxl3enmF_L0zxnHQbyn4jI7OqeZErW9/view?usp=sharing"));
+                  open(context, const PdfScreen(title: "Година для тінсів", url: "https://drive.google.com/file/d/18kxl3enmF_L0zxnHQbyn4jI7OqeZErW9/view?usp=sharing"));
                 }),
               ],
             ),

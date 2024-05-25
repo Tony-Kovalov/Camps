@@ -1,13 +1,12 @@
 import 'package:camps_program/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SecondMenuCard extends StatefulWidget {
-  SecondMenuCard({Key? key, required this.title, required this.onTap, this.isOpened = false}) : super(key: key);
+  const SecondMenuCard({Key? key, required this.title, required this.onTap, this.isOpened = false}) : super(key: key);
 
-  String title;
-  Function() onTap;
-  bool isOpened = false;
+  final String title;
+  final Function() onTap;
+  final bool isOpened;
 
   @override
   State<SecondMenuCard> createState() => _SecondMenuCardState();
@@ -15,7 +14,7 @@ class SecondMenuCard extends StatefulWidget {
 
 class _SecondMenuCardState extends State<SecondMenuCard> {
 
-  Color backgroundColor = Color(0xffffffff);
+  Color backgroundColor = const Color(0xffffffff);
 
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,9 @@
-import 'package:camps_program/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class DownloadButton2 extends StatelessWidget {
-  DownloadButton2({Key? key, this.onPressed}) : super(key: key);
+  const DownloadButton2({Key? key, this.onPressed}) : super(key: key);
 
-  Function? onPressed;
+  final Function? onPressed;
 
   @override
   Widget build(BuildContext context) {

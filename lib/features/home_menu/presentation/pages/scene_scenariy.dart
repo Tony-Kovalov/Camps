@@ -6,12 +6,12 @@ import 'package:url_launcher/url_launcher.dart';
 import '../widgets/download_button.dart';
 
 class SceneScenariy extends StatelessWidget {
-  SceneScenariy({Key? key, required this.text1, required this.text2, required this.urlOnDrive})
+  const SceneScenariy({Key? key, required this.text1, required this.text2, required this.urlOnDrive})
       : super(key: key);
 
-  String text1;
-  String text2;
-  String urlOnDrive;
+  final String text1;
+  final String text2;
+  final String urlOnDrive;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class SceneScenariy extends StatelessWidget {
       await launchUrl(uri);
     } else {
       // todo Tony
-      throw 'Could not launch ${urlOnDrive}';
+      throw 'Could not launch $urlOnDrive';
     }
   }
 }

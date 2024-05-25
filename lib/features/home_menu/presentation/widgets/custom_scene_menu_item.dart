@@ -2,11 +2,16 @@ import 'package:camps_program/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomSceneMenuItem extends StatelessWidget {
-  CustomSceneMenuItem({Key? key, required this.title, required this.onTap, this.isActive = false}) : super(key: key);
+  const CustomSceneMenuItem({
+    Key? key,
+    required this.title,
+    required this.onTap,
+    this.isActive = false,
+  }) : super(key: key);
 
-  String title;
-  Function() onTap;
-  bool isActive = false;
+  final String title;
+  final Function() onTap;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {

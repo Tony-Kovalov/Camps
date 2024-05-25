@@ -1,12 +1,11 @@
 import 'package:camps_program/features/home_menu/data/additional_stations_2.dart';
 import 'package:camps_program/features/home_menu/data/bible_lesson_repo.dart';
-import 'package:camps_program/features/home_menu/data/generalGamesRepo.dart';
+import 'package:camps_program/features/home_menu/data/general_games_repo.dart';
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/data/stations_repo.dart';
 import 'package:camps_program/features/home_menu/data/teens_info_2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/info_page_1bloc.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/simple_text_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -29,7 +28,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Програма табору",
           style: TextStyle(
             fontFamily: 'Inter',
@@ -58,7 +57,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
         ),
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
+          const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +76,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           InfoPage1Bloc(
                               title: "Сцена / Ранок 1",
                               texts: ScenesData2.firstMorningScene,
-                              images: []),
+                              images: null),
                         );
                       },
                     ),
@@ -90,7 +89,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           InfoPage1Bloc(
                             title: "Сцена / Вечір 1",
                             texts: ScenesData2.firstEveningScene,
-                            images: [],
+                            images: null,
                           ),
                         );
                       },
@@ -131,8 +130,8 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           context,
                           InfoPage1Bloc(
                             title: "Чат (біблійна зустріч)",
-                            texts: BibleLessonRepo.bible_seson1,
-                            images: [],
+                            texts: BibleLessonRepo.bibleLesson1,
+                            images: null,
                           ),
                         );
                       },
@@ -152,7 +151,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           InfoPage1Bloc(
                               title: "Сцена / Ранок 2",
                               texts: ScenesData2.secondMorningScene,
-                              images: []),
+                              images: null),
                         );
                       },
                     ),
@@ -165,7 +164,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           InfoPage1Bloc(
                               title: "Сцена / Вечір 2",
                               texts: ScenesData2.secondEveningScene,
-                              images: []),
+                              images: null),
                         );
                       },
                     ),
@@ -205,8 +204,8 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           context,
                           InfoPage1Bloc(
                             title: "Чат (біблійна зустріч)",
-                            texts: BibleLessonRepo.bible_seson2,
-                            images: [],
+                            texts: BibleLessonRepo.bibleLesson2,
+                            images: null,
                           ),
                         );
                       },
@@ -224,9 +223,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Ранок 3",
-                              texts: ScenesData2.thirdMorningScene,
-                              images: []),
+                            title: "Сцена / Ранок 3",
+                            texts: ScenesData2.thirdMorningScene,
+                            images: null,
+                          ),
                         );
                       },
                     ),
@@ -237,9 +237,10 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Вечір 3",
-                              texts: ScenesData2.thirdEveningScene,
-                              images: []),
+                            title: "Сцена / Вечір 3",
+                            texts: ScenesData2.thirdEveningScene,
+                            images: null,
+                          ),
                         );
                       },
                     ),
@@ -279,8 +280,8 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           context,
                           InfoPage1Bloc(
                             title: "Чат (біблійна зустріч)",
-                            texts: BibleLessonRepo.bible_seson3_texts,
-                            images: BibleLessonRepo.bible_seson3_images,
+                            texts: BibleLessonRepo.bibleLesson3Texts,
+                            images: BibleLessonRepo.bibleLesson3Images,
                           ),
                         );
                       },
@@ -298,9 +299,9 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Ранок 4`",
-                              texts: ScenesData2.fourthMorningScene,
-                              images: []),
+                            title: "Сцена / Ранок 4`",
+                            texts: ScenesData2.fourthMorningScene,
+                            images: null,),
                         );
                       },
                     ),
@@ -311,9 +312,9 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Вечір 4",
-                              texts: ScenesData2.fourthEveningScene,
-                              images: []),
+                            title: "Сцена / Вечір 4",
+                            texts: ScenesData2.fourthEveningScene,
+                            images: null,),
                         );
                       },
                     ),
@@ -352,9 +353,9 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                            title: "Чат (біблійна зустріч)",
-                            texts: BibleLessonRepo.bible_seson4_texts,
-                            images: [],
+                              title: "Чат (біблійна зустріч)",
+                              texts: BibleLessonRepo.bibleLesson4Texts,
+                              images: null,
                           ),
                         );
                       },
@@ -372,9 +373,9 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Ранок 5",
-                              texts: ScenesData2.fifthMorningScene,
-                              images: []),
+                            title: "Сцена / Ранок 5",
+                            texts: ScenesData2.fifthMorningScene,
+                            images: null,),
                         );
                       },
                     ),
@@ -385,9 +386,9 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                         open(
                           context,
                           InfoPage1Bloc(
-                              title: "Сцена / Вечір 5",
-                              texts: ScenesData2.fifthEveningScene,
-                              images: []),
+                            title: "Сцена / Вечір 5",
+                            texts: ScenesData2.fifthEveningScene,
+                            images: null,),
                         );
                       },
                     ),
@@ -427,8 +428,8 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           context,
                           InfoPage1Bloc(
                             title: "Чат (біблійна зустріч)",
-                            texts: BibleLessonRepo.bible_seson5_texts,
-                            images: BibleLessonRepo.bible_seson5_images,
+                            texts: BibleLessonRepo.bibleLesson5Texts,
+                            images: BibleLessonRepo.bibleLesson5Images,
                           ),
                         );
                       },
@@ -447,8 +448,8 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           context,
                           InfoPage1Bloc(
                             title: "Творчість",
-                            texts: AdditionalStations2Repo.art_texts,
-                            images: AdditionalStations2Repo.art_images,
+                            texts: AdditionalStations2Repo.artTexts,
+                            images: AdditionalStations2Repo.artImages,
                           ),
                         );
                       },
@@ -462,7 +463,7 @@ class _ProgramMenuPageState2 extends State<ProgramMenuPage2> {
                           InfoPage1Bloc(
                             title: "Ігри з парашутом",
                             texts: AdditionalStations2Repo.parachuteGamesTexts,
-                            images: [],
+                            images: null,
                           ),
                         );
                       },

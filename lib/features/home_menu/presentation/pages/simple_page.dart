@@ -5,9 +5,14 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SimplePage extends StatelessWidget {
-  SimplePage({Key? key, required this.title, required this.text, required this.urlOnDrive}) : super(key: key);
+  const SimplePage({
+    Key? key,
+    required this.title,
+    required this.text,
+    required this.urlOnDrive,
+  }) : super(key: key);
 
-  String title;
+  final String title;
   final String text;
   final String urlOnDrive;
 
@@ -35,7 +40,7 @@ class SimplePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              DownloadButton(onPressed: (){
+              DownloadButton(onPressed: () {
                 _launchURL();
               }),
             ],
@@ -44,14 +49,14 @@ class SimplePage extends StatelessWidget {
       ),
     );
   }
-  
+
   _launchURL() async {
     final uri = Uri.parse(urlOnDrive);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
-    } else { // todo Tony
+    } else {
+      // todo Tony
       throw 'Could not launch $urlOnDrive';
     }
   }
-  
 }

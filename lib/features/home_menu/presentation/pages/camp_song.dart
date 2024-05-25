@@ -1,8 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:camps_program/features/home_menu/presentation/custom_text_styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CampSong extends StatefulWidget {
@@ -14,8 +12,8 @@ class CampSong extends StatefulWidget {
 
 class _CampSongState extends State<CampSong> {
   bool _play = false;
-  Duration duration = Duration(seconds: 0);
-  Duration position = Duration(seconds: 0);
+  Duration duration = const Duration(seconds: 0);
+  Duration position = const Duration(seconds: 0);
   late AssetsAudioPlayer assetsAudioPlayer;
 
   @override
@@ -29,7 +27,7 @@ class _CampSongState extends State<CampSong> {
 
     //Listen to the current playing song
     assetsAudioPlayer.current.listen((playingAudio) {
-      duration = playingAudio?.audio.duration ?? Duration(seconds: 0);
+      duration = playingAudio?.audio.duration ?? const Duration(seconds: 0);
     });
     super.initState();
   }
@@ -38,7 +36,7 @@ class _CampSongState extends State<CampSong> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Табірна пісня"),
+        title: const Text("Табірна пісня"),
         elevation: 0,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -120,7 +118,7 @@ class _CampSongState extends State<CampSong> {
                     "Посилання на пісню:",
                     style: CustomTextStyle.inter16Bold,
                   ),
-                  LinkWidget(
+                  const LinkWidget(
                     url:
                     "https://drive.google.com/file/d/1BgYD42r7yRO1IRmLxv9GQZPA7iZeVDiZ/view",
                     title: "https://drive/реальний/герой",
@@ -130,7 +128,7 @@ class _CampSongState extends State<CampSong> {
                     "Презентація зі словами:",
                     style: CustomTextStyle.inter16Bold,
                   ),
-                  LinkWidget(
+                  const LinkWidget(
                     url:
                         "https://drive.google.com/file/d/1EdqwjUNbFzETo5dVd913Q4JYm9Dlv8rf/view?usp=sharing",
                     title: "https://drive/реальний/герой/слова",
@@ -140,7 +138,7 @@ class _CampSongState extends State<CampSong> {
                     "Тут ви можете знайти багато українського музичного контенту для табору, та відео з рухами до табірної пісні:",
                     style: CustomTextStyle.inter16Bold,
                   ),
-                  LinkWidget(title: "apps://telegram", url: "https://t.me/joinchat/AAAAAFXklGmUMlBJSpGuPw"),
+                  const LinkWidget(title: "apps://telegram", url: "https://t.me/joinchat/AAAAAFXklGmUMlBJSpGuPw"),
                 ],
               ),
             ),
@@ -152,14 +150,14 @@ class _CampSongState extends State<CampSong> {
 }
 
 class LinkWidget extends StatelessWidget {
-  LinkWidget({
+  const LinkWidget({
     super.key,
     required this.title,
     required this.url,
   });
 
-  String url;
-  String title;
+  final String url;
+  final String title;
 
   @override
   Widget build(BuildContext context) {

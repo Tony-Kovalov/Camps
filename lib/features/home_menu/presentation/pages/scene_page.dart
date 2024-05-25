@@ -7,7 +7,7 @@ import 'package:camps_program/features/home_menu/presentation/widgets/custom_sce
 import 'package:flutter/material.dart';
 
 class SceneTextPage extends StatefulWidget {
-  SceneTextPage({
+  const SceneTextPage({
     Key? key,
     required this.text1,
     required this.text2,
@@ -17,12 +17,12 @@ class SceneTextPage extends StatefulWidget {
     required this.videoFormulaUrl,
   }) : super(key: key);
 
-  String text1;
-  String text2;
-  String urlOnDrive;
-  String historyChannelText;
-  String historyChannelUrl;
-  String videoFormulaUrl;
+  final String text1;
+  final String text2;
+  final String urlOnDrive;
+  final String historyChannelText;
+  final String historyChannelUrl;
+  final String videoFormulaUrl;
 
   @override
   State<SceneTextPage> createState() => _SceneTextPageState();
@@ -113,7 +113,7 @@ class _SceneTextPageState extends State<SceneTextPage> {
     if (topItemsState[0] == true) {
       return SceneScenariy(text1: widget.text1, text2: widget.text2, urlOnDrive: widget.urlOnDrive);
     } else if (topItemsState[1] == true) {
-      return SceneActivities();
+      return const SceneActivities();
     } else if (topItemsState[2] == true) {
       return SceneHistoryChannelPage(text: widget.historyChannelText, urlOnDrive: widget.historyChannelUrl);
     } else {

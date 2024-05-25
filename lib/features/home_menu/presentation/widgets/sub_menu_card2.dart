@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../../app_colors.dart';
 
 class SubMenuCard2 extends StatelessWidget {
-  SubMenuCard2({Key? key, required this.title, required this.onTap}) : super(key: key);
+  const SubMenuCard2({Key? key, required this.title, required this.onTap}) : super(key: key);
 
-  String title;
-  Function() onTap;
+  final String title;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) {

@@ -1,17 +1,15 @@
 import 'package:camps_program/features/home_menu/data/shared_prefs.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../widgets/camp_card.dart';
 import 'main_page_cubit.dart';
 
 class ChooseProgram extends StatelessWidget {
-  ChooseProgram(this.mainPageState, {super.key});
+  const ChooseProgram(this.mainPageState, {super.key});
 
-  MainPageState mainPageState;
+  final MainPageState mainPageState;
 
   @override
   Widget build(BuildContext context) {

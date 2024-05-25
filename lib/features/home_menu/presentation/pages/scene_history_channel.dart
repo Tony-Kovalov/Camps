@@ -6,10 +6,10 @@ import '../../../../app_colors.dart';
 import '../widgets/download_button.dart';
 
 class SceneHistoryChannelPage extends StatelessWidget {
-  SceneHistoryChannelPage({Key? key, required this.text, required this.urlOnDrive}) : super(key: key);
+  const SceneHistoryChannelPage({Key? key, required this.text, required this.urlOnDrive}) : super(key: key);
 
-  String text;
-  String urlOnDrive;
+  final String text;
+  final String urlOnDrive;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class SceneHistoryChannelPage extends StatelessWidget {
       await launchUrl(uri);
     } else {
       // todo Tony
-      throw 'Could not launch ${urlOnDrive}';
+      throw 'Could not launch $urlOnDrive';
     }
   }
 }

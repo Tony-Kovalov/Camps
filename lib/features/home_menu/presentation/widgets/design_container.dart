@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DesignContainer extends StatelessWidget {
-  DesignContainer({Key? key, required this.child, this.height}) : super(key: key);
+  const DesignContainer({Key? key, required this.child, this.height}) : super(key: key);
 
-  Widget child;
-  double? height;
+  final Widget child;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {

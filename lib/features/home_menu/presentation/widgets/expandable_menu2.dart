@@ -2,10 +2,10 @@ import 'package:camps_program/features/home_menu/presentation/widgets/second_men
 import 'package:flutter/cupertino.dart';
 
 class ExpandableMenu2 extends StatefulWidget {
-  ExpandableMenu2({Key? key, required this.title, this.children}) : super(key: key);
+  const ExpandableMenu2({Key? key, required this.title, this.children}) : super(key: key);
 
-  String title;
-  List<Widget>? children;
+  final String title;
+  final List<Widget>? children;
 
   @override
   State<ExpandableMenu2> createState() => _ExpandableMenuState2();

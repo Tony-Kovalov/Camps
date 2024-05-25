@@ -5,10 +5,11 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PdfScreen extends StatefulWidget {
-  PdfScreen({Key? key, required this.title, required this.url}) : super(key: key);
+  const PdfScreen({Key? key, required this.title, required this.url})
+      : super(key: key);
 
-  String title;
-  String url;
+  final String title;
+  final String url;
 
   @override
   State<PdfScreen> createState() => _PdfScreenState();
@@ -67,12 +68,14 @@ class _PdfScreenState extends State<PdfScreen> {
         elevation: 0,
         actions: [
           GestureDetector(
-            child: const Padding(padding: EdgeInsets.symmetric(horizontal: 8), child: Center(child: Text("Назад"))),
+            child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8),
+                child: Center(child: Text("Назад"))),
             onTap: () async {
               if (await controller.canGoBack()) {
                 controller.goBack();
               } else {
-                Navigator.of(context).pop();
+                if (context.mounted) Navigator.of(context).pop();
               }
             },
           ),
@@ -93,7 +96,10 @@ class _PdfScreenState extends State<PdfScreen> {
         )),
       );
     } else if (!isReady) {
-      return const Center(child: CircularProgressIndicator(color: AppColors.primaryYellow,));
+      return const Center(
+          child: CircularProgressIndicator(
+        color: AppColors.primaryYellow,
+      ));
     } else {
       return WebViewWidget(controller: controller);
     }
@@ -103,7 +109,8 @@ class _PdfScreenState extends State<PdfScreen> {
     final uri = Uri.parse(activeUrl);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
-    } else { // todo Tony
+    } else {
+      // todo Tony
       throw 'Could not launch $activeUrl';
     }
   }

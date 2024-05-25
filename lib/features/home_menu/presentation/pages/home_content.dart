@@ -4,9 +4,7 @@ import 'package:camps_program/features/home_menu/presentation/pages/design_page.
 import 'package:camps_program/features/home_menu/presentation/pages/organization_moments.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/pdf_screen.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/card.dart';
 import '../widgets/yellow_long_card.dart';
@@ -24,7 +22,7 @@ class MyHomePageContent extends StatelessWidget {
             YellowLongCard(
               title: "ПРО ТАБІР",
               onTap: () {
-                open(context, AboutCampPage());
+                open(context, const AboutCampPage());
               },
             ),
             const SizedBox(height: 14),
@@ -35,7 +33,7 @@ class MyHomePageContent extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ProgramMenuPage()),
+                      MaterialPageRoute(builder: (context) => const ProgramMenuPage()),
                     );
                   },
                 ),
@@ -57,14 +55,14 @@ class MyHomePageContent extends StatelessWidget {
                 MainCard(
                   title: 'фішки\nднів',
                   onTap: () {
-                    open(context,  PdfScreen(title: "Фішки днів", url: "https://drive.google.com/file/d/1AYqM1JHWAUQsACaCeMgHBxOodwDZgr3h/view?usp=sharing"));
+                    open(context,  const PdfScreen(title: "Фішки днів", url: "https://drive.google.com/file/d/1AYqM1JHWAUQsACaCeMgHBxOodwDZgr3h/view?usp=sharing"));
                   },
                 ),
                 const SizedBox(width: 14),
                 MainCard(
                   title: 'робота зі\nсоцмережами',
                   onTap: () {
-                    open(context, PdfScreen(title: "Робота зі соцмережами", url: "https://drive.google.com/file/d/1pxKqE1VHasEvbR0_6DPWR8sSjn-m1rKX/view?usp=sharing"));
+                    open(context, const PdfScreen(title: "Робота зі соцмережами", url: "https://drive.google.com/file/d/1pxKqE1VHasEvbR0_6DPWR8sSjn-m1rKX/view?usp=sharing"));
                   },
                 ),
               ],
@@ -96,14 +94,5 @@ class MyHomePageContent extends StatelessWidget {
 
   open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
-  }
-
-  _launchURL(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } else { // todo Tony
-      throw 'Could not launch $url';
-    }
   }
 }

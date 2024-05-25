@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/second_menu_card2.dart';
@@ -13,7 +10,7 @@ class AdditionalRes2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Додаткові джерела"),
+        title: const Text("Додаткові джерела"),
         elevation: 0,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -43,7 +40,7 @@ class AdditionalRes2 extends StatelessWidget {
             children: [
               const SizedBox(height: 16),
               SecondMenuCard2(
-                title: "Телеграм чат для служителів клубів",
+                title: "Телеграм канал “Християнські клуби",
                 isOpenEffectEnabled: false,
                 onTap: () {
                   _launchURL("https://t.me/christianclubs");

@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Contacts extends StatelessWidget {
+  const Contacts({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,8 +44,8 @@ class Contacts extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Text(
-              "Телеграм канал \“Християнські клуби\”",
+            child: const Text(
+              "Телеграм канал “Християнські клуби”",
               style: TextStyle(
                 fontFamily: 'Inter',
                 fontSize: 16,

@@ -48,9 +48,12 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             text2: ScenesData().firstEveningScene,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1qZXM00OEwT7qBTWKWQz5bGtRxMBUaZ01/view?usp=share_link",
-                            historyChannelText: HistoryChannelRepo().historyChannel1,
-                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                            videoFormulaUrl: "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
+                            historyChannelText:
+                                HistoryChannelRepo().historyChannel1,
+                            historyChannelUrl:
+                                "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl:
+                                "https://www.youtube.com/watch?v=pbxuRwBzseg&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -60,7 +63,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 10-14",
                               url:
                                   "https://drive.google.com/file/d/1qPl_6Vn8yDo5wwRwZEhhKf4Hw1nUxf9d/view?usp=sharing"));
@@ -72,7 +75,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 6-9",
                               url:
                                   "https://drive.google.com/file/d/1U7VLcNOz7HPLCOtjqZhctFF4HSGZASS9/view?usp=sharing"));
@@ -84,10 +87,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Мальовничими куточками України",
                               url:
-                              "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1TLFp2qyTEGq8kpQgL-0uY4HybrIxYBLH/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -121,9 +124,12 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             text2: ScenesData().secondEveningScene,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/17zlHZxCRwQ39kPon4CfiYkgz-5qREOiD/view?usp=share_link",
-                            historyChannelText: HistoryChannelRepo().historyChannel2,
-                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                            videoFormulaUrl: "https://www.youtube.com/watch?v=nc8WRGdH6Iw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=2&ab_channel=KoloDruzivLviv",
+                            historyChannelText:
+                                HistoryChannelRepo().historyChannel2,
+                            historyChannelUrl:
+                                "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl:
+                                "https://www.youtube.com/watch?v=nc8WRGdH6Iw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=2&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -133,7 +139,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 10-14",
                               url:
                                   "https://drive.google.com/file/d/1FY2n8IbFWjJsgOuOPWG7d1iigIxxtrtO/view?usp=sharing"));
@@ -145,7 +151,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 6-9",
                               url:
                                   "https://drive.google.com/file/d/1rCV5g3NlnqE_Te1gUah2qltiFaQME0fo/view?usp=sharing"));
@@ -157,10 +163,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Мальовничими куточками України",
                               url:
-                              "https://drive.google.com/file/d/1HHZaltswvHHcTsFO7rRbzao5dyp2vUT7/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1HHZaltswvHHcTsFO7rRbzao5dyp2vUT7/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -194,9 +200,12 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             text2: ScenesData().thirdEveningScene,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1ioKB1IyXUjKsZRFQ8J4YY0Rtde23Xo0w/view?usp=share_link",
-                            historyChannelText: HistoryChannelRepo().historyChannel3,
-                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                            videoFormulaUrl: "https://www.youtube.com/watch?v=pEbT85ZORqE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=3&ab_channel=KoloDruzivLviv",
+                            historyChannelText:
+                                HistoryChannelRepo().historyChannel3,
+                            historyChannelUrl:
+                                "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl:
+                                "https://www.youtube.com/watch?v=pEbT85ZORqE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=3&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -206,10 +215,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 6-9",
                               url:
-                              "https://drive.google.com/file/d/1QZuVPXiiAkis3si15E33_RIssk_qMbml/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1QZuVPXiiAkis3si15E33_RIssk_qMbml/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -218,10 +227,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Мальовничими куточками України",
                               url:
-                              "https://drive.google.com/file/d/1kn3ZTXkkwBho-UbEY0MGovJJ-bu_IS3_/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1kn3ZTXkkwBho-UbEY0MGovJJ-bu_IS3_/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -230,7 +239,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Бізнес гра \"Життя 2.0\"",
                               url:
                                   "https://drive.google.com/file/d/1m2ZQ5WeofIDqxabCTFAAnsUV3-osCUUY/view?usp=sharing"));
@@ -267,9 +276,12 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             text2: ScenesData().fourthEveningScene,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1diZ7Sgch1X8NvSIfy8tYFxv5vRqXKv8-/view?usp=share_link",
-                            historyChannelText: HistoryChannelRepo().historyChannel4,
-                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                            videoFormulaUrl: "https://www.youtube.com/watch?v=SsvQO5YvHgE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=4&ab_channel=KoloDruzivLviv",
+                            historyChannelText:
+                                HistoryChannelRepo().historyChannel4,
+                            historyChannelUrl:
+                                "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl:
+                                "https://www.youtube.com/watch?v=SsvQO5YvHgE&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=4&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -279,10 +291,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 6-9",
                               url:
-                              "https://drive.google.com/file/d/1ycEXvLX1eY_283loAt_YwZFkNJQ4XSFB/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1ycEXvLX1eY_283loAt_YwZFkNJQ4XSFB/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -291,10 +303,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Мальовничими куточками України",
                               url:
-                              "https://drive.google.com/file/d/1caZFFJv7lFmzV2WWj101pk6xZHjhMEsT/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1caZFFJv7lFmzV2WWj101pk6xZHjhMEsT/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -303,7 +315,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Квест \"Шлях\"",
                               url:
                                   "https://drive.google.com/file/d/1Y7ZDcNdm46hMRhvl87yJwz8udSyVKjWu/view?usp=sharing"));
@@ -329,7 +341,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Турнір",
                               url:
                                   "https://drive.google.com/file/d/1sMm-7MR0IbZb91DBqOyzfXaZeABHsO5g/view?usp=sharing"));
@@ -352,9 +364,12 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                             text2: ScenesData().fifthEveningScene,
                             urlOnDrive:
                                 "https://drive.google.com/file/d/1d754tigY0M2PIAd23T_zvo_qQE88UgJq/view?usp=share_link",
-                            historyChannelText: HistoryChannelRepo().historyChannel5,
-                            historyChannelUrl: "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
-                            videoFormulaUrl: "https://www.youtube.com/watch?v=cSet8HcZOMw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=5&ab_channel=KoloDruzivLviv",
+                            historyChannelText:
+                                HistoryChannelRepo().historyChannel5,
+                            historyChannelUrl:
+                                "https://drive.google.com/file/d/14cfEUrsewAJuq2fwaB473kpDy5BG-xGI/view?usp=sharing",
+                            videoFormulaUrl:
+                                "https://www.youtube.com/watch?v=cSet8HcZOMw&list=PLXJIzqdCb1er8eKzutTVG5MdZpmlUh1uy&index=5&ab_channel=KoloDruzivLviv",
                           ));
                     },
                   ),
@@ -364,10 +379,10 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Станції 6-9",
                               url:
-                              "https://drive.google.com/file/d/1g30fd3X6OJFNSpeBNJ6HQGVzYNTH8O4b/view?usp=sharing"));
+                                  "https://drive.google.com/file/d/1g30fd3X6OJFNSpeBNJ6HQGVzYNTH8O4b/view?usp=sharing"));
                     },
                   ),
                   const SizedBox(height: 5),
@@ -376,7 +391,7 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                     onTap: () {
                       open(
                           context,
-                          PdfScreen(
+                          const PdfScreen(
                               title: "Загальнотабірна гра",
                               url:
                                   "https://drive.google.com/file/d/1T9yu5fGowVsDLrUiEWrrYyWiiy--otRe/view?usp=sharing"));
@@ -400,7 +415,14 @@ class _ProgramMenuPageState extends State<ProgramMenuPage> {
                   SubMenuCard(
                     title: "Виступ для батьків",
                     onTap: () {
-                       open(context, SimplePage(title: "Виступ для батьків", text: GeneralRepo().textForParent, urlOnDrive: "https://drive.google.com/file/d/1C8HW9xbXcINYkYhkZoBVBrOh_LM_DPnX/view?usp=sharing",));
+                      open(
+                          context,
+                          SimplePage(
+                            title: "Виступ для батьків",
+                            text: GeneralRepo().textForParent,
+                            urlOnDrive:
+                                "https://drive.google.com/file/d/1C8HW9xbXcINYkYhkZoBVBrOh_LM_DPnX/view?usp=sharing",
+                          ));
                     },
                   ),
                 ],

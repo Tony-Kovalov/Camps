@@ -1,5 +1,5 @@
 class AdditionalStations2Repo {
-  static List<String> art_texts = [
+  static List<String> artTexts = [
     '''
     <h3>1. Термомозаїка</h3>
     ''',
@@ -111,7 +111,7 @@ class AdditionalStations2Repo {
     ''',
   ];
 
-  static List<String> art_images = [
+  static List<String> artImages = [
     "images/art_1.png",
     "images/art_2.png",
     "images/art_3.png",

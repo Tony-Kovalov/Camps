@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class SceneActivities extends StatelessWidget {
-  SceneActivities({Key? key}) : super(key: key);
+  const SceneActivities({Key? key}) : super(key: key);
 
-  String text1 = '''
+  final String text1 = '''
   <strong>ЛЬОДОКОЛИ</strong><br>
   <br>
   <b>1 льодокол</b><br>
@@ -37,7 +37,7 @@ class SceneActivities extends StatelessWidget {
   <a href="https://docs.google.com/presentation/d/1MAgTOKKniGh3o85IEZPED43xf0aRb4EN/edit?usp=sharing&ouid=104781512787198930141&rtpof=true&sd=true" style="background-color: white; color: blue">https://docs.google.com/presentation/d/1MAgTOKKniGh3o85IEZPED43xf0aRb4EN/edit?usp=sharing&ouid=104781512787198930141&rtpof=true&sd=true</a><br>
   ''';
 
-  String text2 = '''
+  final String text2 = '''
   <strong>ІМПРОВІЗАЦІЯ ШОУ</strong><br>
   <br>
   Сенс шоу(гри) полягає в тому, що учасники імпровізації будуть спілкуватися словами, які починаються на одну і ту саму букву. Загадувати букви для учасників може ведучий, а можуть самі учасники загадати друг другу букву.<br>

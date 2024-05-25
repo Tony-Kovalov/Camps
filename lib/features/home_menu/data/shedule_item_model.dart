@@ -1,7 +1,3 @@
-import 'dart:convert';
-
-import 'package:flutter/material.dart';
-
 class SheduleItemModel {
   int hours;
   int minutes;

@@ -1,10 +1,7 @@
-import 'package:camps_program/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SecondMenuCard2 extends StatefulWidget {
-  SecondMenuCard2({
+  const SecondMenuCard2({
     Key? key,
     required this.title,
     required this.onTap,
@@ -13,11 +10,11 @@ class SecondMenuCard2 extends StatefulWidget {
     this.isVisibleIcon = true,
   }) : super(key: key);
 
-  String title;
-  Function() onTap;
-  bool isOpened = false;
-  bool isOpenEffectEnabled = true;
-  bool isVisibleIcon = true;
+  final String title;
+  final Function() onTap;
+  final bool isOpened;
+  final bool isOpenEffectEnabled;
+  final bool isVisibleIcon;
 
   @override
   State<SecondMenuCard2> createState() => _SecondMenuCardState2();

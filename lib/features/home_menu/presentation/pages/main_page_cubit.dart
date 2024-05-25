@@ -1,6 +1,5 @@
-
-import 'package:bloc/bloc.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainPageCubit extends Cubit<MainPageState> {
   MainPageCubit(super.initialState);
@@ -16,9 +15,4 @@ class MainPageCubit extends Cubit<MainPageState> {
   void openGameVsYouCampPage() {
     emit(const MainPageState(AppState.gameVsYou));
   }
-
-  void openContactsPage() {
-    emit(const MainPageState(AppState.contacts));
-  }
-
 }

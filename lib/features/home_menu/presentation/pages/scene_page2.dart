@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import '../widgets/custom_scene_menu_item2.dart';
 
 class SceneTextPage2 extends StatefulWidget {
-  SceneTextPage2({
+  const SceneTextPage2({
     Key? key,
     required this.text1,
     required this.text2,
@@ -17,12 +17,12 @@ class SceneTextPage2 extends StatefulWidget {
     required this.videoFormulaUrl,
   }) : super(key: key);
 
-  String text1;
-  String text2;
-  String urlOnDrive;
-  String historyChannelText;
-  String historyChannelUrl;
-  String videoFormulaUrl;
+  final String text1;
+  final String text2;
+  final String urlOnDrive;
+  final String historyChannelText;
+  final String historyChannelUrl;
+  final String videoFormulaUrl;
 
   @override
   State<SceneTextPage2> createState() => _SceneTextPageState2();
@@ -120,7 +120,7 @@ class _SceneTextPageState2 extends State<SceneTextPage2> {
           text2: widget.text2,
           urlOnDrive: widget.urlOnDrive);
     } else if (topItemsState[1] == true) {
-      return SceneActivities();
+      return const SceneActivities();
     } else if (topItemsState[2] == true) {
       return SceneHistoryChannelPage(
           text: widget.historyChannelText,

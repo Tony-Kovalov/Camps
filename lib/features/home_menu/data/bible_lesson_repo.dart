@@ -1,5 +1,5 @@
 class BibleLessonRepo {
-  static List<String> bible_seson1 = [
+  static List<String> bibleLesson1 = [
     '''
     <p><b>ЧАТ – час активних теревенів про Головне</br>
     (в народі називають «уроком»)</b></p>
@@ -108,7 +108,7 @@ class BibleLessonRepo {
     ''',
   ];
 
-  static List<String> bible_seson2 = [
+  static List<String> bibleLesson2 = [
     '''
     <h3>Бог знає тебе по імені</h3>
     <p><i>перевірити та обговорити домашнє завдання з ЧАТу (уроку) 1 та дати кристалики.</i></p>
@@ -195,7 +195,7 @@ class BibleLessonRepo {
     ''',
   ];
 
-  static List<String> bible_seson3_texts = [
+  static List<String> bibleLesson3Texts = [
     '''
     <h3>Розвиток навичок/ скілів</h3>
     </br>
@@ -324,12 +324,12 @@ class BibleLessonRepo {
     ''',
   ];
 
-  static List<String> bible_seson3_images = [
+  static List<String> bibleLesson3Images = [
     "images/lesson2_3d_1.png",
     "images/lesson2_3d_2.png",
   ];
 
-  static List<String> bible_seson4_texts = [
+  static List<String> bibleLesson4Texts = [
     '''
     <p><b>Обирай реальних друзів та змінюй з ними світ</b></p>
     <p><b>Основна думка:</b> важливо поставити в пріоритет реальну дружбу, а не онлайн. З друзями ти можеш змінити світ і найголовніше, що кожен може змінити світ свого друга. 4 друзів повністю змінили життя свого друга. Вони принесли його до Ісуса. Як сьогодні твої друзі змінюють твоє життя? Як ти змінюєш життя своїх друзів? Чи приводиш ти сьогодні своїх друзів до Ісуса?</p>
@@ -392,7 +392,7 @@ class BibleLessonRepo {
     ''',
   ];
 
-  static List<String> bible_seson5_texts = [
+  static List<String> bibleLesson5Texts = [
     '''
     <p><b>Основна думка/істина:</b></p>
     <p>Наслідки нашого вибору і як вони впливають на нас і на інших людей. Завжди думай, що ти робиш, з ким ти дружиш, куди ходиш, бо все у житті має свої наслідки.</p>
@@ -473,7 +473,7 @@ class BibleLessonRepo {
     ''',
   ];
 
-  static List<String> bible_seson5_images = [
+  static List<String> bibleLesson5Images = [
     "images/lesson2_5d_1.png",
   ];
 }

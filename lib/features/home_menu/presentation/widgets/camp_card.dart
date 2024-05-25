@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CampCard extends StatelessWidget {
-  CampCard({
+  const CampCard({
     super.key,
     required this.title,
     required this.imgAsset,
@@ -11,7 +10,7 @@ class CampCard extends StatelessWidget {
 
   final String title;
   final String imgAsset;
-  Function? onTap;
+  final Function? onTap;
 
   @override
   Widget build(BuildContext context) {

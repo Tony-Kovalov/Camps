@@ -1,19 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class InfoPage1Bloc extends StatelessWidget {
-  InfoPage1Bloc({
+  const InfoPage1Bloc({
     Key? key,
     required this.title,
     required this.texts,
     required this.images,
   }) : super(key: key);
 
-  String title;
-  List<String> texts;
-  List<String> images;
+  final String title;
+  final List<String> texts;
+  final List<String>? images;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +66,7 @@ class InfoPage1Bloc extends StatelessWidget {
   List<Widget> compactTextAndImages() {
     List<Widget> list = [];
     int t = texts.length;
-    int i = images.length;
+    int i = images?.length ?? 0;
     while (t + i > 0) {
       if (t > 0) {
         list.add(HtmlWidget(texts[texts.length - t]));
@@ -76,7 +74,11 @@ class InfoPage1Bloc extends StatelessWidget {
         t--;
       }
       if (i > 0) {
-        list.add(Center(child: Image.asset(images[images.length - i])));
+        list.add(
+          Center(
+            child: Image.asset(images![(images?.length ?? 0) - i]),
+          ),
+        );
         list.add(const SizedBox(height: 10));
         i--;
       }

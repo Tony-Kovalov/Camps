@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../app_colors.dart';
 
 class CustomToggle extends StatefulWidget {
-  CustomToggle({Key? key, required this.onTap}) : super(key: key);
+  const CustomToggle({Key? key, required this.onTap}) : super(key: key);
 
-  Function(List<bool> isSelected) onTap;
+  final Function(List<bool> isSelected) onTap;
 
   @override
   State<CustomToggle> createState() => _CustomToggleState();

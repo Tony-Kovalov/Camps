@@ -2,16 +2,14 @@ import 'package:camps_program/app_colors.dart';
 import 'package:camps_program/features/home_menu/data/shared_prefs.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/about_us.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/choose_program.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/contacts_page.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_cubit.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/main_page_state.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'additional_res2.dart';
 import 'home_content.dart';
 import 'home_content_2.dart';
 
@@ -128,14 +126,13 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                         child: Divider(color: Color(0x190d08ff))),
                     GestureDetector(
                       onTap: () {
-                        context.read<MainPageCubit>().openContactsPage();
-                        Navigator.of(context).pop();
+                        open(context, const AdditionalRes2());
                       },
                       child: const Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 20, horizontal: 45),
                         child: Text(
-                          "Контакти",
+                          "Додаткові джерела",
                           style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
                         ),
                       ),
@@ -176,7 +173,7 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         semanticsLabel: 'Перемога',
       );
     } else if (state.appState == AppState.gameVsYou) {
-      return Text(
+      return const Text(
         "Гра vs Ти",
         style: TextStyle(
           fontFamily: 'Inter',
@@ -197,9 +194,6 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         return const MyHomePageContent();
       case AppState.gameVsYou:
         return const MyHomePageContent2();
-      case AppState.contacts:
-        return Contacts();
-        break;
     }
   }
 

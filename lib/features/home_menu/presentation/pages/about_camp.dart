@@ -128,7 +128,7 @@ class _AboutCampPageState extends State<AboutCampPage> {
                     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
                   },
                   player: player,
-                  builder: (BuildContext, Widget) {
+                  builder: (BuildContext context, Widget widget) {
                     return Column(
                       children: [
                         player,

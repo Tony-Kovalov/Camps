@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomSceneMenuItem2 extends StatelessWidget {
-  CustomSceneMenuItem2(
+  const CustomSceneMenuItem2(
       {Key? key,
       required this.title,
       required this.onTap,
       this.isActive = false})
       : super(key: key);
 
-  String title;
-  Function() onTap;
-  bool isActive = false;
+  final String title;
+  final Function() onTap;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class CustomSceneMenuItem2 extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: isActive ? Color(0xff0d08ff) : Colors.white,
+          color: isActive ? const Color(0xff0d08ff) : Colors.white,
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),

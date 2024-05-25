@@ -1,5 +1,3 @@
-import 'package:camps_program/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
@@ -105,7 +103,7 @@ class _AboutCamp2PageState extends State<AboutCamp2Page> {
                       overlays: SystemUiOverlay.values);
                 },
                 player: player,
-                builder: (BuildContext, Widget) {
+                builder: (BuildContext context, Widget widget) {
                   return Column(
                     children: [
                       player,

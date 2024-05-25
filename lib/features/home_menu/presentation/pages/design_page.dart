@@ -40,7 +40,7 @@ class DesignPage extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: GestureDetector(onTap: () {
                     _launchURL("https://t.me/merelyroks");
-                  }, child: Text("Telegram: merelyroks", style: TextStyle(decoration: TextDecoration.underline),)),
+                  }, child: const Text("Telegram: merelyroks", style: TextStyle(decoration: TextDecoration.underline),)),
                 ),
                 const SizedBox(height: 40),
                 const Text("ЛОГО", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
