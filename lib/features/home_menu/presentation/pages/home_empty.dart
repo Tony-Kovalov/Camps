@@ -45,10 +45,8 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: SharedPreferences.getInstance(),
-        builder: (
-          BuildContext context,
-          AsyncSnapshot<SharedPreferences> snapshot,
-        ) {
+        builder: (BuildContext context,
+            AsyncSnapshot<SharedPreferences> snapshot,) {
           if (snapshot.connectionState != ConnectionState.done) {
             return Container();
           }
@@ -101,7 +99,7 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                           child: Divider(color: Color(0x190d08ff))),
                       const Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                        EdgeInsets.symmetric(vertical: 20, horizontal: 45),
                         child: Text(
                           "Налаштування",
                           style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
@@ -112,7 +110,7 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                           child: Divider(color: Color(0x190d08ff))),
                       const Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 45),
+                        EdgeInsets.symmetric(vertical: 20, horizontal: 45),
                         child: Text(
                           "Про нас",
                           style: TextStyle(fontSize: 20, fontFamily: 'Inter'),
@@ -159,6 +157,15 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         "assets/logo.svg",
         height: 45,
         semanticsLabel: 'Перемога',
+      );
+    } else if (state.appState == AppState.gameVsYou) {
+      return Text(
+        "Гра vs Ти",
+        style: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 23,
+          fontWeight: FontWeight.bold,
+        ),
       );
     } else {
       return Container();

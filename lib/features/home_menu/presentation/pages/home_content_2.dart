@@ -1,3 +1,4 @@
+import 'package:camps_program/features/home_menu/data/general_repo.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/camp_song.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
@@ -9,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '../widgets/camp_card3.dart';
+import 'info_page_1bloc.dart';
 
 class MyHomePageContent2 extends StatelessWidget {
   const MyHomePageContent2({Key? key}) : super(key: key);
@@ -16,7 +18,7 @@ class MyHomePageContent2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 24, top: 16, right: 24),
+      padding: const EdgeInsets.only(left: 24, right: 24),
       width: double.infinity,
       height: double.infinity,
       decoration: const BoxDecoration(
@@ -31,14 +33,6 @@ class MyHomePageContent2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Гра vs Ти",
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 23,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             const SizedBox(height: 16),
             CampCard(
                 title: "Дивитись про програму \"Гра vs Ти\"",
@@ -73,6 +67,16 @@ class MyHomePageContent2 extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       CampCard3(
+                        onTap: (){
+                          open(
+                            context,
+                            InfoPage1Bloc(
+                              title: "Система заохочення",
+                              texts: GeneralRepo.rewardSystemTexts,
+                              images: GeneralRepo.rewardSystemImages,
+                            ),
+                          );
+                        },
                         title: "Система заохочення - аватар",
                         imgAsset: "images/avatar.png",
                       ),
