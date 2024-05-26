@@ -29,7 +29,7 @@ class ChooseProgram extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 150),
+            const SizedBox(height: 100),
             RichText(
               text: const TextSpan(
                 style: TextStyle(
@@ -76,6 +76,7 @@ class ChooseProgram extends StatelessWidget {
               "Програма денного табору \"Гра vs Ти\"",
               imgAsset: "images/logo_2_0.jpg",
             ),
+            const SizedBox(height: 24),
           ],
         ),
       ),
