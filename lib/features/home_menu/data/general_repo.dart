@@ -160,7 +160,7 @@ class GeneralRepo {
     <p>Є певні Скіли (оберіть самостійно які) котрі дають змогу відразу потрапити в Скарбницю та вибрати приз.</p>
     <p>А ще є Скіли , які дають можливість отримати приз від Координатора , проте ніхто не знає що в тому пакунку.</p>
     <p><b>Скіли:</b></p>
-    <p><a href="https://file.notion.so/f/f/31739cbe-7c4d-4833-8c7b-6c38cfdf8283/6f99b973-2e56-4f1e-af89-75353bb53ef2/%D0%A1%D0%BA%D1%96%D0%BB%D0%B8.pdf?id=0b693886-172d-4d7f-94e0-b3355abbba83&table=block&spaceId=31739cbe-7c4d-4833-8c7b-6c38cfdf8283&expirationTimestamp=1716717600000&signature=zkrcefLDw73ErK9tMcexnxHhjGe_HciG2HFvHe9zZAA&downloadName=%D0%A1%D0%BA%D1%96%D0%BB%D0%B8.pdf">Посилання на ресурс</a></p>
+    <p><a href="https://drive.google.com/file/d/1bVjVNBLWxyg2Z6voNrLHwTnCJaRjY9Nk/view">Посилання на ресурс</a></p>
     <p><b>Аватар з аксесуарами:</b></p>
     ''',
     '''''',

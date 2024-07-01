@@ -70,7 +70,7 @@ class BibleLessonRepo {
     </br>
     <p><b>Таймлайн</b></p>
     <p>Надрукувати наступний файл, і кожен листок розрізати навпіл, і викладати на підлозі в процесі розповіді основної історії.</p>
-    <p><a href="https://file.notion.so/f/f/31739cbe-7c4d-4833-8c7b-6c38cfdf8283/613b11cf-c4fa-462c-a4f2-dae90604c3d1/%D0%A2%D0%B0%D0%B8%D0%BC%D0%BB%D0%B0%D0%B8%D0%BD.pdf?id=9ccf3fe4-f791-480e-a199-71d2ded3ecff&table=block&spaceId=31739cbe-7c4d-4833-8c7b-6c38cfdf8283&expirationTimestamp=1716631200000&signature=UsFdecNpYu8NC4jf2dqtXLRwoXPwUsyE_pzSNWrDTFU&downloadName=%D0%A2%D0%B0%D0%B8%CC%86%D0%BC%D0%BB%D0%B0%D0%B8%CC%86%D0%BD.pdf">Посилання</a></p>
+    <p><a href="https://drive.google.com/file/d/1-FXdcgaNqhPKGbTqIo6fCkp75yewceqI/view">Посилання</a></p>
     </br>
     <hr>
     </br>
