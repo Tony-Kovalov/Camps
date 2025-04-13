@@ -17,5 +17,6 @@ class SharedPrefs {
 enum CampName {
   fiveDivideFour,
   gameVsYou,
+  skyLand,
   unknown,
 }

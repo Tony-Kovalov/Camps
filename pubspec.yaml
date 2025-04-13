@@ -83,6 +83,7 @@ flutter:
     - images/logo.png
     - images/logo_big.png
     - images/logo_2_0.jpg
+    - images/logo3.png
     - images/badge.png
     - images/certificate.png
     - images/door_car.png
@@ -269,6 +270,54 @@ flutter:
     - images/reward_system_13.png
     - images/parent_control.png
     - images/go_play.png
+    - images/0.5x/paper_clip.png
+    - images/0.75x/paper_clip.png
+    - images/paper_clip.png
+    - images/1.5x/paper_clip.png
+    - images/2.0x/paper_clip.png
+    - images/3.0x/paper_clip.png
+    - images/4.0x/paper_clip.png
+    - images/0.5x/button_nail.png
+    - images/0.75x/button_nail.png
+    - images/button_nail.png
+    - images/2.0x/button_nail.png
+    - images/3.0x/button_nail.png
+    - images/4.0x/button_nail.png
+    - images/bell.png
+    - images/0.5x/bell.png
+    - images/0.75x/bell.png
+    - images/1.5x/bell.png
+    - images/2.0x/bell.png
+    - images/3.0x/bell.png
+    - images/4.0x/bell.png
+    - images/pencil.png
+    - images/0.5x/pencil.png
+    - images/0.75x/pencil.png
+    - images/1.5x/pencil.png
+    - images/2.0x/pencil.png
+    - images/3.0x/pencil.png
+    - images/4.0x/pencil.png
+    - images/gift.png
+    - images/0.5x/gift.png
+    - images/0.75x/gift.png
+    - images/1.5x/gift.png
+    - images/2.0x/gift.png
+    - images/3.0x/gift.png
+    - images/4.0x/gift.png
+    - images/bow.png
+    - images/0.5x/bow.png
+    - images/0.75x/bow.png
+    - images/1.5x/bow.png
+    - images/2.0x/bow.png
+    - images/3.0x/bow.png
+    - images/4.0x/bow.png
+    - images/horse.png
+    - images/0.5x/horse.png
+    - images/0.75x/horse.png
+    - images/1.5x/horse.png
+    - images/2.0x/horse.png
+    - images/3.0x/horse.png
+    - images/4.0x/horse.png
     #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg

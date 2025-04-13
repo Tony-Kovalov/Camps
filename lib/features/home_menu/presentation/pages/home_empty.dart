@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'additional_res2.dart';
 import 'home_content.dart';
 import 'home_content_2.dart';
+import 'home_content_3.dart';
 
 class MyHomeEmptyPage extends StatefulWidget {
   const MyHomeEmptyPage({Key? key}) : super(key: key);
@@ -147,12 +148,8 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                   centerTitle: true,
                   title: getLogo(state),
                   flexibleSpace: Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
-                      ),
+                    decoration: BoxDecoration(
+                      gradient: getLinearGradien(state),
                     ),
                   ),
                 ),
@@ -181,6 +178,15 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
           fontWeight: FontWeight.bold,
         ),
       );
+    } else if (state.appState == AppState.skyLand) {
+      return const Text(
+        "СкайLand",
+        style: TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 23,
+          fontWeight: FontWeight.bold,
+        ),
+      );
     } else {
       return Container();
     }
@@ -194,6 +200,37 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         return const MyHomePageContent();
       case AppState.gameVsYou:
         return const MyHomePageContent2();
+      case AppState.skyLand:
+        return const MyHomePageContent3();
+    }
+  }
+
+  LinearGradient getLinearGradien(MainPageState mainPageState) {
+    switch (mainPageState.appState) {
+      case AppState.chooseProgram:
+        return const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
+        );
+      case AppState.fiveDivideFourMenu:
+        return const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
+        );
+      case AppState.gameVsYou:
+        return const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
+        );
+      case AppState.skyLand:
+        return const LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: <Color>[Color(0xff8fc0ff), Color(0xffbae3ff)],
+        );
     }
   }
 

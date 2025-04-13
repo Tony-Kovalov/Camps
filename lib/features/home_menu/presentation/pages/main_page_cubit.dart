@@ -15,4 +15,8 @@ class MainPageCubit extends Cubit<MainPageState> {
   void openGameVsYouCampPage() {
     emit(const MainPageState(AppState.gameVsYou));
   }
+
+  void openSkyLandCampPage() {
+    emit(const MainPageState(AppState.skyLand));
+  }
 }

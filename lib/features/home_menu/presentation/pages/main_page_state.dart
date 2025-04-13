@@ -13,5 +13,6 @@ class MainPageState extends Equatable {
 enum AppState {
   fiveDivideFourMenu,
   gameVsYou,
+  skyLand,
   chooseProgram,
 }

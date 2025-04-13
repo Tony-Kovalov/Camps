@@ -77,6 +77,16 @@ class ChooseProgram extends StatelessWidget {
               imgAsset: "images/logo_2_0.jpg",
             ),
             const SizedBox(height: 24),
+            CampCard(
+              onTap: () {
+                SharedPrefs().setChosenCamp(CampName.skyLand);
+                context.read<MainPageCubit>().openSkyLandCampPage();
+              },
+              title:
+              "Програма денного табору \"СкайLand\"",
+              imgAsset: "images/logo3.png",
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       ),
