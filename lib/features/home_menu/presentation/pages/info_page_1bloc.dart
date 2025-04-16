@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
+enum PageTitleStyle { usual, underAppBar }
+
 class InfoPage1Bloc extends StatelessWidget {
   const InfoPage1Bloc({
     Key? key,
     required this.title,
     required this.texts,
     required this.images,
+    this.titleStyle = PageTitleStyle.usual,
   }) : super(key: key);
 
   final String title;
   final List<String> texts;
   final List<String>? images;
+  final PageTitleStyle titleStyle;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(titleStyle == PageTitleStyle.usual ? title : ""),
         elevation: 0,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -39,24 +43,42 @@ class InfoPage1Bloc extends StatelessWidget {
             colors: [Color(0xffa6a7ff), Color(0xff6c69ff)],
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 24),
-          child: Container(
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(32),
-                topRight: Radius.circular(32),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              if (titleStyle == PageTitleStyle.underAppBar)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              Padding(
+                padding: const EdgeInsets.only(top: 24),
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(32),
+                      topRight: Radius.circular(32),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: compactTextAndImages(),
+                  ),
+                ),
               ),
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: compactTextAndImages(),
-              ),
-            ),
+            ],
           ),
         ),
       ),

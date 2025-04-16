@@ -1,5 +1,7 @@
+import 'package:camps_program/features/home_menu/presentation/pages/program_menu3.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card4.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class MyHomePageContent3 extends StatelessWidget {
   const MyHomePageContent3({super.key});
@@ -32,7 +34,9 @@ class MyHomePageContent3 extends StatelessWidget {
             CampCard4(
               title: "Програма",
               imgAsset: "images/button_nail.png",
-              onTap: () {},// TODO
+              onTap: () {
+                open(context, const ProgramMenu3Page());
+              },
             ),
             const SizedBox(height: 24),
             CampCard4(
@@ -69,5 +73,9 @@ class MyHomePageContent3 extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  open(BuildContext context, Widget page) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
 }
