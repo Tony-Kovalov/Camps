@@ -320,6 +320,8 @@ flutter:
     - images/4.0x/horse.png
     - images/festival_img1.png
     - images/festival_img2.png
+    - images/open_key_img1.png
+    - images/open_key_img2.png
     #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg

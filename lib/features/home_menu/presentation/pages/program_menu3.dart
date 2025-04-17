@@ -88,6 +88,7 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                             texts: Program3Data.registrationTxts,
                             images: null,
                             titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
                           ),
                         );
                       },
@@ -103,6 +104,7 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                             texts: Program3Data.festivalTxts,
                             images: Program3Data.festivalImages,
                             titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
                           ),
                         );
                       },
@@ -111,26 +113,35 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                     SubMenuCard3(
                       title: "ОК (openkey)",
                       onTap: () {
-                        // open(
-                        //   context,
-                        //   InfoPage1Bloc(
-                        //       title: "Сцена / Ранок 1",
-                        //       texts: ScenesData2.firstMorningScene,
-                        //       images: null),
-                        // );
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "OK (openkey) день 1",
+                            texts: Program3Data.openKeyTxts,
+                            images: Program3Data.openKeyImages,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                            onDownloadTap: () {
+                              // TODO
+                            },
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
                     SubMenuCard3(
                       title: "Година для підлітків",
                       onTap: () {
-                        // open(
-                        //   context,
-                        //   InfoPage1Bloc(
-                        //       title: "Сцена / Ранок 1",
-                        //       texts: ScenesData2.firstMorningScene,
-                        //       images: null),
-                        // );
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "Бонусна година для підлітків",
+                            texts: Program3Data.bonusTeensTimeTxts,
+                            images: null,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
                       },
                     ),
                   ],
@@ -140,6 +151,14 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
           ),
         ),
       ),
+    );
+  }
+
+  LinearGradient getBgLinearGradient() {
+    return const LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: [Color(0xff8fc0ff), Color(0xffbae3ff)],
     );
   }
 
