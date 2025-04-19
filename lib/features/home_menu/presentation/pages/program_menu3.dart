@@ -3,8 +3,8 @@ import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_c
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/scenes_repo2.dart';
 import '../widgets/expandable_menu3.dart';
+import 'scene_page3.dart';
 import 'info_page_1bloc.dart';
 
 class ProgramMenu3Page extends StatefulWidget {
@@ -54,27 +54,30 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                     SubMenuCard3(
                       title: "Сцена Ранок",
                       onTap: () {
-                        // open(
-                        //   context,
-                        // InfoPage1Bloc(
-                        //   title: "Реєстрація",
-                        //   texts: Program3Data.registrationTxts,
-                        //   images: null,
-                        // ),
-                        // );
+                        open(
+                          context,
+                          ScenePage(
+                            title: "Сцена ранок",
+                            numOfDay: 1,
+                            partOfDay: PartOfDay.morning,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
                     SubMenuCard3(
                       title: "Сцена Вечір",
                       onTap: () {
-                        // open(
-                        //   context,
-                        //   InfoPage1Bloc(
-                        //       title: "Сцена / Ранок 1",
-                        //       texts: ScenesData2.firstMorningScene,
-                        //       images: null),
-                        // );
+                        open(
+                          context,
+                          ScenePage(
+                            title: "Сцена вечір",
+                            numOfDay: 1,
+                            partOfDay: PartOfDay.evening,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 5),
