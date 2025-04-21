@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 enum PageTitleStyle { usual, underAppBar }
@@ -63,19 +64,25 @@ class InfoPage1Bloc extends StatelessWidget {
                 ),
               Padding(
                 padding: const EdgeInsets.only(top: 24),
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(32),
-                      topRight: Radius.circular(32),
-                    ),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minHeight: MediaQuery.of(context).size.height - kToolbarHeight - 24,
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: compactTextAndImages(),
+                  child: IntrinsicHeight(
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(32),
+                          topRight: Radius.circular(32),
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: compactTextAndImages(),
+                      ),
+                    ),
                   ),
                 ),
               ),

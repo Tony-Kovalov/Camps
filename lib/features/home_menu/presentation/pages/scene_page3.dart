@@ -180,9 +180,9 @@ class _ScenePageState extends State<ScenePage> {
     switch (widget.numOfDay) {
       case 2:
         if (topButtonsState[1]) {
-          return [];
+          return Program3Data.day2RubricMorningTxt;
         } else {
-          return [];
+          return Program3Data.day2ScenariyMorningTxt;
         }
       case 3:
         if (topButtonsState[1]) {
@@ -215,9 +215,9 @@ class _ScenePageState extends State<ScenePage> {
     switch (widget.numOfDay) {
       case 2:
         if (topButtonsState[1]) {
-          return [];
+          return Program3Data.day2RubricEveningTxt;
         } else {
-          return [];
+          return Program3Data.day2ScenariyEveningTxt;
         }
       case 3:
         if (topButtonsState[1]) {
@@ -250,9 +250,9 @@ class _ScenePageState extends State<ScenePage> {
     switch (widget.numOfDay) {
       case 2:
         if (topButtonsState[1]) {
-          return [];
+          return []; // no images
         } else {
-          return [];
+          return Program3Data.day2ScenariyMorningImg;
         }
       case 3:
         if (topButtonsState[1]) {
@@ -285,9 +285,9 @@ class _ScenePageState extends State<ScenePage> {
     switch (widget.numOfDay) {
       case 2:
         if (topButtonsState[1]) {
-          return [];
+          return []; // no images
         } else {
-          return [];
+          return []; // no images
         }
       case 3:
         if (topButtonsState[1]) {
