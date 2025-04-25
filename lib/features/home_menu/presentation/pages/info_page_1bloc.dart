@@ -68,24 +68,22 @@ class InfoPage1Bloc extends StatelessWidget {
                   constraints: BoxConstraints(
                     minHeight: MediaQuery.of(context).size.height - kToolbarHeight - 24,
                   ),
-                  child: IntrinsicHeight(
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(32),
-                          topRight: Radius.circular(32),
-                        ),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(32),
+                        topRight: Radius.circular(32),
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: compactTextAndImages(),
-                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: compactTextAndImages(),
                     ),
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),
@@ -112,7 +110,7 @@ class InfoPage1Bloc extends StatelessWidget {
       if (i > 0) {
         list.add(
           Center(
-            child: Image.asset(images![(images?.length ?? 0) - i]),
+            child: Image.asset(images![images!.length - i]),
           ),
         );
         list.add(const SizedBox(height: 10));
@@ -123,18 +121,25 @@ class InfoPage1Bloc extends StatelessWidget {
   }
 
   Widget _getDownloadButton() {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Color(0xffaed8ff),
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
-      alignment: Alignment.center,
-      child: const Padding(
-        padding: EdgeInsets.all(16),
-        child: Text(
-          "Завантажити матеріал",
-          style: TextStyle(
-            fontSize: 16,
+    return GestureDetector(
+      onTap: () {
+        if (onDownloadTap != null) {
+          onDownloadTap!();
+        }
+      },
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Color(0xffaed8ff),
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+        ),
+        alignment: Alignment.center,
+        child: const Padding(
+          padding: EdgeInsets.all(16),
+          child: Text(
+            "Завантажити матеріал",
+            style: TextStyle(
+              fontSize: 16,
+            ),
           ),
         ),
       ),

@@ -192,9 +192,9 @@ class _ScenePageState extends State<ScenePage> {
         }
       case 4:
         if (topButtonsState[1]) {
-          return [];
+          return Program3Data.day4RubricMorningTxt;
         } else {
-          return [];
+          return Program3Data.day4ScenariyMorningTxt;
         }
       case 5:
         if (topButtonsState[1]) {
@@ -227,9 +227,9 @@ class _ScenePageState extends State<ScenePage> {
         }
       case 4:
         if (topButtonsState[1]) {
-          return [];
+          return Program3Data.day4RubricEveningTxt;
         } else {
-          return [];
+          return Program3Data.day4ScenariyEveningTxt;
         }
       case 5:
         if (topButtonsState[1]) {
@@ -262,9 +262,9 @@ class _ScenePageState extends State<ScenePage> {
         }
       case 4:
         if (topButtonsState[1]) {
-          return [];
+          return []; // no images
         } else {
-          return [];
+          return []; // no images
         }
       case 5:
         if (topButtonsState[1]) {
@@ -297,9 +297,9 @@ class _ScenePageState extends State<ScenePage> {
         }
       case 4:
         if (topButtonsState[1]) {
-          return [];
+          return Program3Data.day4RubricEveningImg;
         } else {
-          return [];
+          return []; // no images
         }
       case 5:
         if (topButtonsState[1]) {
