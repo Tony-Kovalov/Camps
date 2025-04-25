@@ -325,11 +325,19 @@ flutter:
     - images/open_key_img3.png
     - images/open_key_img4.png
     - images/open_key_img5.png
+    - images/open_key_img6.png
     - images/scenariy2_1.png
     - images/scenariy2_2.png
     - images/scenariy2_3.png
     - images/scenariy2_4.png
     - images/rubric_1.png
+    - images/daily_task1.png
+    - images/daily_task2.png
+    - images/daily_task3.png
+    - images/daily_task4.png
+    - images/daily_task5.png
+    - images/daily_task6.png
+    - images/daily_task7.png
     #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg

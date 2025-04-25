@@ -255,6 +255,128 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                     ),
                   ],
                 ),
+                const SizedBox(height: 16),
+                ExpandableMenu3(
+                  title: "День 3",
+                  children: [
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "Сцена Ранок",
+                      onTap: () {
+                        open(
+                          context,
+                          ScenePage(
+                            title: "Сцена ранок",
+                            numOfDay: 3,
+                            partOfDay: PartOfDay.morning,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "Сцена Вечір",
+                      onTap: () {
+                        open(
+                          context,
+                          ScenePage(
+                            title: "Сцена вечір",
+                            numOfDay: 3,
+                            partOfDay: PartOfDay.evening,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "Загальотабірна гра",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "Загальнотабірка “Прірва”",
+                            texts: Program3Data.generalGameTxtsDay3,
+                            images: null,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                            onDownloadTap: () {
+                              // TODO
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "Завдання дня",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "Завдання дня",
+                            texts: Program3Data.day3DailyTaskTxt,
+                            images: Program3Data.day3DailyTaskImg,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "ОК (openkey)",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "OK (openkey) день 3",
+                            texts: Program3Data.openKeyTxtsDay3,
+                            images: Program3Data.openKeyImagesDay3,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                            onDownloadTap: () {
+                              // TODO
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "Година для підлітків",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "Бонусна година для підлітків день 3",
+                            texts: Program3Data.bonusTeensTimeTxtsDay3,
+                            images: null,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    SubMenuCard3(
+                      title: "Вихід з табору",
+                      onTap: () {
+                        open(
+                          context,
+                          InfoPage1Bloc(
+                            title: "Вихід з табору",
+                            texts: Program3Data.leavingTheCampTxtsDay3,
+                            images: null,
+                            titleStyle: PageTitleStyle.underAppBar,
+                            bgLinearGradient: getBgLinearGradient(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
