@@ -326,12 +326,17 @@ flutter:
     - images/open_key_img4.png
     - images/open_key_img5.png
     - images/open_key_img6.png
+    - images/open_key_img7.png
+    - images/open_key_img8.png
     - images/scenariy2_1.png
     - images/scenariy2_2.png
     - images/scenariy2_3.png
     - images/scenariy2_4.png
     - images/rubric_1.png
     - images/rubric_2.png
+    - images/rubric_3.png
+    - images/rubric_4.png
+    - images/rubric_5.png
     - images/daily_task1.png
     - images/daily_task2.png
     - images/daily_task3.png
@@ -339,6 +344,15 @@ flutter:
     - images/daily_task5.png
     - images/daily_task6.png
     - images/daily_task7.png
+    - images/teambuild_3_1.png
+    - images/teambuild_3_2.png
+    - images/teambuild_3_3.png
+    - images/teambuild_3_4.png
+    - images/teambuild_3_5.png
+    - images/teambuild_3_6.png
+    - images/bonus_time1.png
+    - images/bonus_time2.png
+    - images/bonus_time3.png
     #    - pdfs/stations.pdf
     - assets/logo.svg
     - assets/settings.svg
