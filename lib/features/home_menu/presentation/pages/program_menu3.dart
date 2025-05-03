@@ -264,7 +264,7 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  // TODO
+                                  _launchURL("https://drive.google.com/file/d/1zoQuQkL_AzbJLM5J5MwNm1hbyzZMErso/view?usp=drive_link");
                                 },
                               ),
                             );
@@ -454,7 +454,7 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL(""); // todo
+                                  _launchURL("https://drive.google.com/file/d/1C8o3G3-lPVflrWzJfAwaizcswPoXoaot/view?usp=drive_link");
                                 },
                               ),
                             );
