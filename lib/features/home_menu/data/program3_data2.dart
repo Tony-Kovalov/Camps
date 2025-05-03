@@ -231,4 +231,101 @@ class Program3Data2 {
     "images/upgrade_kids3_19.png",
     "images/upgrade_kids3_20.png",
   ];
+
+  static List<String> decorationTxts = [
+    '''
+    <p>Гіперболізоване, обʼємне, велике, кольорове, блискуче.</p>
+    <h3>Фотозона</h3>
+    <p>Обʼємні букви (скай land)</p>
+    ''',
+    '''''',
+    '''''',
+    '''''',
+    '''''',
+    '''''',
+    '''
+    <h3>Сцена</h3>
+    <ul>
+      <li>банер</li>
+      <li>великі надувні фольговані кулі, різного розміру</li>
+      <li>величезні квіти</li>
+      <li>скарбниці, які відкриваються кожного дня</li>
+    </ul>
+    ''',
+    '''''',
+    '''''',
+    '''''',
+    '''''',
+    '''''',
+    '''
+    <h3>Станції</h3>
+    <p>Одна велика деталь яка позначає територію царства.</p>
+    ''',
+    '''
+    <h3>Вхід</h3>
+    <p>Або арка з фольговани  кульок.</p>
+    ''',
+    '''
+    <p>Так можна прикрасити територію, намалювавши там символи «Скайленду»</p>
+    ''',
+    '''
+    <h3>Різні локації</h3>
+    ''',
+    '''''',
+    '''''',
+    '''
+    <p>Так можна прикрасити локацію біля гуртків, там можна щодня висіти якусь фішку дня, чи вірш з ОК.</p>
+    ''',
+    '''''',
+  ];
+
+  static List<String> decorationImgs = [
+    "images/decoration3_1.png",
+    "images/decoration3_2.png",
+    "images/decoration3_3.png",
+    "images/decoration3_4.png",
+    "images/decoration3_5.png",
+    "images/decoration3_6.png",
+    "images/decoration3_7.png",
+    "images/decoration3_8.png",
+    "images/decoration3_9.png",
+    "images/decoration3_10.png",
+    "images/decoration3_11.png",
+    "images/decoration3_12.png",
+    "images/decoration3_13.png",
+    "images/decoration3_14.png",
+    "images/decoration3_15.png",
+    "images/decoration3_16.png",
+    "images/decoration3_17.png",
+    "images/decoration3_18.png",
+    "images/decoration3_19.png",
+    "images/decoration3_20.png",
+  ];
+
+  static String designAndPoligraphy = '''Тут ти знайдеш всі ресурси для оформлення візуальної частини табору.\nУ мініатюрах відображається тільки приклад дизайну, а самі робочі файли (для друку, та використання) ти можеш скачати нижче кожної мініатюри за посиланням.\nДеякі елементи завантажуються окремими файлами, а деякі архівом (бо містять в собі кілька окремих файлів).''';
+
+  static String logoText = "Містить логотип для заставки проектору, та окремі декоративні елементи на прозорому тлі.";
+
+  static String bannerText = "Містить файл для дурку pdf, tiff, та робочий файл Photoshop.";
+
+  static String tShirtText = "Містить векторний файл для дурку та приклад. В архіві три різних дизайни.";
+
+  static String badgeText = "Містить файл для друку pdf, в 2х розмірах. Залежно, які у вас тримачі, ви можете надрукувати необхідний вам розмір.";
+
+  static String flagText = "Містить файл для друку pdf, в розмірі 120см х 90см";
+
+  static String stickersText = "Містить два файли для друку pdf, розмір 4х4см. Один із стантартним логотипом табору, другий - як на зразку.";
+
+  static String adsBannersText = "Містить файли в робочих форматах Photoshop. Шаблони для реклами в сторіс та телеграм.";
+
+  static String paperA4 = "Містить файл для друку pdf, в розмірі А4. На цей лист ви можете додати ваш текст і роздуркувати.";
+
+  static String bannerForScenes = "Містить 4 файли для друку pdf, розмір кожного 60см х 160см.";
+
+  static String avatarTablet = "Містить файл для друку pdf, в розмірі А4.";
+
+  static String teamNames = "Містить файли для друку pdf, в розмірі А4.";
+
+  static String campCurrency = "Містить файли для друку pdf, в розмірі 5х5 см.";
+
 }

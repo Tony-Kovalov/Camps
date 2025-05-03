@@ -1,4 +1,5 @@
 import 'package:camps_program/features/home_menu/presentation/pages/about_camp3.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/design_page3.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu3.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card4.dart';
 import 'package:flutter/cupertino.dart';
@@ -66,7 +67,9 @@ class MyHomePageContent3 extends StatelessWidget {
             CampCard4(
               title: "Дизайн та поліграфія",
               imgAsset: "images/pencil.png",
-              onTap: () {}, // TODO
+              onTap: () {
+                open(context, const DesignPage3());
+              },
             ),
             const SizedBox(height: 24),
             CampCard4(
@@ -92,7 +95,18 @@ class MyHomePageContent3 extends StatelessWidget {
             CampCard4(
               title: "Декор",
               imgAsset: "images/bow.png",
-              onTap: () {}, // TODO
+              onTap: () {
+                open(
+                  context,
+                  InfoPage1Bloc(
+                    title: "Декор",
+                    texts: Program3Data2.decorationTxts,
+                    images: Program3Data2.decorationImgs,
+                    titleStyle: PageTitleStyle.underAppBar,
+                    bgLinearGradient: getBgLinearGradient(),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 24),
             CampCard4(

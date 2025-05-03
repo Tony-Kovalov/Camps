@@ -385,6 +385,40 @@ flutter:
     - images/upgrade_kids3_18.png
     - images/upgrade_kids3_19.png
     - images/upgrade_kids3_20.png
+    - images/decoration3_1.png
+    - images/decoration3_2.png
+    - images/decoration3_3.png
+    - images/decoration3_4.png
+    - images/decoration3_5.png
+    - images/decoration3_6.png
+    - images/decoration3_7.png
+    - images/decoration3_8.png
+    - images/decoration3_9.png
+    - images/decoration3_10.png
+    - images/decoration3_11.png
+    - images/decoration3_12.png
+    - images/decoration3_13.png
+    - images/decoration3_14.png
+    - images/decoration3_15.png
+    - images/decoration3_16.png
+    - images/decoration3_17.png
+    - images/decoration3_18.png
+    - images/decoration3_19.png
+    - images/decoration3_20.png
+    - images/ads_banner3.png
+    - images/badge3.png
+    - images/banner3.png
+    - images/banner_for_scene3_1.png
+    - images/banner_for_scene3_2.png
+    - images/banner_for_scene3_3.png
+    - images/banner_for_scene3_4.png
+    - images/camp_currency3.png
+    - images/flag3.png
+    - images/logo3_2.png
+    - images/paper3.png
+    - images/sticker3.png
+    - images/team_names3.png
+    - images/tshirt3.png
     - assets/trailer3.mp4
     - assets/camp_greeting.mp4
     #    - pdfs/stations.pdf
