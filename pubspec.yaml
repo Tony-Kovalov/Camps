@@ -354,6 +354,17 @@ flutter:
     - images/bonus_time1.png
     - images/bonus_time2.png
     - images/bonus_time3.png
+    - images/hour_before3_1.png
+    - images/hour_before3_2.png
+    - images/hour_before3_3.png
+    - images/hour_before3_4.png
+    - images/hour_before3_5.png
+    - images/hour_before3_6.png
+    - images/hour_before3_7.png
+    - images/hour_before3_8.png
+    - images/hour_before3_9.png
+    - images/hour_before3_10.png
+    - images/hour_before3_11.png
     - assets/trailer3.mp4
     - assets/camp_greeting.mp4
     #    - pdfs/stations.pdf

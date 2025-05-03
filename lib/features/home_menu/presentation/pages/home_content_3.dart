@@ -3,6 +3,7 @@ import 'package:camps_program/features/home_menu/presentation/pages/program_menu
 import 'package:camps_program/features/home_menu/presentation/widgets/camp_card4.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/program3_data2.dart';
 import 'info_page_1bloc.dart';
@@ -49,38 +50,55 @@ class MyHomePageContent3 extends StatelessWidget {
               title: "Зустріч для команд перед табором",
               imgAsset: "images/bell.png",
               onTap: () {
-                open(context, InfoPage1Bloc(
-                  title: "Зустріч для команд перед табором",
-                  texts: Program3Data2.meetingForTeamBeforeCamp,
-                  images: null,
-                  titleStyle: PageTitleStyle.underAppBar,
-                  bgLinearGradient: getBgLinearGradient(),
-                ),);
+                open(
+                  context,
+                  InfoPage1Bloc(
+                    title: "Зустріч для команд перед табором",
+                    texts: Program3Data2.meetingForTeamBeforeCamp,
+                    images: null,
+                    titleStyle: PageTitleStyle.underAppBar,
+                    bgLinearGradient: getBgLinearGradient(),
+                  ),
+                );
               },
             ),
             const SizedBox(height: 24),
             CampCard4(
               title: "Дизайн та поліграфія",
               imgAsset: "images/pencil.png",
-              onTap: () {},// TODO
+              onTap: () {}, // TODO
             ),
             const SizedBox(height: 24),
             CampCard4(
               title: "Година до табору",
               imgAsset: "images/gift.png",
-              onTap: () {},// TODO
+              onTap: () {
+                open(
+                  context,
+                  InfoPage1Bloc(
+                    title: "Година до табору",
+                    texts: Program3Data2.hourBeforeCampTxts,
+                    images: Program3Data2.hourBeforeCampImgs,
+                    titleStyle: PageTitleStyle.underAppBar,
+                    bgLinearGradient: getBgLinearGradient(),
+                    onDownloadTap: () {
+                      _launchURL("https://drive.google.com/drive/folders/1YTsfy7rzk7_IBTGcSc95O5BRiBT11GrC?usp=drive_link");
+                    },
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 24),
             CampCard4(
               title: "Декор",
               imgAsset: "images/bow.png",
-              onTap: () {},// TODO
+              onTap: () {}, // TODO
             ),
             const SizedBox(height: 24),
             CampCard4(
               title: "Апгрейт для малечі",
               imgAsset: "images/horse.png",
-              onTap: () {},// TODO
+              onTap: () {}, // TODO
             ),
             const SizedBox(height: 24),
           ],
@@ -95,6 +113,13 @@ class MyHomePageContent3 extends StatelessWidget {
       end: Alignment.centerRight,
       colors: [Color(0xff8fc0ff), Color(0xffbae3ff)],
     );
+  }
+
+  _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
   }
 
   open(BuildContext context, Widget page) {
