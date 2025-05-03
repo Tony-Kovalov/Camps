@@ -208,4 +208,27 @@ class Program3Data2 {
     "images/hour_before3_10.png",
     "images/hour_before3_11.png",
   ];
+
+  static List<String> upgradeForKidsImgs = [
+    "images/upgrade_kids3_1.png",
+    "images/upgrade_kids3_2.png",
+    "images/upgrade_kids3_3.png",
+    "images/upgrade_kids3_4.png",
+    "images/upgrade_kids3_5.png",
+    "images/upgrade_kids3_6.png",
+    "images/upgrade_kids3_7.png",
+    "images/upgrade_kids3_8.png",
+    "images/upgrade_kids3_9.png",
+    "images/upgrade_kids3_10.png",
+    "images/upgrade_kids3_11.png",
+    "images/upgrade_kids3_12.png",
+    "images/upgrade_kids3_13.png",
+    "images/upgrade_kids3_14.png",
+    "images/upgrade_kids3_15.png",
+    "images/upgrade_kids3_16.png",
+    "images/upgrade_kids3_17.png",
+    "images/upgrade_kids3_18.png",
+    "images/upgrade_kids3_19.png",
+    "images/upgrade_kids3_20.png",
+  ];
 }

@@ -98,7 +98,18 @@ class MyHomePageContent3 extends StatelessWidget {
             CampCard4(
               title: "Апгрейт для малечі",
               imgAsset: "images/horse.png",
-              onTap: () {}, // TODO
+              onTap: () {
+                open(
+                  context,
+                  InfoPage1Bloc(
+                    title: "Апгрейт для малечі",
+                    texts: [],
+                    images: Program3Data2.upgradeForKidsImgs,
+                    titleStyle: PageTitleStyle.underAppBar,
+                    bgLinearGradient: getBgLinearGradient(),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 24),
           ],
