@@ -1,5 +1,5 @@
 import 'package:camps_program/features/home_menu/data/general_repo.dart';
-import 'package:camps_program/features/home_menu/presentation/pages/anout_camp_2.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/about_camp2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/camp_song.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/design_page2.dart';
 import 'package:camps_program/features/home_menu/presentation/pages/program_menu2.dart';
