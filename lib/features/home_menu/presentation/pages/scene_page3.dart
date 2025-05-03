@@ -55,68 +55,78 @@ class _ScenePageState extends State<ScenePage> {
         decoration: BoxDecoration(
           gradient: widget.bgLinearGradient,
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              if (widget.titleStyle == PageTitleStyle.underAppBar)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      widget.title,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Image.asset(
+                "images/sky_land6.png",
+              ),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  if (widget.titleStyle == PageTitleStyle.underAppBar)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          widget.title,
+                          style: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  Row(
+                    children: [
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: TopNavigationButton1(
+                          title: 'Сценарій',
+                          isActive: topButtonsState[0],
+                          onTap: () {
+                            activateTopButton(0);
+                          },
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: TopNavigationButton1(
+                          title: 'Рубрики',
+                          isActive: topButtonsState[1],
+                          onTap: () {
+                            activateTopButton(1);
+                          },
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 24),
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(32),
+                          topRight: Radius.circular(32),
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: compactTextAndImages(),
                       ),
                     ),
                   ),
-                ),
-              Row(
-                children: [
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: TopNavigationButton1(
-                      title: 'Сценарій',
-                      isActive: topButtonsState[0],
-                      onTap: () {
-                        activateTopButton(0);
-                      },
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: TopNavigationButton1(
-                      title: 'Рубрики',
-                      isActive: topButtonsState[1],
-                      onTap: () {
-                        activateTopButton(1);
-                      },
-                    ),
-                  ),
-                  const SizedBox(width: 16),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 24),
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(32),
-                      topRight: Radius.circular(32),
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: compactTextAndImages(),
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

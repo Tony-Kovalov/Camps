@@ -179,14 +179,7 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         ),
       );
     } else if (state.appState == AppState.skyLand) {
-      return const Text(
-        "СкайLand",
-        style: TextStyle(
-          fontFamily: 'Inter',
-          fontSize: 23,
-          fontWeight: FontWeight.bold,
-        ),
-      );
+      return const Text("");
     } else {
       return Container();
     }

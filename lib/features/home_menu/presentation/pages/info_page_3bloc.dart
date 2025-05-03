@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
-enum PageTitleStyle { usual, underAppBar }
+import 'info_page_1bloc.dart';
 
-class InfoPage1Bloc extends StatelessWidget {
-  const InfoPage1Bloc({
+class InfoPage3Bloc extends StatelessWidget {
+  const InfoPage3Bloc({
     Key? key,
     required this.title,
     required this.texts,
@@ -43,47 +43,59 @@ class InfoPage1Bloc extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: bgLinearGradient,
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              if (titleStyle == PageTitleStyle.underAppBar)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Image.asset(
+                "images/sky_land6.png",
+              ),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  if (titleStyle == PageTitleStyle.underAppBar)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          title,
+                          style: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                ),
-              Padding(
-                padding: const EdgeInsets.only(top: 24),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: MediaQuery.of(context).size.height - kToolbarHeight - 24,
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(32),
-                        topRight: Radius.circular(32),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 24),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: MediaQuery.of(context).size.height -
+                            kToolbarHeight -
+                            24,
+                      ),
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(32),
+                            topRight: Radius.circular(32),
+                          ),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: compactTextAndImages(),
+                        ),
                       ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: compactTextAndImages(),
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
