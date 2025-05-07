@@ -1,4 +1,5 @@
 import 'package:camps_program/features/home_menu/data/program3_data.dart';
+import 'package:camps_program/features/home_menu/presentation/pages/video_scene3.dart';
 import 'package:camps_program/features/home_menu/presentation/widgets/sub_menu_card3.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -40,8 +41,7 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
             colors: [Color(0xff8fc0ff), Color(0xffbae3ff)],
           ),
         ),
-        child:
-        Stack(
+        child: Stack(
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 36),
@@ -115,6 +115,24 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                         ),
                         const SizedBox(height: 5),
                         SubMenuCard3(
+                          title: "Відео сцена",
+                          onTap: () {
+                            open(
+                              context,
+                              const VideoScene3(
+                                numOfDay: 1,
+                                links: {
+                                  "ДЕНЬ 1 РАНОК":
+                                      "https://www.youtube.com/watch?v=pDk1hHZHGYo&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 1 ВЕЧІР [БУДИЛЬНИК]":"https://www.youtube.com/watch?v=Rukg_ebSTHc&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 1 ВЕЧІР":"https://www.youtube.com/watch?v=EHdKq213nFY&ab_channel=KoloDruzivLviv",
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 5),
+                        SubMenuCard3(
                           title: "Реєстрація",
                           onTap: () {
                             open(
@@ -158,7 +176,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/drive/folders/1SwzT3WQ4y6IPbw-09ihJJq6CE_fhYkFR?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/drive/folders/1SwzT3WQ4y6IPbw-09ihJJq6CE_fhYkFR?usp=drive_link");
                                 },
                               ),
                             );
@@ -218,6 +237,28 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                         ),
                         const SizedBox(height: 5),
                         SubMenuCard3(
+                          title: "Відео сцена",
+                          onTap: () {
+                            open(
+                              context,
+                              const VideoScene3(
+                                numOfDay: 2,
+                                links: {
+                                  "ДЕНЬ 2 РАНОК [СПОГАДИ ПЕРШОГО ДНЯ]":"https://www.youtube.com/watch?v=iHByZ2c_ti4&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 РАНОК [ІЛЮЗОРНЕ ЦАРСТВО]":"https://www.youtube.com/watch?v=MG-8A-ZGsSA&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 РАНОК [ЗНАК ЦАРЯ]":"https://www.youtube.com/watch?v=p5Emr5NygtY&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 РАНОК [ЗАГАДКИ]":"https://www.youtube.com/watch?v=5g_yeGqo-Dg&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 РАНОК [відео на слова Ская: А тепер… зараз все виглядає таким поламаним… таким порожнім]":"https://www.youtube.com/watch?v=BsGu8p6rXFE&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 ВЕЧІР [ЗНАК ЦАРЯ]":"https://www.youtube.com/watch?v=aGjRVT9EmHY&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 ВЕЧІР [ДВЕРІ 1]":"https://www.youtube.com/watch?v=TMMaWCTLah8&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 2 ВЕЧІР [ДВЕРІ 2]":"https://www.youtube.com/watch?v=AKpRm9u8t8Y&ab_channel=KoloDruzivLviv",
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 5),
+                        SubMenuCard3(
                           title: "Вхід в табір",
                           onTap: () {
                             open(
@@ -245,7 +286,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/drive/folders/1bkEiWtr7x13Cbc1IyoOW744djCYVJPaF?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/drive/folders/1bkEiWtr7x13Cbc1IyoOW744djCYVJPaF?usp=drive_link");
                                 },
                               ),
                             );
@@ -264,7 +306,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/file/d/1zoQuQkL_AzbJLM5J5MwNm1hbyzZMErso/view?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/file/d/1zoQuQkL_AzbJLM5J5MwNm1hbyzZMErso/view?usp=drive_link");
                                 },
                               ),
                             );
@@ -324,6 +367,25 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                         ),
                         const SizedBox(height: 5),
                         SubMenuCard3(
+                          title: "Відео сцена",
+                          onTap: () {
+                            open(
+                              context,
+                              const VideoScene3(
+                                numOfDay: 3,
+                                links: {
+                                  "ДЕНЬ 3 РАНОК [ЕКРАН]":"https://www.youtube.com/watch?v=jjqX4DBmxMs&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 3 РАНОК [ПРІРВА]":"https://www.youtube.com/watch?v=IaiPMVlBQ9E&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 3 РАНОК [НЕПРАВИЛЬНА ВІДПОВІДЬ]":"https://www.youtube.com/watch?v=S8uyDeHa2t4&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 3 ВЕЧІР [ПРАВИЛЬНІ ВІДПОВІДІ]":"https://www.youtube.com/watch?v=jPTdphD4qbw&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 3 ВЕЧІР [ДВЕРІ]":"https://www.youtube.com/watch?v=hbnOiy2S2wI&ab_channel=KoloDruzivLviv",
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 5),
+                        SubMenuCard3(
                           title: "Загальнотабірна гра",
                           onTap: () {
                             open(
@@ -367,7 +429,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/drive/folders/1j5VIbN_x9mP2ng14nGyPBVPF2pT0YpQK?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/drive/folders/1j5VIbN_x9mP2ng14nGyPBVPF2pT0YpQK?usp=drive_link");
                                 },
                               ),
                             );
@@ -443,6 +506,22 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                         ),
                         const SizedBox(height: 5),
                         SubMenuCard3(
+                          title: "Відео сцена",
+                          onTap: () {
+                            open(
+                              context,
+                              const VideoScene3(
+                                numOfDay: 4,
+                                links: {
+                                  "ДЕНЬ 4 РАНОК [ЗНАК ЦАРЯ]":"https://www.youtube.com/watch?v=ny85bj0WKEY&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 4 ВЕЧІР":"https://www.youtube.com/watch?v=aareXMYduaE&ab_channel=KoloDruzivLviv",
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 5),
+                        SubMenuCard3(
                           title: "Квест",
                           onTap: () {
                             open(
@@ -454,7 +533,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/file/d/1C8o3G3-lPVflrWzJfAwaizcswPoXoaot/view?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/file/d/1C8o3G3-lPVflrWzJfAwaizcswPoXoaot/view?usp=drive_link");
                                 },
                               ),
                             );
@@ -473,7 +553,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/drive/folders/1ws1gvuJVIJxzhazHeOpRtxWvSf61sKFt?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/drive/folders/1ws1gvuJVIJxzhazHeOpRtxWvSf61sKFt?usp=drive_link");
                                 },
                               ),
                             );
@@ -533,6 +614,22 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                         ),
                         const SizedBox(height: 5),
                         SubMenuCard3(
+                          title: "Відео сцена",
+                          onTap: () {
+                            open(
+                              context,
+                              const VideoScene3(
+                                numOfDay: 5,
+                                links: {
+                                  "ДЕНЬ 5 РАНОК":"https://www.youtube.com/watch?v=NEUkEkCUkGU&ab_channel=KoloDruzivLviv",
+                                  "ДЕНЬ 5 ВЕЧІР":"https://www.youtube.com/watch?v=1upGL84vTq4&ab_channel=KoloDruzivLviv",
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 5),
+                        SubMenuCard3(
                           title: "Тімбілдінг",
                           onTap: () {
                             open(
@@ -560,7 +657,8 @@ class _ProgramMenu3PageState extends State<ProgramMenu3Page> {
                                 titleStyle: PageTitleStyle.underAppBar,
                                 bgLinearGradient: getBgLinearGradient(),
                                 onDownloadTap: () {
-                                  _launchURL("https://drive.google.com/drive/folders/1Ky3TboHALygP253y5YbzKJqf5Qy8328j?usp=drive_link");
+                                  _launchURL(
+                                      "https://drive.google.com/drive/folders/1Ky3TboHALygP253y5YbzKJqf5Qy8328j?usp=drive_link");
                                 },
                               ),
                             );
