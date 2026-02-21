@@ -1,0 +1,429 @@
+name: camps_program
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 3.0.0+15
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.1.1
+  flutter_widget_from_html: ^0.16.0
+  url_launcher: ^6.1.11
+  webview_flutter: ^4.13.0
+  flutter_svg: ^2.0.5
+  internet_connection_checker: ^1.0.0+1
+  youtube_player_flutter: ^9.0.0
+  video_player: ^2.2.18
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+
+  fonts:
+    - family: Unbounded
+      fonts:
+        - asset: fonts/Unbounded-Light.ttf
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter-Medium.ttf
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - sounds/camp_song.mp3
+    - images/logo.png
+    - images/logo_big.png
+    - images/logo_2_0.jpg
+    - images/logo3.png
+    - images/badge.png
+    - images/certificate.png
+    - images/door_car.png
+    - images/stations1_1.png
+    - images/stations1_2.png
+    - images/stations1_3.png
+    - images/stations1_4.png
+    - images/stations1_5.png
+    - images/stations2_1.png
+    - images/stations2_2.png
+    - images/stations2_3.png
+    - images/stations2_4.png
+    - images/stations2_5.png
+    - images/stations2_6.png
+    - images/stations2_7.png
+    - images/stations3_1.png
+    - images/draw_1.png
+    - images/draw_2.png
+    - images/flags.png
+    - images/letters.png
+    - images/baner.png
+    - images/fotozona.png
+    - images/proector.png
+    - images/winers_diary.png
+    - images/tshirt.png
+    - images/daily_camps.png
+    - images/play_rounded_new_ligh.png
+    - images/notepad.png
+    - images/rocket.png
+    - images/design.png
+    - images/social.png
+    - images/management.png
+    - images/additional_sources.png
+    - images/logo2.jpg
+    - images/tshirt2.png
+    - images/avatar_tablet.png
+    - images/badge2.png
+    - images/bible_lesson.png
+    - images/camp_currency.png
+    - images/certificate2.png
+    - images/coloring_pages.png
+    - images/joystick.png
+    - images/planet.png
+    - images/stickers.png
+    - images/camp_surfers1.png
+    - images/camp_surfers2.png
+    - images/camp_surfers3.png
+    - images/camp_surfers4.png
+    - images/camp_surfers5.png
+    - images/camp_stars1.png
+    - images/camp_stars2.png
+    - images/like_us1.png
+    - images/like_us2.png
+    - images/journey1.png
+    - images/journey2.png
+    - images/journey3.png
+    - images/avatar.png
+    - images/first_station_1.png
+    - images/first_station_2.png
+    - images/first_station_3.png
+    - images/first_station_4.png
+    - images/first_station_5.png
+    - images/first2_station_1.png
+    - images/first2_station_2.png
+    - images/first2_station_3.png
+    - images/first2_station_4.png
+    - images/first2_station_5.png
+    - images/first2_station_6.png
+    - images/first2_station_7.png
+    - images/second_station_1.png
+    - images/second_station_2.png
+    - images/second_station_3.png
+    - images/second_station_4.png
+    - images/second_station_5.png
+    - images/second_station_6.png
+    - images/second_station_7.png
+    - images/second_station_8.png
+    - images/second2_station_1.png
+    - images/second2_station_2.png
+    - images/second2_station_3.png
+    - images/second2_station_4.png
+    - images/second2_station_5.png
+    - images/second2_station_6.png
+    - images/second2_station_7.png
+    - images/second2_station_8.png
+    - images/second2_station_9.png
+    - images/second2_station_10.png
+    - images/second2_station_11.png
+    - images/second2_station_12.png
+    - images/second2_station_13.png
+    - images/third_station_1.png
+    - images/third_station_2.png
+    - images/third_station_3.png
+    - images/third_station_4.png
+    - images/third_station_5.png
+    - images/third_station_6.png
+    - images/third_station_7.png
+    - images/third_station_8.png
+    - images/third_station_9.png
+    - images/third2_station_1.png
+    - images/third2_station_2.png
+    - images/third2_station_3.png
+    - images/third2_station_4.png
+    - images/third2_station_5.png
+    - images/fourth_station_1.png
+    - images/fourth_station_2.png
+    - images/fourth_station_3.png
+    - images/fourth_station_4.png
+    - images/fourth_station_4.png
+    - images/fourth_station_5.png
+    - images/fourth_station_6.png
+    - images/fourth_station_7.png
+    - images/fourth_station_8.png
+    - images/fourth_station_9.png
+    - images/fourth_station_10.png
+    - images/fourth2_station_1.png
+    - images/fourth2_station_2.png
+    - images/fourth2_station_3.png
+    - images/fifth2_station_1.png
+    - images/fifth2_station_2.png
+    - images/fifth2_station_3.png
+    - images/fifth2_station_4.png
+    - images/fifth2_station_5.png
+    - images/fifth2_station_6.png
+    - images/fifth_station_1.png
+    - images/fifth_station_2.png
+    - images/fifth_station_3.png
+    - images/fifth_station_4.png
+    - images/fifth_station_5.png
+    - images/fifth_station_6.png
+    - images/fifth_station_7.png
+    - images/fifth_station_8.png
+    - images/fifth_station_9.png
+    - images/lesson2_3d_1.png
+    - images/lesson2_3d_2.png
+    - images/lesson2_5d_1.png
+    - images/art_1.png
+    - images/art_2.png
+    - images/art_3.png
+    - images/art_4.png
+    - images/art_5.png
+    - images/art_6.png
+    - images/art_7.png
+    - images/art_8.png
+    - images/art_9.png
+    - images/art_10.png
+    - images/art_11.png
+    - images/art_12.png
+    - images/art_13.png
+    - images/art_14.png
+    - images/art_15.png
+    - images/art_16.png
+    - images/art_17.png
+    - images/art_18.png
+    - images/master_classes_1.png
+    - images/master_classes_2.png
+    - images/master_classes_3.png
+    - images/master_classes_4.png
+    - images/master_classes_5.png
+    - images/master_classes_6.png
+    - images/master_classes_7.png
+    - images/master_classes_8.png
+    - images/master_classes_9.png
+    - images/master_classes_10.png
+    - images/master_classes_11.png
+    - images/master_classes_12.png
+    - images/teens2_1.png
+    - images/teens2_2.png
+    - images/teens2_3.png
+    - images/teens2_4.png
+    - images/music.jpg
+    - images/reward_system_1.png
+    - images/reward_system_2.png
+    - images/reward_system_3.png
+    - images/reward_system_4.png
+    - images/reward_system_5.png
+    - images/reward_system_6.png
+    - images/reward_system_7.png
+    - images/reward_system_8.png
+    - images/reward_system_9.png
+    - images/reward_system_10.png
+    - images/reward_system_11.png
+    - images/reward_system_12.png
+    - images/reward_system_13.png
+    - images/parent_control.png
+    - images/go_play.png
+    - images/0.5x/paper_clip.png
+    - images/0.75x/paper_clip.png
+    - images/paper_clip.png
+    - images/1.5x/paper_clip.png
+    - images/2.0x/paper_clip.png
+    - images/3.0x/paper_clip.png
+    - images/4.0x/paper_clip.png
+    - images/0.5x/button_nail.png
+    - images/0.75x/button_nail.png
+    - images/button_nail.png
+    - images/2.0x/button_nail.png
+    - images/3.0x/button_nail.png
+    - images/4.0x/button_nail.png
+    - images/bell.png
+    - images/0.5x/bell.png
+    - images/0.75x/bell.png
+    - images/1.5x/bell.png
+    - images/2.0x/bell.png
+    - images/3.0x/bell.png
+    - images/4.0x/bell.png
+    - images/pencil.png
+    - images/0.5x/pencil.png
+    - images/0.75x/pencil.png
+    - images/1.5x/pencil.png
+    - images/2.0x/pencil.png
+    - images/3.0x/pencil.png
+    - images/4.0x/pencil.png
+    - images/gift.png
+    - images/0.5x/gift.png
+    - images/0.75x/gift.png
+    - images/1.5x/gift.png
+    - images/2.0x/gift.png
+    - images/3.0x/gift.png
+    - images/4.0x/gift.png
+    - images/bow.png
+    - images/0.5x/bow.png
+    - images/0.75x/bow.png
+    - images/1.5x/bow.png
+    - images/2.0x/bow.png
+    - images/3.0x/bow.png
+    - images/4.0x/bow.png
+    - images/horse.png
+    - images/0.5x/horse.png
+    - images/0.75x/horse.png
+    - images/1.5x/horse.png
+    - images/2.0x/horse.png
+    - images/3.0x/horse.png
+    - images/4.0x/horse.png
+    - images/festival_img1.png
+    - images/festival_img2.png
+    - images/open_key_img1.png
+    - images/open_key_img2.png
+    - images/open_key_img3.png
+    - images/open_key_img4.png
+    - images/open_key_img5.png
+    - images/open_key_img6.png
+    - images/open_key_img7.png
+    - images/open_key_img8.png
+    - images/scenariy2_1.png
+    - images/scenariy2_2.png
+    - images/scenariy2_3.png
+    - images/scenariy2_4.png
+    - images/rubric_1.png
+    - images/rubric_2.png
+    - images/rubric_3.png
+    - images/rubric_4.png
+    - images/rubric_5.png
+    - images/daily_task1.png
+    - images/daily_task2.png
+    - images/daily_task3.png
+    - images/daily_task4.png
+    - images/daily_task5.png
+    - images/daily_task6.png
+    - images/daily_task7.png
+    - images/teambuild_3_1.png
+    - images/teambuild_3_2.png
+    - images/teambuild_3_3.png
+    - images/teambuild_3_4.png
+    - images/teambuild_3_5.png
+    - images/teambuild_3_6.png
+    - images/bonus_time1.png
+    - images/bonus_time2.png
+    - images/bonus_time3.png
+    - images/hour_before3_1.png
+    - images/hour_before3_2.png
+    - images/hour_before3_3.png
+    - images/hour_before3_4.png
+    - images/hour_before3_5.png
+    - images/hour_before3_6.png
+    - images/hour_before3_7.png
+    - images/hour_before3_8.png
+    - images/hour_before3_9.png
+    - images/hour_before3_10.png
+    - images/hour_before3_11.png
+    - images/upgrade_kids3_1.png
+    - images/upgrade_kids3_2.png
+    - images/upgrade_kids3_3.png
+    - images/upgrade_kids3_4.png
+    - images/upgrade_kids3_5.png
+    - images/upgrade_kids3_6.png
+    - images/upgrade_kids3_7.png
+    - images/upgrade_kids3_8.png
+    - images/upgrade_kids3_9.png
+    - images/upgrade_kids3_10.png
+    - images/upgrade_kids3_11.png
+    - images/upgrade_kids3_12.png
+    - images/upgrade_kids3_13.png
+    - images/upgrade_kids3_14.png
+    - images/upgrade_kids3_15.png
+    - images/upgrade_kids3_16.png
+    - images/upgrade_kids3_17.png
+    - images/upgrade_kids3_18.png
+    - images/upgrade_kids3_19.png
+    - images/upgrade_kids3_20.png
+    - images/decoration3_1.png
+    - images/decoration3_2.png
+    - images/decoration3_3.png
+    - images/decoration3_4.png
+    - images/decoration3_5.png
+    - images/decoration3_6.png
+    - images/decoration3_7.png
+    - images/decoration3_8.png
+    - images/decoration3_9.png
+    - images/decoration3_10.png
+    - images/decoration3_11.png
+    - images/decoration3_12.png
+    - images/decoration3_13.png
+    - images/decoration3_14.png
+    - images/decoration3_15.png
+    - images/decoration3_16.png
+    - images/decoration3_17.png
+    - images/decoration3_18.png
+    - images/decoration3_19.png
+    - images/decoration3_20.png
+    - images/ads_banner3.png
+    - images/badge3.png
+    - images/sky_land1.png
+    - images/sky_land2.png
+    - images/sky_land3.png
+    - images/sky_land4.png
+    - images/sky_land5.png
+    - images/sky_land6.png
+    - images/banner3.png
+    - images/banner_for_scene3_1.png
+    - images/banner_for_scene3_2.png
+    - images/banner_for_scene3_3.png
+    - images/banner_for_scene3_4.png
+    - images/camp_currency3.png
+    - images/flag3.png
+    - images/logo3_2.png
+    - images/paper3.png
+    - images/sticker3.png
+    - images/team_names3.png
+    - images/tshirt3.png
+    - assets/trailer3.mp4
+    - assets/camp_greeting.mp4
+    #    - pdfs/stations.pdf
+    - assets/logo.svg
+    - assets/settings.svg
+    - assets/home.svg
+    - assets/file_text.svg
+    - assets/clock.svg
+    - assets/clipboard.svg
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

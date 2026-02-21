@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+
+import '../../../../app_colors.dart';
+
+class SecondMenuCard extends StatefulWidget {
+  const SecondMenuCard({Key? key, required this.title, required this.onTap, this.isOpened = false}) : super(key: key);
+
+  final String title;
+  final Function() onTap;
+  final bool isOpened;
+
+  @override
+  State<SecondMenuCard> createState() => _SecondMenuCardState();
+}
+
+class _SecondMenuCardState extends State<SecondMenuCard> {
+
+  Color backgroundColor = const Color(0xffffffff);
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        backgroundColor: backgroundColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        side: const BorderSide(color: Colors.black),
+      ),
+      onPressed: () {
+        setState(() {
+          if (backgroundColor == AppColors.primaryYellow) {
+            backgroundColor = const Color(0xffffffff);
+          } else {
+            backgroundColor = AppColors.primaryYellow;
+          }
+        });
+        widget.onTap();
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: Center(
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  widget.title,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontFamily: 'Unbounded',
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+              Icon(widget.isOpened ? Icons.keyboard_arrow_down_outlined : Icons.keyboard_arrow_right, color: Colors.black),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
