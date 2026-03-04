@@ -18,5 +18,6 @@ enum CampName {
   fiveDivideFour,
   gameVsYou,
   skyLand,
+  secretCase,
   unknown,
 }

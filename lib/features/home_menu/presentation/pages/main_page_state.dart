@@ -14,5 +14,6 @@ enum AppState {
   fiveDivideFourMenu,
   gameVsYou,
   skyLand,
+  secretCase,
   chooseProgram,
 }

@@ -11,6 +11,7 @@ import 'choose_program.dart';
 import 'home_content.dart';
 import 'home_content_2.dart';
 import 'home_content_3.dart';
+import 'home_content_4.dart';
 import 'main_page_cubit.dart';
 import 'main_page_state.dart';
 
@@ -39,6 +40,10 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         break;
       case CampName.skyLand:
         appState = AppState.skyLand;
+        break;
+      case CampName.secretCase:
+        appState = AppState.secretCase;
+        break;
     }
   }
 
@@ -182,6 +187,8 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
       );
     } else if (state.appState == AppState.skyLand) {
       return const Text("");
+    } else if (state.appState == AppState.secretCase) {
+      return const Text("");
     } else {
       return Container();
     }
@@ -197,6 +204,8 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         return const MyHomePageContent2();
       case AppState.skyLand:
         return const MyHomePageContent3();
+      case AppState.secretCase:
+        return const MyHomePageContent4();
     }
   }
 
@@ -221,6 +230,12 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
           colors: <Color>[Color(0xfffcfcfe), Color(0xfff7f6ff)],
         );
       case AppState.skyLand:
+        return const LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: <Color>[Color(0xff8fc0ff), Color(0xffbae3ff)],
+        );
+      case AppState.secretCase:
         return const LinearGradient(
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
