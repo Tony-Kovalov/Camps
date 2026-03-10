@@ -87,6 +87,16 @@ class ChooseProgram extends StatelessWidget {
               imgAsset: "images/logo3.png",
             ),
             const SizedBox(height: 24),
+            CampCard(
+              onTap: () {
+                SharedPrefs().setChosenCamp(CampName.secretCase);
+                context.read<MainPageCubit>().opensecretCaseCampPage();
+              },
+              title:
+              "Програма денного табору \"Secret Case\"",
+              imgAsset: "images/logo3.png",
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       ),

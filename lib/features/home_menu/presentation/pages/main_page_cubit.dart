@@ -20,4 +20,8 @@ class MainPageCubit extends Cubit<MainPageState> {
   void openSkyLandCampPage() {
     emit(const MainPageState(AppState.skyLand));
   }
+
+  void opensecretCaseCampPage() {
+    emit(const MainPageState(AppState.secretCase));
+  }
 }
