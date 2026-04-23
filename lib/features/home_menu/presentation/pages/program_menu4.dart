@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import '../../data/program4_data.dart';
 import '../widgets/expandable_menu3.dart';
 import '../widgets/sub_menu_card3.dart';
-import 'info_page_1bloc.dart';
+import 'info_page_1bloc.dart'; // ПОВЕРНУТО ІМПОРТ ДЛЯ PageTitleStyle
 import 'info_page_3bloc.dart';
-import 'video_scene3.dart';
 
 class ProgramMenu4Page extends StatefulWidget {
   const ProgramMenu4Page({super.key});
@@ -81,70 +80,331 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                   ),
                   const SizedBox(height: 30),
 
+                  // ==========================================
                   // ДЕНЬ 1
+                  // ==========================================
                   _buildDaySection(
                     title: "ДЕНЬ 1: БОЖИЙ БЕЗЛІМІТ",
-                    icon: "🔍",
+                    icon: "",
                     children: [
                       _buildMenuCard(
-                        "🔍 План розслідування (Станції)",
+                        "🔍 Активності дня (Станції)",
                             () => _openInfo(
-                          "План розслідування",
+                          "Активності дня",
                           Program4Data.planDay1Txts,
                         ),
                       ),
                       _buildMenuCard(
-                        "📜 Ранковий сценарій",
+                        "📜 Сценарій ранок",
                             () => _openInfo(
-                          "Ранковий сценарій",
+                          "Сценарій ранок",
                           Program4Data.scriptMorningDay1Txts,
                         ),
                       ),
                       _buildMenuCard(
-                        "📁 Вечірній аналіз (Сценарій)",
+                        "📁 Сценарій вечір",
                             () => _openInfo(
-                          "Вечірній сценарій",
+                          "Сценарій вечір",
                           Program4Data.scriptEveningDay1Txts,
                         ),
                       ),
                       _buildMenuCard(
-                        "🧩 Тестування системи (Ігри)",
+                        "🧩 Ігри на сцені (Ранок)",
                             () => _openInfo(
-                          "Ранкові ігри",
+                          "Ігри на сцені (Ранок)",
                           Program4Data.gamesMorningDay1Txts,
                         ),
                       ),
                       _buildMenuCard(
-                        "🧬 Лабораторна робота (Ігри)",
+                        "🧬 Ігри на сцені (Вечір)",
                             () => _openInfo(
-                          "Вечірні ігри",
+                          "Ігри на сцені (Вечір)",
                           Program4Data.gamesEveningDay1Txts,
                         ),
                       ),
                       _buildMenuCard(
-                        "📦 Розпаковка доказів",
+                        "⏳ Година для підлітків",
+                            () => _openInfo(
+                          "Година для підлітків",
+                          Program4Data.teensHourDay1Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📦 Розпаковка",
                             () => _openInfo(
                           "Розпаковка",
                           Program4Data.unpackingDay1Txts,
                         ),
                       ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // ==========================================
+                  // ДЕНЬ 2
+                  // ==========================================
+                  _buildDaySection(
+                    title: "ДЕНЬ 2: ОБМЕЖЕННЯ ЧАСУ",
+                    icon: "",
+                    children: [
                       _buildMenuCard(
-                        "📹 Секретні медіа-файли",
-                            () => open(
-                          context,
-                          const VideoScene3(
-                            numOfDay: 1,
-                            links: {
-                              "🎵 Музика під сцену": "https://youtu.be/qYaKzpMdBaM", //change
-                              "♾ Безліміт Божої любові": "https://www.youtube.com/watch?v=rWlWAvWI8gE&t=180s", //change
-                              "📱 Гра 'Стікер-ти'": "https://www.instagram.com/reel/DT01iJvEdrk/?igsh=bzI5Y2xqdjdmdW1j", //change
-                            },
-                          ),
+                        "⏳ Активності дня (Естафети та Загальнотабірка)",
+                            () => _openInfo(
+                          "Активності дня",
+                          Program4Data.planDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📜 Сценарій ранок",
+                            () => _openInfo(
+                          "Сценарій ранок",
+                          Program4Data.scriptMorningDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📁 Сценарій вечір",
+                            () => _openInfo(
+                          "Сценарій вечір",
+                          Program4Data.scriptEveningDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "⚠️ Ігри на сцені (Ранок)",
+                            () => _openInfo(
+                          "Ігри на сцені (Ранок)",
+                          Program4Data.gamesMorningDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "⚔️ Ігри на сцені (Вечір)",
+                            () => _openInfo(
+                          "Ігри на сцені (Вечір)",
+                          Program4Data.gamesEveningDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "⏳ Година для підлітків",
+                            () => _openInfo(
+                          "Година для підлітків",
+                          Program4Data.teensHourDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📦 Розпаковка",
+                            () => _openInfo(
+                          "Розпаковка",
+                          Program4Data.unpackingDay2Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "👥 Командний челендж - зустріч лідерів",
+                            () => _openInfo(
+                          "Командний челендж",
+                          Program4Data.teamChallengeDay2Txts,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 40),
+
+                  const SizedBox(height: 20),
+
+                  // ==========================================
+                  // ДЕНЬ 3
+                  // ==========================================
+                  _buildDaySection(
+                    title: "ДЕНЬ 3: ВНУТРІШНІ КРАДІЇ ЧАСУ",
+                    icon: "",
+                    children: [
+                      _buildMenuCard(
+                        "🕳️ Активності дня",
+                            () => _openInfo(
+                          "Активності дня",
+                          Program4Data.planDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📜 Сценарій ранок",
+                            () => _openInfo(
+                          "Сценарій ранок",
+                          Program4Data.scriptMorningDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📁 Сценарій вечір",
+                            () => _openInfo(
+                          "Сценарій вечір",
+                          Program4Data.scriptEveningDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "🧩 Ігри на сцені (Ранок)",
+                            () => _openInfo(
+                          "Ігри на сцені (Ранок)",
+                          Program4Data.gamesMorningDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "🧬 Ігри на сцені (Вечір)",
+                            () => _openInfo(
+                          "Ігри на сцені (Вечір)",
+                          Program4Data.gamesEveningDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📦 Розпаковка",
+                            () => _openInfo(
+                          "Розпаковка",
+                          Program4Data.unpackingDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "👥 Командний челендж - зустріч лідерів",
+                            () => _openInfo(
+                          "Командний челендж",
+                          Program4Data.teamChallengeDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "🧸 Апгрейд для малечі",
+                            () => _openInfo(
+                          "Апгрейд для малечі",
+                          Program4Data.kidsUpgradeDay3Txts,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 20),
+                  // ==========================================
+                  // ДЕНЬ 4
+                  // ==========================================
+                  _buildDaySection(
+                    title: "ДЕНЬ 4: ЗОВНІШНІ КРАДІЇ ЧАСУ",
+                    icon: "",
+                    children: [
+                      _buildMenuCard(
+                        "🕳️ Активності дня",
+                            () => _openInfo(
+                          "Активності дня",
+                          Program4Data.planDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📜 Сценарій ранок",
+                            () => _openInfo(
+                          "Сценарій ранок",
+                          Program4Data.scriptMorningDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📁 Сценарій вечір",
+                            () => _openInfo(
+                          "Сценарій вечір",
+                          Program4Data.scriptEveningDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "🧩 Ігри на сцені (Ранок)",
+                            () => _openInfo(
+                          "Ігри на сцені (Ранок)",
+                          Program4Data.gamesMorningDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "🧬 Ігри на сцені (Вечір)",
+                            () => _openInfo(
+                          "Ігри на сцені (Вечір)",
+                          Program4Data.gamesEveningDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "📦 Розпаковка",
+                            () => _openInfo(
+                          "Розпаковка",
+                          Program4Data.unpackingDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "👥 Командний челендж - зустріч лідерів",
+                            () => _openInfo(
+                          "Командний челендж",
+                          Program4Data.teamChallengeDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
+                        "🧸 Апгрейд для малечі",
+                            () => _openInfo(
+                          "Апгрейд для малечі",
+                          Program4Data.kidsUpgradeDay4Txts,
+                        ),
+                      ),
+                    ],
+                  ),
+                      const SizedBox(height: 20),
+
+
+
+                  // ==========================================
+                  // ДЕНЬ 5
+                  // ==========================================
+                      _buildDaySection(
+                        title: "ДЕНЬ 5: ВНУТРІШНІ КРАДІЇ ЧАСУ",
+                        icon: "️",
+                        children: [
+                          _buildMenuCard(
+                            "🕳️ Активності дня",
+                                () => _openInfo(
+                              "Активності дня",
+                              Program4Data.planDay5Txts,
+                            ),
+                          ),
+                          _buildMenuCard(
+                            "📜 Сценарій ранок",
+                                () => _openInfo(
+                              "Сценарій ранок",
+                              Program4Data.scriptMorningDay5Txts,
+                            ),
+                          ),
+                          _buildMenuCard(
+                            "📁 Сценарій вечір",
+                                () => _openInfo(
+                              "Сценарій вечір",
+                              Program4Data.scriptEveningDay5Txts,
+                            ),
+                          ),
+                          _buildMenuCard(
+                            "🧩 Ігри на сцені (Ранок)",
+                                () => _openInfo(
+                              "Ігри на сцені (Ранок)",
+                              Program4Data.gamesMorningDay5Txts,
+                            ),
+                          ),
+                          _buildMenuCard(
+                            "🧬 Ігри на сцені (Вечір)",
+                                () => _openInfo(
+                              "Ігри на сцені (Вечір)",
+                              Program4Data.gamesEveningDay5Txts,
+                            ),
+                          ),
+                          _buildMenuCard(
+                            "📦 Розпаковка",
+                                () => _openInfo(
+                              "Розпаковка",
+                              Program4Data.unpackingDay5Txts,
+                            ),
+                          ),
+                          _buildMenuCard(
+                            "👥 Командний челендж - зустріч лідерів",
+                                () => _openInfo(
+                              "Командний челендж",
+                              Program4Data.teamChallengeDay5Txts,
+                            ),
+                          ),
+                          const SizedBox(height: 20)
+
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -199,7 +459,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
     );
   }
 
-  open(BuildContext context, Widget page) {
+  void open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
 }

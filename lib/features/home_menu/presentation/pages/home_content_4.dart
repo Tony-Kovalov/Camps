@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/program3_data2.dart';
-import 'about_camp3.dart';
+import '../../data/program4_data.dart';
 import 'design_page3.dart';
 import 'info_page_1bloc.dart';
 import 'info_page_3bloc.dart';
@@ -67,33 +67,44 @@ class MyHomePageContent4 extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 30),
-
                 _buildSecretCard(
                   context,
                   title: "Про програму Secret Case",
                   icon: "🕵️‍♂️",
-                  onTap: () => open(context, AboutCamp3()),
+                  onTap: () => open(
+                    context,
+                    InfoPage3Bloc(
+                      title: "Про програму Secret Case",
+                      texts: [ // ПРИБРАНО CONST
+                        Program3Data2.generalDescription,
+                        Program3Data2.namesOfTheTeam,
+                      ],
+                      images: null,
+                      titleStyle: PageTitleStyle.underAppBar,
+                      bgLinearGradient: getBgLinearGradient(),
+                    ),
+                  ),
                 ),
                 _buildSecretCard(
                   context,
                   title: "Розклад та Програма (Дні 1-5)",
                   icon: "📋",
-                  // ТУТ ВІДКРИВАЄТЬСЯ НАШ ОНОВЛЕНИЙ program_menu4.dart
                   onTap: () => open(context, const ProgramMenu4Page()),
                   isHighlighted: true,
                 ),
                 _buildSecretCard(
                   context,
-                  title: "Зустріч для команд перед табором",
+                  title: "Робота з командою",
                   icon: "🤝",
                   onTap: () => open(
                     context,
                     InfoPage3Bloc(
-                      title: "Зустріч для команд",
-                      texts: Program3Data2.meetingForTeamBeforeCamp,
+                      title: "Робота з командою",
+                      texts: Program4Data.teamWorkTxts,
                       images: null,
                       titleStyle: PageTitleStyle.underAppBar,
                       bgLinearGradient: getBgLinearGradient(),
+                      onDownloadTap: () => _launchURL("https://christian-meetings.notion.site/320b1641f88180729cc4d1aefd3a533a"),
                     ),
                   ),
                 ),
@@ -142,7 +153,7 @@ class MyHomePageContent4 extends StatelessWidget {
                     context,
                     InfoPage3Bloc(
                       title: "Апгрейт для малечі",
-                      texts: [],
+                      texts: const [],
                       images: Program3Data2.upgradeForKidsImgs,
                       titleStyle: PageTitleStyle.underAppBar,
                       bgLinearGradient: getBgLinearGradient(),
@@ -209,14 +220,14 @@ class MyHomePageContent4 extends StatelessWidget {
     );
   }
 
-  _launchURL(String url) async {
+  void _launchURL(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
     }
   }
 
-  open(BuildContext context, Widget page) {
+  void open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
 }
