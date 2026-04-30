@@ -66,7 +66,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                             ),
                           ),
                           const Text(
-                            "Архів справ",
+                            "Програма(1-5 день)",
                             style: TextStyle(
                               color: Colors.white,
                               fontFamily: 'Inter',
@@ -88,7 +88,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                     icon: "",
                     children: [
                       _buildMenuCard(
-                        "🔍 Активності дня (Станції)",
+                        "🔍 Активності дня",
                             () => _openInfo(
                           "Активності дня",
                           Program4Data.planDay1Txts,
@@ -149,7 +149,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                     icon: "",
                     children: [
                       _buildMenuCard(
-                        "⏳ Активності дня (Естафети та Загальнотабірка)",
+                        "🔍 Активності дня",
                             () => _openInfo(
                           "Активності дня",
                           Program4Data.planDay2Txts,
@@ -190,6 +190,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                           Program4Data.teensHourDay2Txts,
                         ),
                       ),
+
                       _buildMenuCard(
                         "📦 Розпаковка",
                             () => _openInfo(
@@ -217,7 +218,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                     icon: "",
                     children: [
                       _buildMenuCard(
-                        "🕳️ Активності дня",
+                        "🔍 Активності дня",
                             () => _openInfo(
                           "Активності дня",
                           Program4Data.planDay3Txts,
@@ -259,6 +260,13 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                         ),
                       ),
                       _buildMenuCard(
+                        "⏳ Година для підлітків",
+                            () => _openInfo(
+                          "Година для підлітків",
+                          Program4Data.teensHourDay3Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
                         "👥 Командний челендж - зустріч лідерів",
                             () => _openInfo(
                           "Командний челендж",
@@ -284,7 +292,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                     icon: "",
                     children: [
                       _buildMenuCard(
-                        "🕳️ Активності дня",
+                        "🔍 Активності дня",
                             () => _openInfo(
                           "Активності дня",
                           Program4Data.planDay4Txts,
@@ -326,6 +334,13 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                         ),
                       ),
                       _buildMenuCard(
+                        "⏳ Година для підлітків",
+                            () => _openInfo(
+                          "Година для підлітків",
+                          Program4Data.teensHourDay4Txts,
+                        ),
+                      ),
+                      _buildMenuCard(
                         "👥 Командний челендж - зустріч лідерів",
                             () => _openInfo(
                           "Командний челендж",
@@ -353,7 +368,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                         icon: "️",
                         children: [
                           _buildMenuCard(
-                            "🕳️ Активності дня",
+                            "🔍 Активності дня",
                                 () => _openInfo(
                               "Активності дня",
                               Program4Data.planDay5Txts,
@@ -430,7 +445,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
 
   Widget _buildMenuCard(String title, Function() onTap) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.only(bottom: 4, top: 8),
       child: SubMenuCard3(
         title: title,
         onTap: onTap,
