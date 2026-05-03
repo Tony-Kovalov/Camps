@@ -2,11 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../data/program3_data2.dart';
-import 'about_camp3.dart';
+import '../../data/program4_data.dart';
 import 'design_page3.dart';
+// import 'design_page4.dart';
 import 'info_page_1bloc.dart';
 import 'info_page_3bloc.dart';
+import 'info_page_4bloc.dart';
 import 'program_menu4.dart';
+
+import '../widgets/expandable_menu3.dart';
+import '../widgets/sub_menu_card3.dart';
+
+import 'about_camp4.dart';
 
 class MyHomePageContent4 extends StatelessWidget {
   const MyHomePageContent4({super.key});
@@ -67,30 +74,29 @@ class MyHomePageContent4 extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 30),
-
                 _buildSecretCard(
                   context,
                   title: "Про програму Secret Case",
                   icon: "🕵️‍♂️",
-                  onTap: () => open(context, AboutCamp3()),
+                  onTap: () => open(context, const AboutCamp4Page()),
                 ),
+
                 _buildSecretCard(
                   context,
                   title: "Розклад та Програма (Дні 1-5)",
                   icon: "📋",
-                  // ТУТ ВІДКРИВАЄТЬСЯ НАШ ОНОВЛЕНИЙ program_menu4.dart
                   onTap: () => open(context, const ProgramMenu4Page()),
                   isHighlighted: true,
                 ),
                 _buildSecretCard(
                   context,
-                  title: "Зустріч для команд перед табором",
+                  title: "Зустріч для команд",
                   icon: "🤝",
                   onTap: () => open(
                     context,
                     InfoPage3Bloc(
                       title: "Зустріч для команд",
-                      texts: Program3Data2.meetingForTeamBeforeCamp,
+                      texts: Program4Data.teamWorkTxts,
                       images: null,
                       titleStyle: PageTitleStyle.underAppBar,
                       bgLinearGradient: getBgLinearGradient(),
@@ -103,22 +109,22 @@ class MyHomePageContent4 extends StatelessWidget {
                   icon: "🎨",
                   onTap: () => open(context, const DesignPage3()),
                 ),
-                _buildSecretCard(
-                  context,
-                  title: "Година до табору",
-                  icon: "⏳",
-                  onTap: () => open(
-                    context,
-                    InfoPage3Bloc(
-                      title: "Година до табору",
-                      texts: Program3Data2.hourBeforeCampTxts,
-                      images: Program3Data2.hourBeforeCampImgs,
-                      titleStyle: PageTitleStyle.underAppBar,
-                      bgLinearGradient: getBgLinearGradient(),
-                      onDownloadTap: () => _launchURL("https://drive.google.com/drive/folders/1YTsfy7rzk7_IBTGcSc95O5BRiBT11GrC?usp=drive_link"),
-                    ),
-                  ),
-                ),
+                // _buildSecretCard(
+                // context,
+                //   title: "Година до табору",
+                //   icon: "⏳",
+                //   onTap: () => open(
+                //     context,
+                //     InfoPage3Bloc(
+                //       title: "Година до табору",
+                //       texts: Program3Data2.hourBeforeCampTxts,
+                //       images: Program3Data2.hourBeforeCampImgs,
+                //       titleStyle: PageTitleStyle.underAppBar,
+                //       bgLinearGradient: getBgLinearGradient(),
+                //       onDownloadTap: () => _launchURL("https://drive.google.com/drive/folders/1YTsfy7rzk7_IBTGcSc95O5BRiBT11GrC?usp=drive_link"),
+                //     ),
+                //   ),
+                // ),
                 _buildSecretCard(
                   context,
                   title: "Декор",
@@ -134,22 +140,6 @@ class MyHomePageContent4 extends StatelessWidget {
                     ),
                   ),
                 ),
-                _buildSecretCard(
-                  context,
-                  title: "Апгрейт для малечі",
-                  icon: "🧸",
-                  onTap: () => open(
-                    context,
-                    InfoPage3Bloc(
-                      title: "Апгрейт для малечі",
-                      texts: [],
-                      images: Program3Data2.upgradeForKidsImgs,
-                      titleStyle: PageTitleStyle.underAppBar,
-                      bgLinearGradient: getBgLinearGradient(),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 40),
               ],
             ),
           ),
@@ -209,14 +199,53 @@ class MyHomePageContent4 extends StatelessWidget {
     );
   }
 
-  _launchURL(String url) async {
+  void _launchURL(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
     }
   }
 
-  open(BuildContext context, Widget page) {
+  void open(BuildContext context, Widget page) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+  }
+  Widget _buildDaySection({required String title, required String icon, required List<Widget> children}) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.05),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.white.withOpacity(0.1)),
+        ),
+        child: ExpandableMenu3(
+          title: "$icon $title",
+          children: children,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMenuCard(String title, Function() onTap) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4, top: 8),
+      child: SubMenuCard3(
+        title: title,
+        onTap: onTap,
+      ),
+    );
+  }
+
+  void _openInfo(BuildContext context, String title, List<String> texts) {
+    open(
+      context,
+      InfoPage3Bloc(
+        title: title,
+        texts: texts,
+        images: null,
+        titleStyle: PageTitleStyle.underAppBar,
+        bgLinearGradient: getBgLinearGradient(),
+      ),
+    );
   }
 }
