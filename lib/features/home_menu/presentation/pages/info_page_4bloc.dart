@@ -64,6 +64,7 @@ class InfoPage4Bloc extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -79,7 +80,7 @@ class InfoPage4Bloc extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: const BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xFF1E293B),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(32),
                             topRight: Radius.circular(32),
@@ -113,7 +114,7 @@ class InfoPage4Bloc extends StatelessWidget {
 
     while (t + i > 0) {
       if (t > 0) {
-        list.add(HtmlWidget(texts[texts.length - t]));
+        list.add(HtmlWidget(texts[texts.length - t], textStyle: const TextStyle(color: Colors.white)));
         list.add(const SizedBox(height: 10));
         t--;
       }

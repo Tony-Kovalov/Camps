@@ -58,7 +58,7 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         if (snapshot.connectionState != ConnectionState.done) {
           return Container();
         }
-        updateCampNameFromPrefs(snapshot.data!);
+        // updateCampNameFromPrefs(snapshot.data!);
         return MultiBlocProvider(
           providers: [
             BlocProvider(
@@ -239,7 +239,7 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
         return const LinearGradient(
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
-          colors: <Color>[Color(0xff8fc0ff), Color(0xffbae3ff)],
+          colors: <Color>[Color(0xFF0F172A), Color(0xFF0F172A)],
         );
     }
   }
