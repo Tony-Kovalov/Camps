@@ -154,6 +154,9 @@ class _MyHomeEmptyPageState extends State<MyHomeEmptyPage> {
                   elevation: 0.0,
                   centerTitle: true,
                   title: getLogo(state),
+                  iconTheme: IconThemeData(
+                    color: state.appState == AppState.secretCase ? Colors.white : Colors.black,
+                  ),
                   flexibleSpace: Container(
                     decoration: BoxDecoration(
                       gradient: getLinearGradien(state),

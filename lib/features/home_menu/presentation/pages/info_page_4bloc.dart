@@ -29,7 +29,13 @@ class InfoPage4Bloc extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(titleStyle == PageTitleStyle.usual ? title : ""),
+        // РОБИМО СТРІЛОЧКУ БІЛОЮ:
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: Text(
+          titleStyle == PageTitleStyle.usual ? title : "",
+          // РОБИМО ТЕКСТ ЗАГОЛОВКА БІЛИМ:
+          style: const TextStyle(color: Colors.white),
+        ),
         elevation: 0,
         flexibleSpace: Container(
           decoration: BoxDecoration(
