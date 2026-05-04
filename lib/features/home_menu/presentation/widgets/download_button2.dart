@@ -5,10 +5,12 @@ class DownloadButton2 extends StatelessWidget {
     Key? key,
     this.onPressed,
     this.bgColor = Colors.white,
+    this.textColor = Colors.black,
   }) : super(key: key);
 
   final Function? onPressed;
   final Color bgColor;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +25,14 @@ class DownloadButton2 extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           color: bgColor,
         ),
-        child: const Text(
+        // ПРИБРАНО const перед Text
+        child: Text(
           textAlign: TextAlign.center,
           "Завантажити",
           style: TextStyle(
             fontFamily: "Inter",
             fontSize: 16,
+            color: textColor, // ДОДАНО: Застосовуємо наш колір
           ),
         ),
       ),

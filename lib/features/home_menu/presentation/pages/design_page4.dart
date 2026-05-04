@@ -170,6 +170,7 @@ class DesignPage4 extends StatelessWidget {
           DownloadButton2(
             onPressed: () => _launchURL(driveUrl),
             bgColor: Colors.blueAccent.withOpacity(0.2),
+            textColor: Colors.white,
           ),
         ],
       ),
