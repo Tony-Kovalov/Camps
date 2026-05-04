@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../data/program3_data2.dart';
 import '../../data/program4_data.dart';
 import 'design_page3.dart';
-// import 'design_page4.dart';
+import 'design_page4.dart';
 import 'info_page_1bloc.dart';
 import 'info_page_3bloc.dart';
 import 'info_page_4bloc.dart';
@@ -25,8 +25,8 @@ class MyHomePageContent4 extends StatelessWidget {
       height: double.infinity,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
           colors: [
             Color(0xFF0F172A),
             Color(0xFF1E293B),
@@ -86,7 +86,7 @@ class MyHomePageContent4 extends StatelessWidget {
                   title: "Розклад та Програма (Дні 1-5)",
                   icon: "📋",
                   onTap: () => open(context, const ProgramMenu4Page()),
-                  isHighlighted: true,
+                  isHighlighted: false,
                 ),
                 _buildSecretCard(
                   context,
@@ -94,7 +94,7 @@ class MyHomePageContent4 extends StatelessWidget {
                   icon: "🤝",
                   onTap: () => open(
                     context,
-                    InfoPage3Bloc(
+                    InfoPage4Bloc(
                       title: "Зустріч для команд",
                       texts: Program4Data.teamWorkTxts,
                       images: null,
@@ -107,7 +107,7 @@ class MyHomePageContent4 extends StatelessWidget {
                   context,
                   title: "Дизайн та поліграфія",
                   icon: "🎨",
-                  onTap: () => open(context, const DesignPage3()),
+                  onTap: () => open(context, const DesignPage4()),
                 ),
                 // _buildSecretCard(
                 // context,
@@ -131,10 +131,10 @@ class MyHomePageContent4 extends StatelessWidget {
                   icon: "🎭",
                   onTap: () => open(
                     context,
-                    InfoPage3Bloc(
+                    InfoPage4Bloc(
                       title: "Декор",
-                      texts: Program3Data2.decorationTxts,
-                      images: Program3Data2.decorationImgs,
+                      texts: Program4Data.decorationImgs,   // Program3Data2.decorationTxts,
+                      images: [],
                       titleStyle: PageTitleStyle.underAppBar,
                       bgLinearGradient: getBgLinearGradient(),
                     ),

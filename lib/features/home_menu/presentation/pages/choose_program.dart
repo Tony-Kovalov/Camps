@@ -94,7 +94,7 @@ class ChooseProgram extends StatelessWidget {
               },
               title:
               "Програма денного табору \"Secret Case\"",
-              imgAsset: "images/logo3.png",
+              imgAsset: "images/secret-case-d-6.png",
             ),
             const SizedBox(height: 24),
           ],

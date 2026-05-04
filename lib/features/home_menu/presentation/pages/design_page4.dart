@@ -1,168 +1,130 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../widgets/download_button2.dart';
 
-import '../../../../app_colors.dart';
-import '../widgets/design_container.dart';
-import '../widgets/download_button.dart';
-
-class DesignPage extends StatelessWidget {
-  const DesignPage({Key? key}) : super(key: key);
+class DesignPage4 extends StatelessWidget {
+  const DesignPage4({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryWhite,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
-        title: const Text("Дизайн табору"),
+        backgroundColor: Colors.transparent,
+        leading: const BackButton(color: Colors.white),
+        title: const Text(
+          "Дизайн та поліграфія",
+          style: TextStyle(color: Colors.white, fontFamily: 'Inter'),
+        ),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          color: AppColors.primaryWhite,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-            child: Column(
-              children: [
-                const Text(
-                  "Тут ти знайдеш всі ресурси для офрмлення візуальної частини табору.\nУ мініатюрах відображається тільки приклад дизайну, а самі робочі файли (для друку, та використання)  ти можеш скачати нижче кожної мініатюри за посиланням. \nДеякі елементи завантажуються окремими файлами, а деякі архівом (бо містять в собі кілька окремих файлів).",
-                  style: TextStyle(fontSize:12, color: Colors.black, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 15),
-                Text(
-                  "П.С. Якщо вам потрібна допомога з роздруком  елементів, або хочете замовити всі елементи вже у готовому варіанті, можете звернутись за посиланням нижче:\n",
-                  style: TextStyle(
-                    fontSize:12,
-                    color: Colors.purple[800],
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFF0F172A),
+              Color(0xFF1E293B),
+              Color(0xFF020617),
+            ],
+          ),
+        ),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Вступний текст
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.05),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Colors.white.withOpacity(0.1)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Усі матеріали доступні для завантаження за посиланнями нижче. (Формати: pdf, png, svg).",
+                          style: TextStyle(fontSize: 14, color: Colors.white70),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          "З питань розробки індивідуального дизайну:",
+                          style: TextStyle(color: Colors.blueAccent[100], fontSize: 13),
+                        ),
+                        const SizedBox(height: 4),
+                        GestureDetector(
+                          onTap: () => _launchURL("https://t.me/merelyroks"),
+                          child: const Text(
+                            "Telegram: @merelyroks",
+                            style: TextStyle(
+                              color: Colors.white,
+                              decoration: TextDecoration.underline,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: GestureDetector(onTap: () {
-                    _launchURL("https://t.me/merelyroks");
-                  }, child: const Text("Telegram: merelyroks", style: TextStyle(decoration: TextDecoration.underline),)),
-                ),
-                const SizedBox(height: 40),
-                const Text("ЛОГО", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: SvgPicture.asset(
-                    "assets/logo.svg",
-                    height: 80,
-                    semanticsLabel: 'Перемога'
-                ),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1GfzkC0R7xcJSpLFl4E03zpqrukvTCyw3?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-                const Text("БЕЙДЖИКИ (РОЗМІР А7)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(height: 270,child: Image.asset("images/badge.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1CHgOSo38ZXAPmmuZqdn1xjI-9xauTox-?usp=share_link");
-                }),
-                const SizedBox(height: 40),
+                  const SizedBox(height: 40),
 
-                const Text("ЗАСТАВКА НА ПРОЕКТОР", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/proector.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1ZHs015HduMcAmRpYet70-MCwspyMN_In?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("СЕРТИФІКАТ (РОЗМІР А5)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/certificate.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1K0x6vACqMu73985YcjXZIHfsnrQ5mKhv?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("ФУТБОЛКИ (4 ВАРІАНТИ)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/tshirt.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1PW-EQL6Kr69zG3o_2-dbDN5QWh6ADjfg?usp=sharing");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("ЛИСТІВКИ (РОЗМІР А6)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/letters.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1Ez8BXZYkPGlzgumNraMrF4IwYKemM_Rn?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("ПРАПОРИ (РОЗМІР А4)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/flags.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/19xgIA0cu_WGJ0gRvnosq87HLs4F-ZCd6?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("ДЕТАЛІ МАШИНИ", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(height: 200, child: Image.asset("images/door_car.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1guhJ86KstHobm8FU4FKTjdXDcfaECf4K?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("ЩОДЕННИК ПЕРЕМОЖЦЯ", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(height: 345, child: Image.asset("images/winers_diary.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1WmblVBdnd_3MrNaw9wczB-V4tVarMW41?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("РОЗМАЛЬОВКА 1 (РОЗМІР 1М Х 2М)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/draw_1.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1VgnmyNZ7-SWS6cc7p7I2gcvsgeHYgT4M?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("РОЗМАЛЬОВКА 1 (ПО КЛІТИНКАХ) (РОЗМІР 1М Х 4М)", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/draw_2.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1y9a0gXnd4-BEXASQI0FRylvyFSXeZscB?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("ФОТОЗОНА", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/fotozona.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1L0UHWclb1anLT5eNKS18MKfcUPMw6h0O?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-
-                const Text("БАНЕР", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 20),
-                DesignContainer(child: Image.asset("images/baner.png"),),
-                const SizedBox(height: 20),
-                DownloadButton(onPressed: () {
-                  _launchURL("https://drive.google.com/drive/folders/1d9yLNlKm_V8kytUVCVdg8UppMyizZl5a?usp=share_link");
-                }),
-                const SizedBox(height: 40),
-              ],
+                  // Секції дизайну згідно з фото
+                  _buildDesignSection(
+                    title: "Футболки",
+                    imagePath: "images/secret-case-d-1.png",
+                    driveUrl: "https://drive.google.com/drive/folders/1fTkQCwFSFEhvU_l_rhngeWCOKgkbD0Xo?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Мапа прогресу в таборі",
+                    imagePath: "images/secret-case-d-2.png",
+                    driveUrl: "https://drive.google.com/drive/folders/19ocatHoqaKd-GBfcPMe6Va1yEa7geDVg?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Кросворд, розмальовка",
+                    imagePath: "images/secret-case-d-3.png",
+                    driveUrl: "https://drive.google.com/drive/folders/18bnb0ZL9z8mcDTG8s0zBqbexMEzEeKYW?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Карта станцій",
+                    imagePath: "images/secret-case-d-4.png",
+                    driveUrl: "https://drive.google.com/drive/folders/1-b1CpsomS8HWDn4Yfgr-0wrHlUxxe2CE?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Заставка",
+                    imagePath: "images/secret-case-d-5.png",
+                    driveUrl: "https://drive.google.com/drive/folders/1ms6XQxFOydEZ5D4mpv3N4M9xLnHsEZ7I?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Елементи (окремо)",
+                    imagePath: "images/secret-case-d-6.png",
+                    driveUrl: "https://drive.google.com/drive/folders/1ebb6QH9LSNymWpPeXSOnfPN67QJ5ojsO?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Біблійні уроки",
+                    imagePath: "images/secret-case-d-7.png",
+                    driveUrl: "https://drive.google.com/drive/folders/1DQ_Frvk3UX5eE7d7qAcqAIXV8-MdCE6T?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Бейдж А7",
+                    imagePath: "images/secret-case-d-8.png",
+                    driveUrl: "https://drive.google.com/drive/folders/1RIchw6M3dWp1qBUV6--WVls6-P-A6NQM?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  _buildDesignSection(
+                    title: "Банер",
+                    imagePath: "images/secret-case-d-9.png",
+                    driveUrl: "https://drive.google.com/drive/folders/14rCWcMJ0eViRN2Z_9Zb89PZHfFlIOV57?usp=drive_link", // TODO: Додайте посилання
+                  ),
+                  const SizedBox(height: 40),
+                ],
+              ),
             ),
           ),
         ),
@@ -170,13 +132,54 @@ class DesignPage extends StatelessWidget {
     );
   }
 
-  _launchURL(String url) async {
+  Widget _buildDesignSection({
+    required String title,
+    required String imagePath,
+    required String driveUrl,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 48),
+      child: Column(
+        children: [
+          Text(
+            title.toUpperCase(),
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1.5,
+              fontFamily: 'Inter',
+            ),
+          ),
+          const SizedBox(height: 20),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.05),
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(color: Colors.white.withOpacity(0.1)),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(imagePath, fit: BoxFit.contain),
+            ),
+          ),
+          const SizedBox(height: 16),
+          DownloadButton2(
+            onPressed: () => _launchURL(driveUrl),
+            bgColor: Colors.blueAccent.withOpacity(0.2),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _launchURL(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
-    } else { // todo Tony
-      throw 'Could not launch $url';
     }
   }
-
 }

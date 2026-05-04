@@ -7,6 +7,7 @@ import '../../data/program4_data.dart';
 import '../widgets/sub_menu_card3.dart';
 import 'info_page_3bloc.dart';
 import 'info_page_1bloc.dart';
+import 'info_page_4bloc.dart';
 
 class AboutCamp4Page extends StatefulWidget {
   const AboutCamp4Page({super.key});
@@ -26,10 +27,10 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
       DeviceOrientation.landscapeLeft,
     ]);
 
-    String? videoId = YoutubePlayer.convertUrlToId(
-        "https://youtu.be/iFLAIHl8Yyc?si=R-l459vaM5ovsiI-");
+    String? videoId = YoutubePlayer.convertUrlToId("https://youtu.be/iFLAIHl8Yyc?si=nvt7LRpHnY0OptE1");
+
     _controller = YoutubePlayerController(
-      initialVideoId: videoId ?? "",
+      initialVideoId: videoId ?? "iFLAIHl8Yyc",
       flags: const YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
@@ -130,7 +131,7 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
                       },
                       player: player,
                       builder: (BuildContext context, Widget widget) {
-                        return player;
+                        return widget;
                       },
                     ),
                   ),
@@ -140,6 +141,7 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
 
                     // НОВІ ВКЛАДКИ
                     _buildMenuCard(context, "📖 Загальний опис легенди", Program4Data.campLegendTxt),
+                    _buildMenuCard(context, "🎵 Табірна пісня", Program4Data.campSong),
                     _buildMenuCard(context, "🕵️‍♂️ Назви команд", Program4Data.teamNamesTxt),
                     _buildMenuCard(context, "🗺️ Система мотивації", Program4Data.motivationSystemTxt),
                     _buildMenuCard(context, "🚀 Післятабірні зустрічі", Program4Data.postCampMeetingsTxt),
@@ -165,7 +167,7 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
         onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => InfoPage3Bloc(
+            builder: (context) => InfoPage4Bloc(
               title: title,
               texts: texts,
               images: null,

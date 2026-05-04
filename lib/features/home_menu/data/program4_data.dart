@@ -4431,4 +4431,135 @@ class Program4Data {
     </ul>'''
   ];
 
+
+
+  static const List<String> decorationImgs = [
+    '''
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1FLnZ41mkLu37jpJ4XBbK-QUHSy0zYEeC" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1RdOlSZZSoChSVE9BW0aaKsNmC6JzCGcv" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1967pp94K2M2ml6lDoXW0YHTg6kwip0ti" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1G159n5oHh3XEmwuhxyVQmlsRbsTGDCAF" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1-5KPw37IGs8nVoEI1mu5dvwoP5wR9FPg" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1a9anxv9WBxd1VDYan9CTmOof_ExAjYeu" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1lruYEx7Uceuw3-bCjKIX9Ke7y69s3ZwN" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1VCL_G4uZVO5-aS_JGR1KkqVzWRkwRF_C" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1dowhJBg8WjkFdDWhNdc30qcxJYWF-1uh" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1QjuRJsTi8nR9Pep4UOkpu8_2SKVOTI4h" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1XcaKC8L1FKrCfDgO3Dq6133CpqzcNXiT" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=10rKLH5OV_UNuH3nVz41fy1rHxojOYoE8" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1yvrfAfcBqD_Kc1LatDXWpsoj1r7tYX3y" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1gUhuxnQU334XvuQU61_PskkmA6eMw3Sl" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1uYLCRBOb53zj4l57bUg54j-Nna5vubZI" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1Z_eCttwc8pl65fYBCmRtJxtay4sHNQEH" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+    <img src="https://drive.google.com/uc?export=view&id=1nWKO-0Q3j8fAAqnn9e2EjP1m79hrH3xh" style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    </div>
+    '''
+  ];
+
+  static const List<String> campSong = [
+    '''
+    <p><strong>Пісня табору</strong></p>
+    
+    <p>Це офіційна пісня табору, яка об'єднує нас у велику родину. Нижче наведено посилання на музичні ресурси:</p>
+    
+    <ul>
+      <li>Оригінал пісні:<br> <a href="https://youtu.be/zMsPtHJaTV8">https://youtu.be/zMsPtHJaTV8</a></li>
+      <li>Мінус + версія з другим куплетом:<br> <a href="https://youtu.be/9TC_qIunv1E">https://youtu.be/9TC_qIunv1E</a></li>
+      <li>Презентація зі словами:<br> <a href="https://docs.google.com/presentation/d/1UD069Dlx5wX2Xe3_eg8gxY_Nk-CcwKf2/edit?usp=drive_link&ouid=105542304730804416128&rtpof=true&sd=true">Відкрити в Google Drive</a></li>
+    </ul>
+
+    <br>
+
+    <p><strong>Куплет 1:</strong><br>
+    Час непомітно крізь пальці тікає,<br> 
+    Кожна хвилина нам Богом дана.<br> 
+    Куди поспішаєш на, що витрачаєш<br>
+    Ти свої дні та своє життя.</p>
+
+    <p><strong>Передприспів:</strong><br>
+    Та серед шуму світу й доріг<br> 
+    Чую я голос тихий, святий…</p>
+
+    <p><strong>Приспів:</strong><br>
+    Стій, зупинись, стань, обернись<br> 
+    Подивись в небо, до Бога звернись.<br>
+    Час не чекає — серце відкрий,<br>
+    Світло Христа в душі збережи<br> 
+    Стій, зупинись, стань, обернись<br> 
+    Він кличе тебе "До мене вернись (звернись)"<br>
+    Оуо</p>
+
+    <p><strong>Куплет 2:</strong><br>
+    Табірні ранки вогнище світло<br>
+    Дружні молитви сміх і пісні<br> 
+    Тут ми навчилися вірити щиро<br>
+    Йти за Ісусом в кожному дні.</p>
+
+    <p><strong>Передприспів:</strong><br>
+    Навіть коли розійдуться шляхи<br>
+    З нами назавжди слова ці прості..</p>
+
+    <p><strong>Приспів:</strong><br>
+    Стій, зупинись, стань, обернись<br> 
+    Подивись в небо, до Бога звернись.<br>
+    Час не чекає — серце відкрий,<br>
+    Світло Христа в душі збережи<br> 
+    Стій, зупинись, стань, обернись<br> 
+    З Христом починається справжнє життя!</p>
+
+    <p><small>***<br>
+    Автор тексту та музики: Явнікова Даріна<br>
+    Харків, Україна — 2026 р.<br>
+    Reshka Ukraine</small></p>
+    '''
+  ];
 }

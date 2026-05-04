@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../../data/program4_data.dart';
 import '../widgets/expandable_menu3.dart';
 import '../widgets/sub_menu_card3.dart';
-import 'info_page_1bloc.dart'; // ПОВЕРНУТО ІМПОРТ ДЛЯ PageTitleStyle
+import 'info_page_1bloc.dart';
 import 'info_page_3bloc.dart';
+import 'info_page_4bloc.dart';
 
 class ProgramMenu4Page extends StatefulWidget {
   const ProgramMenu4Page({super.key});
@@ -456,7 +457,7 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
   void _openInfo(String title, List<String> texts) {
     open(
       context,
-      InfoPage3Bloc(
+      InfoPage4Bloc(
         title: title,
         texts: texts,
         images: null,
