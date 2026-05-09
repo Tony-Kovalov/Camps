@@ -8,10 +8,7 @@ class SubMenuCard3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
-      child: MenuCard3(onTap: onTap, title: title),
-    );
+    return MenuCard3(onTap: onTap, title: title);
   }
 }
 

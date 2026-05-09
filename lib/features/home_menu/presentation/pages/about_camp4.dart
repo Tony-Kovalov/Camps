@@ -161,20 +161,23 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
   Widget _buildMenuCard(BuildContext context, String title, List<String> texts) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: SubMenuCard3(
-        title: title,
-        onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => InfoPage4Bloc(
-              title: title,
-              texts: texts,
-              images: null,
-              titleStyle: PageTitleStyle.underAppBar,
-              bgLinearGradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFF1E293B), Color(0xFF0F172A)],
+      child: SizedBox(
+        width: double.infinity, // <--- ДОДАНО ЦЕЙ РЯДОК: Розтягує кнопку на всю ширину
+        child: SubMenuCard3(
+          title: title,
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => InfoPage4Bloc(
+                title: title,
+                texts: texts,
+                images: null,
+                titleStyle: PageTitleStyle.underAppBar,
+                bgLinearGradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Color(0xFF1E293B), Color(0xFF0F172A)],
+                ),
               ),
             ),
           ),
@@ -182,7 +185,6 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
       ),
     );
   }
-
   // Віджет для вкладок, які одразу відкривають посилання (напр. Telegram)
   Widget _buildLinkCard(String title, String url) {
     return Padding(
