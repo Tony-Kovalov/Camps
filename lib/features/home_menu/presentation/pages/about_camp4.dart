@@ -167,8 +167,9 @@ class _AboutCamp4PageState extends State<AboutCamp4Page> {
           title: title,
           onTap: () => Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) => InfoPage4Bloc(
+            PageRouteBuilder(
+              transitionDuration: Duration.zero,
+              pageBuilder: (_, __, ___) => InfoPage4Bloc(
                 title: title,
                 texts: texts,
                 images: null,
