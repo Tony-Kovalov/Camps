@@ -46,36 +46,36 @@ class _ProgramMenu4PageState extends State<ProgramMenu4Page> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 10),
+                  // СТАЛО:
                   Row(
                     children: [
-                      const Text(
-                        "🕵️‍♂️",
-                        style: TextStyle(fontSize: 40),
-                      ),
+                      const Text("🕵️‍♂️", style: TextStyle(fontSize: 40)),
                       const SizedBox(width: 12),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "SECRET CASE",
-                            style: TextStyle(
-                              color: Colors.blueAccent[100],
-                              fontFamily: 'Inter',
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2,
+                      Expanded( // ✅ ДОДАНО EXPANDED
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "SECRET CASE",
+                              style: TextStyle(
+                                color: Colors.blueAccent[100],
+                                fontFamily: 'Inter',
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2,
+                              ),
                             ),
-                          ),
-                          const Text(
-                            "Програма(1-5 день)",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 28,
-                              fontWeight: FontWeight.w900,
+                            const Text(
+                              "Програма",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.w900,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),

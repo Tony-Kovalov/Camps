@@ -83,7 +83,7 @@ class MyHomePageContent4 extends StatelessWidget {
 
                 _buildSecretCard(
                   context,
-                  title: "Розклад та Програма (Дні 1-5)",
+                  title: "Розклад та Програма",
                   icon: "📋",
                   onTap: () => open(context, const ProgramMenu4Page()),
                   isHighlighted: false,
