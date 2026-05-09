@@ -38,71 +38,55 @@ class InfoPage4Bloc extends StatelessWidget {
         ),
         elevation: 0,
         flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: bgLinearGradient,
-          ),
+          color: const Color(0xFF0F172A),
         ),
       ),
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: BoxDecoration(
-          gradient: bgLinearGradient,
-        ),
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: Image.asset(
-                "images/sky_land6.png",
-              ),
-            ),
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  if (titleStyle == PageTitleStyle.underAppBar)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          title,
-                          style: const TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
+        color: const Color(0xFF0F172A),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              if (titleStyle == PageTitleStyle.underAppBar)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 24),
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minHeight: MediaQuery.of(context).size.height -
-                            kToolbarHeight -
-                            24,
-                      ),
-                      child: Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF1E293B),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(32),
-                            topRight: Radius.circular(32),
-                          ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: compactTextAndImages(),
-                        ),
+                  ),
+                ),
+              Padding(
+                padding: const EdgeInsets.only(top: 24),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minHeight: MediaQuery.of(context).size.height -
+                        kToolbarHeight -
+                        24,
+                  ),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF1E293B),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(32),
+                        topRight: Radius.circular(32),
                       ),
                     ),
-                  )
-                ],
-              ),
-            ),
-          ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: compactTextAndImages(),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
